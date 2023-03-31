@@ -1,20 +1,24 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import CHNZheYangDeAi from '../src/songs/CHN_ZheYangDeAi'
+import Nav from "../src/components/nav";
+import HeaderLogo from './components/headerLogo';
+import CHNZheYangDeAi from './songs/CHNZheYangDeAi';
+import RunDownOne from './components/runDown/runDownOne';
 
 function App() {
   return (
-    <>
-      <h1>Hello from App</h1>
+    <div>
+      <HeaderLogo />
+      <Nav />
       <Switch>
         <Route exact path="/">
-          <CHNZheYangDeAi />
+          <RunDownOne />
         </Route>
         <Route path="/test">
           <CHNZheYangDeAi />
         </Route>
       </Switch>
-    </>
+    </div>
   );
 }
 
