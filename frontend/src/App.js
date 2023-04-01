@@ -12,10 +12,10 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/">
-          <RunDownOne />
+
         </Route>
         <Route path="/test">
-          <CHNZheYangDeAi />
+
         </Route>
       </Switch>
     </div>
