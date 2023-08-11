@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Nav from "../src/components/nav";
+import Nav from "./components/navbar/nav";
 import HeaderLogo from './components/headerLogo';
 import CHNZheYangDeAi from './songs/CHNZheYangDeAi';
 import RunDownOne from './components/runDown/runDownOne';
