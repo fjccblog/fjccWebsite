@@ -1,10 +1,14 @@
 import React from 'react';
-import "./navDropDown.css";
+import "./navbar.css";
 
 function NavDropDown() {
+  let dropDownContent = ['a', 'b', 'c']
+
   return (
-    <div className="nav-bg">
-      test
+    <div className="navDropdown">
+      {dropDownContent.map(element => {
+        return <a href="#">{element}</a>
+      })}
     </div>
   )
 }
