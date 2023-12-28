@@ -1,14 +1,14 @@
 /*============ customer global className ================*/
-.logo-font {
-  font-family: 'Shadows Into Light', cursive;
-}
-
 .user-err {
   color: red;
 }
 
 #modal-content {
   border-radius: 10px;
+}
+
+#webContainer {
+  padding: 1rem;
 }
 
 /*============ background-color ================*/
