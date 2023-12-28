@@ -10,7 +10,7 @@ import NotFoundPage from '../pages/NotFoundPage';
 
 function Router() {
   return (
-    <div id='webContainer'>
+    <div>
       <Logo />
       <Nav />
       <Switch>

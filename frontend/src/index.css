@@ -1,14 +1,11 @@
-/*============ customer global className ================*/
-.user-err {
-  color: red;
+body {
+  margin: 0px;
 }
 
-#modal-content {
-  border-radius: 10px;
-}
-
-#webContainer {
-  padding: 1rem;
+/*============ custom global className ================*/
+:root {
+  --lightBlue: rgb(0,140,205);
+  --lightPurple: rgb(115,60,180);
 }
 
 /*============ background-color ================*/
@@ -121,6 +118,10 @@
 .flx-no-wrap {
   flex-wrap: nowrap;
 }
+
+.flx-wrap {
+  flex-wrap: wrap;
+}
 /*============ font-size ================*/
 
 .font15 {
@@ -147,6 +148,10 @@
 
 .gap10p {
   gap: 10px;
+}
+
+.gap15p {
+  gap: 15px;
 }
 
 /*============ grid ================*/
