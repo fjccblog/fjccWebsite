@@ -1,0 +1,33 @@
+.width1-3 {
+  width: 33.3333%;
+}
+
+.item-container {
+  width: 325px;
+  height: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.img-container {
+  width: 275px;
+  height: 150px;
+  margin: auto;
+}
+
+.obj-fit-cover {
+  object-fit: cover;
+}
+
+.height-max-100 {
+  max-height: 100%;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.bor-rad-15 {
+  border-radius: 15px;
+}
