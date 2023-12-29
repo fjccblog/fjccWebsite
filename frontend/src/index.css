@@ -2,9 +2,15 @@ body {
   margin: 0px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
 /*============ custom global className ================*/
 :root {
-  --lightBlue: rgb(0,140,205);
+  --lightBlue: #8dc7f2;
   --lightPurple: rgb(115,60,180);
   --lightWise: #f2b88d4f;
   --lightgray:rgb(243, 242, 241);
@@ -58,6 +64,10 @@ body {
 }
 
 /*============ color ================*/
+.color-blk {
+  color:black;
+}
+
 .color-white {
   color:white;
 }

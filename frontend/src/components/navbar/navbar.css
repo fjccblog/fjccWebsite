@@ -11,10 +11,6 @@
   cursor: pointer;
 }
 
-.navItem:hover {
-  color: var(--lightPurple);
-}
-
 .navItem:hover .navDropdown{
   visibility: visible;
 }
@@ -56,11 +52,11 @@
 }
 
 /* make the nav item arrow point left when hover */
-.dropdown-nav-item:hover .fas {
+.dropdown-nav-item:hover .fa-chevron-down {
   transform: rotate(90deg);
   transition: transform ease-in-out 0.4s;
 }
 
-/* .dropdown-nav-item:hover .dropbtn {
-  background-color: #3e8e41;
-} */
+.navItem:hover {
+  color: var(--lightBlue);
+}

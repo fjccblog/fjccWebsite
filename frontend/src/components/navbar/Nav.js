@@ -80,8 +80,8 @@ function Nav() {
 
         <li>
           <div>
-            <button className='navItem'>
-              奉獻
+            <button className='navItem donation'>
+                奉獻 <i className="fas fa-envelope"></i>
             </button>
           </div>
         </li>
