@@ -7,7 +7,7 @@ function Nav() {
 
   return (
     <div className="navContainer">
-      <ul className='flx list-none gap15p'>
+      <ul className='flx-center list-none gap20p'>
         <li className='dropdown-nav-item'>
           <div>
             <button className="navItem" onClick={(e)=>e.preventDefault()}>
@@ -42,7 +42,7 @@ function Nav() {
                 <a href="#welcome">信仰立場</a>
               </Link>
               <Link to='mission'>
-                <a href="#meetOurTeam">宗旨和使命</a>
+                <a href="#meetOurTeam">宗旨 / 使命</a>
               </Link>
               <Link to='churchHistory'>
                 <a href="#whoWeAre">教會簡史</a>

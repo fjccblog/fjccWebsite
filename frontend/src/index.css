@@ -6,6 +6,8 @@ body {
 :root {
   --lightBlue: rgb(0,140,205);
   --lightPurple: rgb(115,60,180);
+  --lightWise: #f2b88d4f;
+  --lightgray:rgb(243, 242, 241);
 }
 
 /*============ background-color ================*/
@@ -123,6 +125,10 @@ body {
   flex-wrap: wrap;
 }
 /*============ font-size ================*/
+.font15p {
+  font-size: 14px;
+}
+
 
 .font15 {
   font-size: 1.5rem;
@@ -152,6 +158,10 @@ body {
 
 .gap15p {
   gap: 15px;
+}
+
+.gap20p {
+  gap: 20px;
 }
 
 /*============ grid ================*/
