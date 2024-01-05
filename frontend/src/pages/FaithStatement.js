@@ -4,7 +4,7 @@ import './FaithStatement.css';
 function FaithStatement() {
   return (
     <div className='statementContainer'>
-      <h1>FJCC Statement of Faith</h1>
+      <h1 className='flx-center'>FJCC Statement of Faith</h1>
 
       <h3>1. Bible</h3>
       <p>
