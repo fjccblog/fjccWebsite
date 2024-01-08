@@ -59,7 +59,7 @@ function Nav() {
               <Link to='/prayerLetter'>
                 <a href="#welcome">代禱信</a>
               </Link>
-              <Link to='lifeTogether'>
+              <Link to='album'>
                 <a href="#meetOurTeam">活動花絮</a>
               </Link>
             </div>
@@ -71,7 +71,7 @@ function Nav() {
               生命見證 <i className="fas fa-chevron-down"></i>
             </button>
             <div className='dropdown-content'>
-              <Link to='/baptismTestimony'>
+              <Link to='/baptism'>
                 <a href="#welcome">得救見證</a>
               </Link>
             </div>
