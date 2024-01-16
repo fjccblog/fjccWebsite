@@ -11,6 +11,7 @@ import MinistryPage from './pages/Ministry.js';
 import Nav from './components/navbar/Nav.js';
 import NotFoundPage from './pages/NotFoundPage';
 import PrayerLetterPage from './pages/PrayerLetterPage.js'
+import PurposePage from './pages/PurposePage.js';
 
 function Router() {
   return (
@@ -41,6 +42,9 @@ function Router() {
         </Route>
         <Route path="/prayerLetter">
           <PrayerLetterPage />
+        </Route>
+        <Route path="/purpose">
+          <PurposePage />
         </Route>
         <Route path="/*">
           <NotFoundPage />

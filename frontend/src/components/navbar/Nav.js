@@ -41,7 +41,7 @@ function Nav() {
               <Link to='/faithStatement'>
                 <a href="#welcome">信仰立場</a>
               </Link>
-              <Link to='mission'>
+              <Link to='purpose'>
                 <a href="#meetOurTeam">宗旨 / 使命</a>
               </Link>
               <Link to='churchHistory'>
