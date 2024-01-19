@@ -1,10 +1,9 @@
 import React from 'react';
+import Album from '../components/Album/Album';
 
 function AlbumPage() {
   return (
-    <div>
-      This is album page
-    </div>
+    <Album />
   )
 }
 

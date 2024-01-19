@@ -1,14 +1,20 @@
-/*============ customer global className ================*/
-.user-err {
-  color: red;
+body {
+  margin: 0px;
 }
 
-#modal-content {
-  border-radius: 10px;
+a {
+  text-decoration: none;
+  color: black;
+  padding: 0px 0px;
 }
 
-#webContainer {
-  padding: 1rem;
+
+/*============ custom global className ================*/
+:root {
+  --lightBlue: #8dc7f2;
+  --lightPurple: rgb(115,60,180);
+  --lightWise: #f2b88d4f;
+  --lightgray:rgb(243, 242, 241);
 }
 
 /*============ background-color ================*/
@@ -59,6 +65,10 @@
 }
 
 /*============ color ================*/
+.color-blk {
+  color:black;
+}
+
 .color-white {
   color:white;
 }
@@ -121,7 +131,15 @@
 .flx-no-wrap {
   flex-wrap: nowrap;
 }
+
+.flx-wrap {
+  flex-wrap: wrap;
+}
 /*============ font-size ================*/
+.font15p {
+  font-size: 14px;
+}
+
 
 .font15 {
   font-size: 1.5rem;
@@ -147,6 +165,14 @@
 
 .gap10p {
   gap: 10px;
+}
+
+.gap15p {
+  gap: 15px;
+}
+
+.gap20p {
+  gap: 20px;
 }
 
 /*============ grid ================*/

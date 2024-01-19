@@ -2,9 +2,13 @@
   width: 33.3333%;
 }
 
+.landingHeader{
+  height:50vh;
+}
+
 .item-container {
   width: 325px;
-  height: 200px;
+  height: 250px;
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;

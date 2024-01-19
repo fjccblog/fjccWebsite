@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PrayerPage() {
+function PrayerLetter() {
   return (
     <div>
       This is prayer page
@@ -8,4 +8,4 @@ function PrayerPage() {
   )
 }
 
-export default PrayerPage
+export default PrayerLetter

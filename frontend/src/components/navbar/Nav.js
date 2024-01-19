@@ -5,11 +5,10 @@ import './navbar.css';
 
 function Nav() {
 
-  // maybe map?
   return (
     <div className="navContainer">
-      <ul className='flx list-none gap10p'>
-      <li className='dropdown-nav-item'>
+      <ul className='flx-center list-none gap20p'>
+        <li className='dropdown-nav-item'>
           <div>
             <button className="navItem" onClick={(e)=>e.preventDefault()}>
               外展事工 <i className="fas fa-chevron-down"></i>
@@ -18,10 +17,18 @@ function Nav() {
               <Link to='/childMinistry'>
                 <a href="#welcome">兒童事工</a>
               </Link>
-              <a href="#meetOurTeam">初、高中生事工</a>
-              <a href="#whoWeAre">大學事工</a>
-              <a href="#whoWeAre">體育事工</a>
-              <a href="#whoWeAre">長者事工</a>
+              <Link to='juniorHighMinistry'>
+                <a href="#meetOurTeam">初、高中生事工</a>
+              </Link>
+              <Link to='collegeMinistry'>
+                <a href="#whoWeAre">大學事工</a>
+              </Link>
+              <Link to='sportMinistry'>
+                <a href="#whoWeAre">體育事工</a>
+              </Link>
+              <Link to='seniorMinistry'>
+                <a href="#whoWeAre">長者事工</a>
+              </Link>
             </div>
           </div>
         </li>
@@ -31,11 +38,30 @@ function Nav() {
               關於教會 <i className="fas fa-chevron-down"></i>
             </button>
             <div className='dropdown-content'>
-              <Link to='/about'>
+              <Link to='/faithStatement'>
                 <a href="#welcome">信仰立場</a>
               </Link>
-              <a href="#meetOurTeam">宗旨 / 使命</a>
-              <a href="#whoWeAre">教會簡史</a>
+              <Link to='purpose'>
+                <a href="#meetOurTeam">宗旨 / 使命</a>
+              </Link>
+              <Link to='churchHistory'>
+                <a href="#whoWeAre">教會簡史</a>
+              </Link>
+            </div>
+          </div>
+        </li>
+        <li className='dropdown-nav-item'>
+          <div>
+            <button className="navItem" onClick={(e)=>e.preventDefault()}>
+              教會近況 <i className="fas fa-chevron-down"></i>
+            </button>
+            <div className='dropdown-content'>
+              <Link to='/prayerLetter'>
+                <a href="#welcome">代禱信</a>
+              </Link>
+              <Link to='album'>
+                <a href="#meetOurTeam">活動花絮</a>
+              </Link>
             </div>
           </div>
         </li>
@@ -45,18 +71,17 @@ function Nav() {
               生命見證 <i className="fas fa-chevron-down"></i>
             </button>
             <div className='dropdown-content'>
-              <Link to='/about'>
+              <Link to='/baptism'>
                 <a href="#welcome">得救見證</a>
               </Link>
-              <a href="#meetOurTeam">活動花絮</a>
             </div>
           </div>
         </li>
 
         <li>
           <div>
-            <button className='navItem'>
-              奉獻
+            <button className='navItem donation'>
+                奉獻 <i className="fas fa-envelope"></i>
             </button>
           </div>
         </li>
