@@ -1,4 +1,4 @@
-export const Album2023LifeTogetherData = [
+export const AlbumData2023LifeTogether = [
   "https://lh3.googleusercontent.com/pw/ABLVV84t3azys4HaG3Fwwbj-FnQhjPbGLqYTiXUb10YG5-lBXjevXfZUE-6yk78FQ0ZPSZR0QY4zi_RSSFyKozzBBfYI5Xlw5ZzODoRjCDL4V9jYubnPzj8=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV86kXh5IthsJ5m4lTj2zx03hR8DKzhri8xX22FiOO-wu1o--G84mjb9l1D2c-oDQEsgqlgIsGaU7Lf2_Xs19L2Hm41YjP0HMs-WvnRnyz-fXHpM2Db8=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV86RDm_UTrbQmyTrMmkzGe6W6rK6lr5X2MIVYUHGgynQng0OmR_3kQX2dZ-XT-Wjr_veUhOcRoj8u8NGI4SOei0LqdQujN4NLh1fru8EF_korTpCivc=w1920-h1080",

@@ -1,4 +1,4 @@
-export const Album2023ThanksgivingData = [
+export const AlbumData2023Thanksgiving = [
 "https://lh3.googleusercontent.com/pw/ABLVV844XjH7lN3XFxyDgWk5iJ0_zkdzOORhmqFnkEupJFWAvx8L5HDBgRT_XjmSrMm9ZJL2ysDXosOwtJmUesuMeLfX8-CtAJN4VoTHCRoLwJpXHkJlTiI=w1920-h1080",
 "https://lh3.googleusercontent.com/pw/ABLVV87AZl4oGaEGTGF7zIHkIA0mfcforpC8aKFqucYq4z9d40mnuNIbUNrJ9Oj6sbnclQPUd5QpH3oGp5_XGZPl-P2HQcTQQrB8dsieJzijzIdCe9WXOJM=w1920-h1080",
 "https://lh3.googleusercontent.com/pw/ABLVV85_eXoZxcxrJuQHRNFcF6QwsBsSVEq0XXlgTTW9FERwIww5qtmPIjgPKi3SDbFFWesf55ngTW6L9tOqY1KSo4gIinoy66T4dortjZCQVxoY_EznRrE=w1920-h1080",

@@ -1,4 +1,4 @@
-export const Album2023ElderlyCareMinistryData = [
+export const AlbumData2023ElderlyCareMinistry = [
   "https://lh3.googleusercontent.com/pw/ABLVV85w4uv0z_PR4SS4x3Dpu0mhTroM2t6WTJFFfaZhW3UeAp6EV3VDRGANyMLhAL-VVLS3ITbMOHThpRZ4jr9_g44dNaL3YtQQwQ6OUOmjj0noJU9YvVo=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV85GbwwNGyKbsj6eHTLC_fuwmOfy_2m3IyoGRarsacAAWXXepe8avWkgyDmRz-9pIMcAeFoT0lWYogZPrRulniLW03JUsW4XBi0vFR-clulJe9oXl4I=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV84-IuW2YuplZLBRH_wkxDZ9DWcMMIXuDO4s_ZouRDZcW1ZkH0epCGEqhbXQ3deGvjnckmr7j_xrg7OxwWlXQlA7NJYtmb5_fgFVgvN4QhwIbLod4R4=w1920-h1080",

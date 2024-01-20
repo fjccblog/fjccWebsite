@@ -1,5 +1,5 @@
 // links from google photos album, should be stable
-export const Album2023ChristmasData = [
+export const AlbumData2023Christmas = [
   "https://lh3.googleusercontent.com/pw/ABLVV87L00pYV2haptNnmfObGZKolqiyzTOgCLm9GyWRr_Hdfuaz9Z1H7SkJil2gVxXFyv6TOEHI_Eu64bCJlED9k7eblpE5AmwUEWPwX7SLd_dSsJLE36s=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV87e7IE6P5Iq1VW46pmQrQxUwJxskPRk8VPIbMlO5fHlgbn4iWnSyic1tX5aDuMWGFptCa-rFvI59K2MHy7r08IBFH87hw7vAmhZYc19jnKt6zO2IV4=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV84eSusmB4QsTnrLcZvOsbqc-sIXpxFV24s2PzqAlox5ZM9rVFqWpO625T3Yf8DrGYPRv-9mSPwrYIdcGPYYMasbQ57lBpgY0ALsUANP22G-uCguLFU=w1920-h1080",
