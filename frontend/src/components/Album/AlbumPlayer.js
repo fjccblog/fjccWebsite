@@ -20,17 +20,33 @@ function AlbumPlayer({data}) {
     setAlbumIndex(currIndex)
   }
 
+  function enterFullScreen() {
+    let albumPlayerContainer = document.querySelector(".albumPlayerContainer")
+    if (document.fullscreenElement === null) {
+      albumPlayerContainer.requestFullscreen()
+      // fullScreenBtn.classList.add("full-screen")
+    } else {
+      document.exitFullscreen()
+      // fullScreenBtn.classList.remove("full-screen")
+    }
+  }
+
 
   return (
     <div>
       <div className='albumPlayerContainer'>
         <img src={data[albumIndex]} alt='' className='albumImg'/>
-        <button onClick={()=>setPrevImg()} className='albumBtn albumLeftBtn'>
+        <button onClick={()=>setPrevImg()} className='albumBtn albumArrowBtn albumLeftBtn'>
         <i className="fas fa-chevron-left"></i>
         </button>
-        <button onClick={()=>setNextImg()} className='albumBtn albumRightBtn'>
+        <button onClick={()=>setNextImg()} className='albumBtn albumArrowBtn albumRightBtn'>
           <i className="fas fa-chevron-right"></i>
         </button>
+        <div className='albumControlDiv'>
+          <button onClick={()=>enterFullScreen()} className='albumBtn albumRightBtn'>
+            <i className="fas fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
       <div className='reference'>
         {data.map((ele)=>{
