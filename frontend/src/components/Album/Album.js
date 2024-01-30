@@ -6,8 +6,6 @@ function Album() {
   return (
     <div>
       This is album page, need to set up router
-      {/* <h3>album 2021</h3>
-      <Album2021 /> */}
       <h3>album 2023 Christmas</h3>
       <Album2023Christmas />
     </div>

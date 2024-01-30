@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './AlbumPlayer.css';
 
 function AlbumPlayer({data}) {
-  // needs to revise
+
   let [albumIndex, setAlbumIndex] = useState(0);
 
   function setPrevImg() {
@@ -22,20 +22,17 @@ function AlbumPlayer({data}) {
 
 
   return (
-    // <div className="pa-gallery-player-widget albumPlayer"
-    //   data-title="2023 Christmas"
-    //   data-description="71 new items · Album by FJCC FJCC">
-    //     {data.map((ele)=>{
-    //       return <object data={ele} />
-    //     })}
-    // </div>
     <div>
-      <div className='width300p'>
-        <img src={data[albumIndex]} alt='' className='width100'/>
-        <button onClick={()=>setPrevImg()}>left</button>
-        <button onClick={()=>setNextImg()}>right</button>
+      <div className='albumPlayerContainer'>
+        <img src={data[albumIndex]} alt='' className='albumImg'/>
+        <button onClick={()=>setPrevImg()} className='albumBtn albumLeftBtn'>
+        <i className="fas fa-chevron-left"></i>
+        </button>
+        <button onClick={()=>setNextImg()} className='albumBtn albumRightBtn'>
+          <i className="fas fa-chevron-right"></i>
+        </button>
       </div>
-      <div>
+      <div className='reference'>
         {data.map((ele)=>{
           return <img src={ele} alt="" className='width300p'/>
         })}
