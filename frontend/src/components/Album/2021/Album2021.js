@@ -1,7 +1,8 @@
 import React from 'react';
-import {AlbumData2021} from './Album2021Data.js';
+import {AlbumData2021} from './AlbumData2021';
 
 function Album2021() {
+  console.log(AlbumData2021)
   return (
     <div>
       {AlbumData2021.map(element =>
