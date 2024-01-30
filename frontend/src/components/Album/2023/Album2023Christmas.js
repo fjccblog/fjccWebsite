@@ -1,14 +1,14 @@
 import React from 'react';
-import { Album2023ChristmasData } from './Album2023ChristmasData';
+import { AlbumData2023Christmas } from './AlbumData2023Christmas';
 import AlbumPlayer from '../AlbumPlayer';
 
 function Album2023Christmas() {
   return (
     <div>
-      <AlbumPlayer data={Album2023ChristmasData}/>
-      {Album2023ChristmasData.map(element =>
+      <AlbumPlayer data={AlbumData2023Christmas}/>
+      {/* {AlbumData2023Christmas.map(element =>
       <img key={element} className="width300p height-max-100 obj-fit-cover bor-rad-15" src={element}></img>
-      )}
+      )} */}
     </div>
   )
 }
