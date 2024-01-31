@@ -7,35 +7,44 @@
 }
 
 .albumControlDiv {
+  display: flex;
   position: absolute;
   bottom: 0;
-  height: 2rem;
-  background-color: orange;
-  border: 2px solid orange;
+  height: 2.5rem;
+  /* border: 2px solid orange; */
 }
 
 .albumBtn {
+  /*universal property to buttons in album player */
   all: unset;
-  position: absolute;
+
   display: flex;
   text-align: center;
   width: 1rem;
   height: 1rem;
   color: transparent;
-  padding: 1rem;
-  margin: 10px;
+
   cursor: pointer;
   /* background-color: black; */
 }
 
 .albumArrowBtn {
+  /* left and right button */
+  position: absolute;
   top: 45%;
   border-radius: 50%;
+  margin: 10px;
+  padding: 1rem;
   /* background-color: black; */
 }
 
-/*hover the container to see all buttons*/
-.albumPlayerContainer:hover > .albumBtn{
+.albumControlBtn {
+  margin: 0 10px;
+  font-size: 2rem;
+}
+
+.albumPlayerContainer:hover .albumBtn{
+  /*hover the container to see all buttons by showong color and background*/
   background-color: rgba(0,0,0,0.3);
   color: white;
 }

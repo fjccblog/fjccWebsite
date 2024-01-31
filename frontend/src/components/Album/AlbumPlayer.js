@@ -43,8 +43,13 @@ function AlbumPlayer({data}) {
           <i className="fas fa-chevron-right"></i>
         </button>
         <div className='albumControlDiv'>
-          <button onClick={()=>enterFullScreen()} className='albumBtn albumRightBtn'>
-            <i className="fas fa-chevron-right"></i>
+          <button onClick={()=>enterFullScreen()} className='albumBtn albumControlBtn'>
+            <i className="fas fa-expand"></i>
+            {/* <i className="fas fa-compress"></i> */}
+          </button>
+          <button onClick={()=>enterFullScreen()} className='albumBtn albumControlBtn'>
+            {/* <i className="fas fa-expand"></i> */}
+            <i className="fas fa-compress"></i>
           </button>
         </div>
       </div>
