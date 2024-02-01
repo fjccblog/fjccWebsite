@@ -24,10 +24,10 @@ function AlbumPlayer({data}) {
     let albumPlayerContainer = document.querySelector(".albumPlayerContainer")
     if (document.fullscreenElement === null) {
       albumPlayerContainer.requestFullscreen()
-      // fullScreenBtn.classList.add("full-screen")
+      albumPlayerContainer.classList.add("fullscreen")
     } else {
       document.exitFullscreen()
-      // fullScreenBtn.classList.remove("full-screen")
+      albumPlayerContainer.classList.remove("fullscreen")
     }
   }
 
@@ -43,12 +43,10 @@ function AlbumPlayer({data}) {
           <i className="fas fa-chevron-right"></i>
         </button>
         <div className='albumControlDiv'>
-          <button onClick={()=>enterFullScreen()} className='albumBtn albumControlBtn'>
+          <button onClick={()=>enterFullScreen()} className='albumBtn albumControlBtn enterFullscreen'>
             <i className="fas fa-expand"></i>
-            {/* <i className="fas fa-compress"></i> */}
           </button>
-          <button onClick={()=>enterFullScreen()} className='albumBtn albumControlBtn'>
-            {/* <i className="fas fa-expand"></i> */}
+          <button onClick={()=>enterFullScreen()} className='albumBtn albumControlBtn exitFullscreen'>
             <i className="fas fa-compress"></i>
           </button>
         </div>
