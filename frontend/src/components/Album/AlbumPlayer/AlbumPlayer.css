@@ -1,0 +1,82 @@
+.albumPlayerContainer {
+  width:600px;
+  height:480px;
+  position: relative;
+  background-color: black;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.albumControlDiv {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2.5rem;
+  margin-right: 10px;
+}
+
+.albumImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.albumBtn {
+  /*universal property to buttons in album player */
+  all: unset;
+  display: flex;
+  text-align: center;
+  width: 1rem;
+  height: 1rem;
+  color: transparent;
+  cursor: pointer;
+  /* background-color: black; */
+}
+
+.albumArrowBtn {
+  /* left and right button */
+  position: absolute;
+  top: 45%;
+  border-radius: 50%;
+  margin: 10px;
+  padding: 1rem;
+  /* background-color: black; */
+}
+
+.albumLeftBtn {
+  left:0;
+}
+
+.albumRightBtn {
+  right:0;
+}
+
+.albumControlBtn {
+  margin: 0 10px;
+  font-size: 2rem;
+}
+
+.albumPlayerContainer.fullscreen .enterFullscreen {
+  /* hide fullscreen button when it is fullscreen */
+  display: none;
+}
+
+.albumPlayerContainer:not(.fullscreen) .exitFullscreen  {
+  /* hide exit-fullscreen-button when it is not fullscreen */
+  display: none;
+}
+
+.albumPlayerContainer:hover .albumBtn{
+  /*hover the container to see all buttons by showong color and background*/
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+}
+
+.albumBtn > * {
+  stroke: white;
+  fill: black;
+  width: 2rem;
+  height: 2rem;
+}
