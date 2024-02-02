@@ -1,4 +1,4 @@
-export const Album2023CampusMinistryData = [
+export const AlbumData2023CampusMinistry = [
   "https://lh3.googleusercontent.com/pw/ABLVV84oSNU-moQiQY4T8Xd_12K9ApjHKUO_iWC-p30iwg_7EEAqjaILshACo1oOREwS-gGuq_vVc8kbxe-egBSx-y_kmGue68QB3a9KPopmJnqNXIB-HxU=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV84Qwda0e-hbPdIMRy33DMdilqhMvsWiywW6EqhFWiDwi4hI2gUVvyO4KFBATpn0MRZU9mj2fitx0qKft6YCpGpcrQlAp7QGAjzaDW4MFubv2Yt8QhM=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV85Vjl6HxlLACr-sJEo5-z071qtCLAM7fs1f-aO__vZym_hgIuGtM-1R3gW7ZhXDUuou-xlUUs7AqVSa_NOPTDbkml3SZj1eS3aRdnpQx7qHM3eym4o=w1920-h1080",

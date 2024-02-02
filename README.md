@@ -13,3 +13,21 @@
 * Facebook might have a API to fetch all the data ? couldn't find a solution yet [Jan 2024]
 * Immediate solution: download all the pictures, and upload to Google photos. Then use ```https://www.publicalbum.org/blog/embedding-google-photos-albums``` to find out the source links.
 * Modify codes into a array of links.
+
+### images with CORB issue
+* ```https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#What-kinds-of-requests-are-CORB_eligible```
+object or emded pose less risk of leaking data
+
+* trying to use ```<object/>``` to prevent sometimes CORB issue, but the image doens't auto-resize with css
+
+```<div style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
+  <object data={data[albumIndex]} type='image/jepg' aria-labelledby='pic' className='albumObj'
+    style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+      <img
+        src={data[albumIndex]} // Replace with your image URL
+        alt="new year"
+        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+      />
+  </object>
+</div>
+```
