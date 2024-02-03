@@ -23,3 +23,12 @@
   display: block;
   text-align: center;
 }
+
+.albumFilterYear {
+  cursor: pointer;
+
+}
+
+.albumFilterYear:hover {
+  color: var(--lightBlue);
+}
