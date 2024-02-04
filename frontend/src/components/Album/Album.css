@@ -5,6 +5,10 @@
   gap: 1rem;
   max-width: 1300px;
   margin: 0 auto;
+  animation: ShowInfo 2s ease;
+}
+
+.singleAlbumInfoContainer {
   cursor: pointer;
 }
 
@@ -17,11 +21,15 @@
 
 .albumInfoDescription {
   height: 50px;
+  text-align: center;
 }
 
-.albumInfoDescription span{
+.albumInfoDescriptionName{
   display: block;
-  text-align: center;
+}
+
+.albumNew {
+  color: red;
 }
 
 .albumFilterYear {
@@ -31,4 +39,9 @@
 
 .albumFilterYear:hover {
   color: var(--lightBlue);
+}
+
+@keyframes ShowInfo {
+  0%   { transform: translateY(60vh); }
+  100% { transform: translateY(0); }
 }
