@@ -42,4 +42,4 @@ object or emded pose less risk of leaking data
     <Redirect to="/" />
   </Route>
 ```
-* run ``` npm run deploy``` in the frontend folder when the changes are up to date
+* run ``` npm run deploy``` in the frontend folder when the changes are up to date, but this will save the version of your current branch, not strictly on the main branch. However, there is always an option to switch to main branch before deploy.
