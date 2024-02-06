@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import AboutPage from './pages/AboutPage.js';
 import AlbumPage from './pages/AlbumPage.js';
 import BaptismPage from './pages/BaptismPage.js';
@@ -21,6 +21,10 @@ function Router() {
       <Switch>
         <Route exact path="/">
           <HomePage />
+        </Route>
+        <Route path="/fjccWebsite">
+          <Redirect to="/" />
+          {/* just for the purpose of Github pages */}
         </Route>
         <Route path="/about">
           <AboutPage />

@@ -31,3 +31,15 @@ object or emded pose less risk of leaking data
   </object>
 </div>
 ```
+
+### deploy React to GitHub Pages
+* most of the part is very straigt forward with ```https://github.com/gitname/react-gh-pages```
+* The only difference is that this repo has frontend and backend folder, even though at this moment, the backend folder is empty
+* When deployed to Github Pages, the url is ```https://fjccblog.github.io/fjccWebsite```, but that is not the url we want, because it will affect other parts/Links of the Router in the DOM
+* Therefore I add the a route to redirect to home page, just for the purpose to "auto-correct" the router problem
+```
+  <Route path="/fjccWebsite">
+    <Redirect to="/" />
+  </Route>
+```
+* run ``` npm run deploy``` in the frontend folder when the changes are up to date, but this will save the version of your current branch, not strictly on the main branch. However, there is always an option to switch to main branch before deploy.
