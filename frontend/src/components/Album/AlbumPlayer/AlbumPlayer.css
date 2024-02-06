@@ -88,6 +88,6 @@
 } */
 
 @keyframes ShowAlbum {
-  0%   { transform: translateY(70vh); }
-  100% { transform: translateY(0); }
+  0%   { transform: translateY(70vh); opacity: 0.3;}
+  100% { transform: translateY(0); opacity: 1;}
 }

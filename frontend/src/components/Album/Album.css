@@ -42,6 +42,6 @@
 }
 
 @keyframes ShowInfo {
-  0%   { transform: translateY(60vh); }
-  100% { transform: translateY(0); }
+  0%   { transform: translateY(60vh); opacity: 0.2;}
+  100% { transform: translateY(0); opacity: 1;}
 }
