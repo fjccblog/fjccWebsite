@@ -61,11 +61,11 @@ function AlbumPlayer({data}) {
           </button>
         </div>
       </div>
-      <div className='reference'>
+      {/* <div className='reference'>
         {data.map((ele)=>{
           return <img src={ele} alt="" className='width300p' key={ele}/>
         })}
-      </div>
+      </div> */}
     </div>
   )
 }
