@@ -47,8 +47,8 @@ function Album() {
   let currTime = new Date();
 
   return (
-    <div>
-      <div>
+    <div className='albumPageContainer'>
+      <div className='albumFilterYearContainer'>
       {years.map((year)=> {
         return (
           <span onClick={()=>filterAlbumByYear(year)} className='albumFilterYear'>{year} </span>

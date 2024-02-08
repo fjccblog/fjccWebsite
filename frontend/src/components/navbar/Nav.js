@@ -80,9 +80,11 @@ function Nav() {
 
         <li>
           <div>
-            <button className='navItem donation'>
-                奉獻 <i className="fas fa-envelope"></i>
-            </button>
+            <Link to='offering'>
+              <button className='navItem donation'>
+                  奉獻 <i className="fas fa-envelope"></i>
+              </button>
+            </Link>
           </div>
         </li>
         {/* <li className='navItem'>item 5

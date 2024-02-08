@@ -13,9 +13,9 @@ function FaithStatement() {
 
       <h3>2. The Triune God</h3>
       <p>
-      We believe in one triune God, eternally, existing in three persons God the Father, God the Son, and God the Holy Spirit co-eternal in being, co-identical in nature, who created all things, and accomplished the work of redemption.
-      We believe in the Lord Jesus Christ, the only begotten Son of the Father, who was conceived by the Holy Spirit, born of the Virgin Mary, and is sinless. He was crucified on the cross for the redemption of human sins, and was bodily resurrected on the third day. He ascended into heaven, sits on the right side of the Father interceding for all believers. One day, He will return to earth on His glorious body.
-      We believe in the Holy Spirit, the Third Person of the Triune God, who convicts the world of sin. He indwells believers, unites them with the Lord, and endows them with power to live holy lives.
+      We believe in one triune God, eternally, existing in three persons God the Father, God the Son, and God the Holy Spirit co-eternal in being, co-identical in nature, who created all things, and accomplished the work of redemption.<br />
+      We believe in the Lord Jesus Christ, the only begotten Son of the Father, who was conceived by the Holy Spirit, born of the Virgin Mary, and is sinless. He was crucified on the cross for the redemption of human sins, and was bodily resurrected on the third day. He ascended into heaven, sits on the right side of the Father interceding for all believers. One day, He will return to earth on His glorious body.<br />
+      We believe in the Holy Spirit, the Third Person of the Triune God, who convicts the world of sin. He indwells believers, unites them with the Lord, and endows them with power to live holy lives.<br />
       </p>
 
 
