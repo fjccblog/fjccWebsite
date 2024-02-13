@@ -13,7 +13,7 @@ function Album() {
     setIsAlbumPlayerActive(false);
   }
 
-  function updateAldumData (albumData) {
+  function updateAlbumData (albumData) {
     setCurrAlbumData(albumData);
     setIsAlbumPlayerActive(true);
   }
@@ -58,16 +58,17 @@ function Album() {
   return (
     <div className='albumPageContainer'>
       <div className='albumFilterYearContainer'>
-      {years.map((year)=> {
-        return (
-          <span onClick={()=>filterAlbumByYear(year)} className='albumFilterYear'>{year} </span>
-        )
-      })}
+        <span className=''>年份: </span>
+        {years.map((year)=> {
+          return (
+            <span onClick={()=>filterAlbumByYear(year)} className='albumFilterYear'>{year} </span>
+          )
+        })}
       </div>
       <div className='allAlbumInfoContainer'>
         {currYearAlbums.map((albumInfo)=>{
           return (
-            <div className='singleAlbumInfoContainer' onClick={() => updateAldumData(albumInfo.albumData)}>
+            <div className='singleAlbumInfoContainer' onClick={() => updateAlbumData(albumInfo.albumData)}>
               <img src={albumInfo.coverImgUrl} className='albumInfoImg'/>
               <div className='albumInfoDescription'>
                 <strong className='albumInfoDescriptionName'>{albumInfo.albumName}</strong>

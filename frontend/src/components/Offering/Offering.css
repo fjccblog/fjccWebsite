@@ -1,3 +1,5 @@
 .OfferingPageContainer {
-  margin: 0 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px 3rem;
 }
