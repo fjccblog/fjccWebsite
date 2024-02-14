@@ -2,8 +2,12 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { LetterBasicInfoData } from './LetterBasicInfo/LetterBasicInfoData';
 import IframePlayer from './iframePlayer/iframePlayer';
+import './PrayerLetter.css'
 
 function PrayerLetter() {
+
+  let allLetterInfoContainer = document.querySelector('.allLetterInfoContainer');
+  let letterPlayerContainer = document.querySelector('.letterPlayerContainer');
 
   function filterLetterByYear(year) {
     setCurrYearLetters(LetterBasicInfoData.filter((infoData)=>infoData.year === year))
@@ -39,6 +43,16 @@ function PrayerLetter() {
     filterLetterByYear(years[0]);
   }, [])
 
+  useEffect(()=> {
+    if (isLetterPlayerActive) {
+      if (allLetterInfoContainer) allLetterInfoContainer.style.display = "none";
+      if (letterPlayerContainer) letterPlayerContainer.style.display = "block";
+    } else {
+      if (allLetterInfoContainer) allLetterInfoContainer.style.display = "flex";
+      if (letterPlayerContainer) letterPlayerContainer.style.display = "none";
+    }
+  }, [isLetterPlayerActive])
+
   //------------------
   let currTime = new Date();
 
@@ -52,31 +66,24 @@ function PrayerLetter() {
           )
         })}
       </div>
-      <div className='allAlbumInfoContainer'>
+      <div className='allLetterInfoContainer'>
         {currYearLetters.map((letterInfo)=>{
           return (
-            <div className='singleAlbumInfoContainer' onClick={() => updateLetterData(letterInfo.albumData)}>
+            <div className='singleAlbumInfoContainer' onClick={() => updateLetterData(letterInfo.letterID)}>
               <div className='albumInfoDescription'>
                 <strong className='albumInfoDescriptionName'>{letterInfo.letterName}</strong>
+                {isLetterRecent(currTime, letterInfo.updatedAt) && <span className='albumNew'>New</span>}
                 <div className='albumInfoDescriptionUpdateAt'>
-                  <div>
                     <div>
                       <span className='albumInfoUpdated'>Updated:</span> <span>{letterInfo.updatedAt} </span>
-                      {isLetterRecent(currTime, letterInfo.updatedAt) && <span className='albumNew'>New</span>}
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
           )})}
       </div>
-      {currLetterData.letterID.length !== 0 && isLetterPlayerActive && <IframePlayer file={currLetterData} />}
+      {currLetterData.letterID !== '' && isLetterPlayerActive && <IframePlayer file={currLetterData} />}
     </div>
-    // <div >
-    //   {LetterBasicInfoData.map((letterInfo)=>{
-    //     return <IframePlayer file={letterInfo} />
-    //   })}
-    // </div>
   )
 }
 

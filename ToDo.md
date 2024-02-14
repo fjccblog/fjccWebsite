@@ -1,5 +1,7 @@
 * [  ] album player could add another button to control div, when click, album player takes the whole space of webpage
 * [  ] add more album filter years and more album data
+* [  ] album player should take 100vw when in mobile size
+
 * [  ] prayer letters list and simliar structure to album page for prayer letter page
 
 * [  ] faith statement page, add toggle on and off to show content for each section
