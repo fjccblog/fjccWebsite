@@ -10,6 +10,7 @@ import Logo from './components/Logo/Logo.js';
 import MinistryPage from './pages/Ministry.js';
 import Nav from './components/navbar/Nav.js';
 import NotFoundPage from './pages/NotFoundPage';
+import OfferingPage from './pages/OfferingPage.js';
 import PrayerLetterPage from './pages/PrayerLetterPage.js'
 import PurposePage from './pages/PurposePage.js';
 
@@ -43,6 +44,9 @@ function Router() {
         </Route>
         <Route path="/ministry*">
           <MinistryPage />
+        </Route>
+        <Route path="/offering">
+          <OfferingPage />
         </Route>
         <Route path="/prayerLetter">
           <PrayerLetterPage />

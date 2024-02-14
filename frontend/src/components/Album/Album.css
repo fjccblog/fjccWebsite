@@ -1,9 +1,14 @@
+.albumPageContainer {
+  margin: 0 auto;
+}
+
 .allAlbumInfoContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
-  max-width: 1300px;
+  max-width: 1100px;
   margin: 0 auto;
   animation: ShowInfo 2s ease;
 }
@@ -26,19 +31,39 @@
 
 .albumInfoDescriptionName{
   display: block;
+  font-size: 1.30rem;
+  margin: 5px;
+}
+
+.albumInfoUpdated {
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.65);
 }
 
 .albumNew {
   color: red;
 }
 
+.albumFilterYearContainer {
+  display: flex;
+  width: fit-content;
+  margin: 15px auto;
+}
+
 .albumFilterYear {
   cursor: pointer;
-
+  display: block;
+  margin: 0 8px;
+  font-size: 1.25rem;
 }
 
 .albumFilterYear:hover {
   color: var(--lightBlue);
+}
+
+.singleAlbumInfoContainer:hover{
+  border: 2x solid var(--lightBlue);
+  border-radius: 5px;
 }
 
 @keyframes ShowInfo {

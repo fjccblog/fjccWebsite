@@ -10,19 +10,16 @@ function Album() {
 
   function filterAlbumByYear(year) {
     setCurrYearAlbums(AlbumBasicInfoData.filter((infoData)=>infoData.year === year))
-    if (allAlbumInfoContainer) allAlbumInfoContainer.style.display = "flex";
-    if (albumPlayerContainer) albumPlayerContainer.style.display = "none";
+    setIsAlbumPlayerActive(false);
   }
 
-  function updateAldumData (albumData) {
+  function updateAlbumData (albumData) {
     setCurrAlbumData(albumData);
-    if (allAlbumInfoContainer) allAlbumInfoContainer.style.display = "none";
-    if (albumPlayerContainer) albumPlayerContainer.style.display = "block";
+    setIsAlbumPlayerActive(true);
   }
 
   function isAlbumRecent (currTime, albumTime) {
     return (((currTime.getTime() - new Date(albumTime).getTime()) / 1000) < (60 * 60 * 24 * 31)) ? true : false
-
   }
 
   //-------------------------
@@ -31,6 +28,8 @@ function Album() {
   let [currYearAlbums, setCurrYearAlbums] = useState([]);
 
   let [currAlbumData, setCurrAlbumData] = useState([]);
+
+  let [isAlbumPlayerActive, setIsAlbumPlayerActive] = useState(false);
 
   AlbumBasicInfoData.forEach((infoData) => {
     if (!(yearSet.has(infoData.year))) {
@@ -43,36 +42,49 @@ function Album() {
     filterAlbumByYear(years[0]);
   }, [])
 
+  useEffect(()=> {
+    if (isAlbumPlayerActive) {
+      if (allAlbumInfoContainer) allAlbumInfoContainer.style.display = "none";
+      if (albumPlayerContainer) albumPlayerContainer.style.display = "block";
+    } else {
+      if (allAlbumInfoContainer) allAlbumInfoContainer.style.display = "flex";
+      if (albumPlayerContainer) albumPlayerContainer.style.display = "none";
+    }
+  }, [isAlbumPlayerActive])
+
   //------------------
   let currTime = new Date();
 
   return (
-    <div>
-      <div>
-      {years.map((year)=> {
-        return (
-          <span onClick={()=>filterAlbumByYear(year)} className='albumFilterYear'>{year} </span>
-        )
-      })}
+    <div className='albumPageContainer'>
+      <div className='albumFilterYearContainer'>
+        <span className=''>年份: </span>
+        {years.map((year)=> {
+          return (
+            <span onClick={()=>filterAlbumByYear(year)} className='albumFilterYear'>{year} </span>
+          )
+        })}
       </div>
       <div className='allAlbumInfoContainer'>
         {currYearAlbums.map((albumInfo)=>{
           return (
-            <div className='singleAlbumInfoContainer' onClick={() => updateAldumData(albumInfo.albumData)}>
+            <div className='singleAlbumInfoContainer' onClick={() => updateAlbumData(albumInfo.albumData)}>
               <img src={albumInfo.coverImgUrl} className='albumInfoImg'/>
               <div className='albumInfoDescription'>
-                <span className='albumInfoDescriptionName'>{albumInfo.albumName}</span>
+                <strong className='albumInfoDescriptionName'>{albumInfo.albumName}</strong>
                 <div className='albumInfoDescriptionUpdateAt'>
                   <div>
-                    <span>Updated: {albumInfo.updatedAt} </span>
-                    {isAlbumRecent(currTime, albumInfo.updatedAt) && <span className='albumNew'>New</span>}
+                    <div>
+                      <span className='albumInfoUpdated'>Updated:</span> <span>{albumInfo.updatedAt} </span>
+                      {isAlbumRecent(currTime, albumInfo.updatedAt) && <span className='albumNew'>New</span>}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           )})}
       </div>
-      {currAlbumData.length !== 0 && <AlbumPlayer data={currAlbumData} />}
+      {currAlbumData.length !== 0 && isAlbumPlayerActive && <AlbumPlayer data={currAlbumData} />}
     </div>
   )
 }

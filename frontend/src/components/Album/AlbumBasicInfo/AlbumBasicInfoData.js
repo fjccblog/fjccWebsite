@@ -7,8 +7,16 @@ import { AlbumData2023ElderlyCareMinistry } from "../2023/AlbumData2023ElderlyCa
 import { AlbumData2023LifeTogether } from "../2023/AlbumData2023LifeTogether";
 import { AlbumData2023Thanksgiving } from "../2023/AlbumData2023Thanksgiving";
 import { AlbumData2023Christmas } from "../2023/AlbumData2023Christmas";
+import { AlbumData2024LunarNewYear } from "../2024/AlbumData2024LunarNewYear";
 
 export const AlbumBasicInfoData = [
+  {
+    'albumName':'2024 Lunar New Year',
+    'year': 2024,
+    'updatedAt': '2024-02-14',
+    'albumData' : AlbumData2024LunarNewYear,
+    'coverImgUrl':'https://lh3.googleusercontent.com/pw/ABLVV86UmG6guTn1HHw0vqsGj_Y4gS43QTt4Yz7q8z8m-7B0koxHdAIBHDMk8_hgTzOWpsOVP_865cPdmOpg0ta8VjxdSdSVrP849bQDkf9HCBkKGiJbDRE=w1920-h1080'
+  },
   {
     'albumName':'2023 Christmas',
     'year': 2023,
