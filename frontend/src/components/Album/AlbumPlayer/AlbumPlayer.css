@@ -91,3 +91,9 @@
   0%   { transform: translateY(70vh); opacity: 0.3;}
   100% { transform: translateY(0); opacity: 1;}
 }
+
+@media screen and (max-width: 600px) {
+  .albumPlayerContainer {
+    width: 95vw;
+  }
+}

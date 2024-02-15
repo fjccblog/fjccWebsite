@@ -69,16 +69,17 @@ function PrayerLetter() {
       <div className='allLetterInfoContainer'>
         {currYearLetters.map((letterInfo)=>{
           return (
-            <div className='singleAlbumInfoContainer' onClick={() => updateLetterData(letterInfo.letterID)}>
-              <div className='albumInfoDescription'>
-                <strong className='albumInfoDescriptionName'>{letterInfo.letterName}</strong>
-                {isLetterRecent(currTime, letterInfo.updatedAt) && <span className='albumNew'>New</span>}
-                <div className='albumInfoDescriptionUpdateAt'>
-                    <div>
-                      <span className='albumInfoUpdated'>Updated:</span> <span>{letterInfo.updatedAt} </span>
-                    </div>
+            <div className='singleLetterInfoContainer' onClick={() => updateLetterData(letterInfo.letterID)}>
+              <div className='letterInfo'>
+                <div>
+                  <strong className='letterName'>{letterInfo.letterName}</strong>
+                  {isLetterRecent(currTime, letterInfo.updatedAt) && <span className='letterNew'>New</span>}
+                </div>
+                <div className=''>
+                  <span className=''>Updated:</span> <span>{letterInfo.updatedAt} </span>
                 </div>
               </div>
+              <hr></hr>
             </div>
           )})}
       </div>
