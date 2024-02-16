@@ -30,7 +30,7 @@
   padding: 10px;
 }
 
-.letterFilterYear:hover {
+.letterFilterYear:hover:not(.letterFilterYearActive) {
   color: var(--hoverBlue);
 }
 

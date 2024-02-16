@@ -61,7 +61,7 @@
   padding: 10px;
 }
 
-.albumFilterYear:hover {
+.albumFilterYear:hover:not(.letterFilterYearActive) {
   color: var(--hoverBlue);
 }
 
