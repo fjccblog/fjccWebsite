@@ -3,6 +3,7 @@
 * [  ] album player should take 100vw when in mobile size
 
 * [  ] prayer letters list and simliar structure to album page for prayer letter page
+* [  ] perhaps alternating color for prayer letter
 
 * [  ] faith statement page, add toggle on and off to show content for each section
 

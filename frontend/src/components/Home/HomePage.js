@@ -17,7 +17,7 @@ function HomePage() {
           <div className='item-container color-blk'>
             <Link to={element.English}>
               <div className='img-container '>
-                <img class="width100 height-max-100 obj-fit-cover bor-rad-15" src="https://lh3.googleusercontent.com/p/AF1QipNliLMj6OFAC-4mfbhtUBrshwN5HrsFlXKbDrYT=s1360-w1360-h1020" alt="App Academy" />
+                <img className="width100 height-max-100 obj-fit-cover bor-rad-15" src="https://lh3.googleusercontent.com/pw/ABLVV84t3azys4HaG3Fwwbj-FnQhjPbGLqYTiXUb10YG5-lBXjevXfZUE-6yk78FQ0ZPSZR0QY4zi_RSSFyKozzBBfYI5Xlw5ZzODoRjCDL4V9jYubnPzj8=w1920-h1080" alt="walk together" />
               </div>
               <div className='pad15p font15' >
                 {element.Chinese}

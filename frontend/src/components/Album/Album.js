@@ -8,9 +8,10 @@ function Album() {
   let allAlbumInfoContainer = document.querySelector('.allAlbumInfoContainer');
   let albumPlayerContainer = document.querySelector('.albumPlayerContainer');
 
-  function filterAlbumByYear(year) {
+  function filterAlbumByYear(year, index) {
     setCurrYearAlbums(AlbumBasicInfoData.filter((infoData)=>infoData.year === year))
     setIsAlbumPlayerActive(false);
+    setSelectedYearIndex(index);
   }
 
   function updateAlbumData (albumData) {
@@ -25,10 +26,9 @@ function Album() {
   //-------------------------
   let years = [];
   let yearSet = new Set();
+  let [selectedYearIndex, setSelectedYearIndex] = useState(0);
   let [currYearAlbums, setCurrYearAlbums] = useState([]);
-
   let [currAlbumData, setCurrAlbumData] = useState([]);
-
   let [isAlbumPlayerActive, setIsAlbumPlayerActive] = useState(false);
 
   AlbumBasicInfoData.forEach((infoData) => {
@@ -40,6 +40,7 @@ function Album() {
 
   useEffect(()=>{
     filterAlbumByYear(years[0]);
+    setSelectedYearIndex(0);
   }, [])
 
   useEffect(()=> {
@@ -59,9 +60,12 @@ function Album() {
     <div className='albumPageContainer'>
       <div className='albumFilterYearContainer'>
         <span className=''>年份: </span>
-        {years.map((year)=> {
+        {years.map((year, index)=> {
           return (
-            <span onClick={()=>filterAlbumByYear(year)} className='albumFilterYear'>{year} </span>
+            <span onClick={()=>filterAlbumByYear(year, index)}
+              className={`albumFilterYear ${selectedYearIndex === index ? "letterFilterYearActive" : ""}`}>
+              {year}
+            </span>
           )
         })}
       </div>

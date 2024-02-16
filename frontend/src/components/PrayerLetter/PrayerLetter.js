@@ -9,13 +9,14 @@ function PrayerLetter() {
   let allLetterInfoContainer = document.querySelector('.allLetterInfoContainer');
   let letterPlayerContainer = document.querySelector('.letterPlayerContainer');
 
-  function filterLetterByYear(year) {
+  function filterLetterByYear(year, index) {
     setCurrYearLetters(LetterBasicInfoData.filter((infoData)=>infoData.year === year))
     setIsLetterPlayerActive(false);
+    setSelectedYearIndex(index);
   }
 
-  function updateLetterData (albumData) {
-    setCurrLetterData(albumData);
+  function updateLetterData (letterID) {
+    setCurrLetterData(letterID);
     setIsLetterPlayerActive(true);
   }
 
@@ -26,10 +27,9 @@ function PrayerLetter() {
   //-------------------------
   let years = [];
   let yearSet = new Set();
+  let [selectedYearIndex, setSelectedYearIndex] = useState(0);
   let [currYearLetters, setCurrYearLetters] = useState([]);
-
   let [currLetterData, setCurrLetterData] = useState('');
-
   let [isLetterPlayerActive, setIsLetterPlayerActive] = useState(false);
 
   LetterBasicInfoData.forEach((infoData) => {
@@ -41,6 +41,7 @@ function PrayerLetter() {
 
   useEffect(()=>{
     filterLetterByYear(years[0]);
+    setSelectedYearIndex(0);
   }, [])
 
   useEffect(()=> {
@@ -58,11 +59,14 @@ function PrayerLetter() {
 
   return (
     <div className='albumPageContainer'>
-      <div className='albumFilterYearContainer'>
+      <div className='letterFilterYearContainer'>
         <span className=''>年份: </span>
-        {years.map((year)=> {
+        {years.map((year, index)=> {
           return (
-            <span onClick={()=>filterLetterByYear(year)} className='albumFilterYear'>{year} </span>
+            <span onClick={()=>filterLetterByYear(year, index)}
+              className={`letterFilterYear ${selectedYearIndex === index ? "letterFilterYearActive" : ""}`}>
+              {year}
+            </span>
           )
         })}
       </div>
@@ -72,14 +76,14 @@ function PrayerLetter() {
             <div className='singleLetterInfoContainer' onClick={() => updateLetterData(letterInfo.letterID)}>
               <div className='letterInfo'>
                 <div>
-                  <strong className='letterName'>{letterInfo.letterName}</strong>
+                  <div className='letterName'>{letterInfo.letterName}</div>
                   {isLetterRecent(currTime, letterInfo.updatedAt) && <span className='letterNew'>New</span>}
                 </div>
                 <div className=''>
-                  <span className=''>Updated:</span> <span>{letterInfo.updatedAt} </span>
+                  {/* <span className=''>Updated:</span>  */}
+                  <span>{letterInfo.updatedAt} </span>
                 </div>
               </div>
-              <hr></hr>
             </div>
           )})}
       </div>
