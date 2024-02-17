@@ -3,7 +3,7 @@ let sections = [
     imgurl:null},
   {English: 'salvationTestimony', Chinese: '得救見證', lastUpdate:'楊紹芬得救見證',
     imgurl:null},
-  {English: 'eventHighlight', Chinese: '活動花絮', lastUpdate:'Dec 2023',
+  {English: 'album', Chinese: '活動花絮', lastUpdate:'Dec 2023',
     imgurl:null},
   {English: 'spiritalFood', Chinese: '靈糧寶庫', lastUpdate:null,
     imgurl:null},

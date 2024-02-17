@@ -2,13 +2,13 @@ export const LetterBasicInfoData = [
   {
     'letterName':'FJCC 2023 November Prayer Letter',
     'year': 2023,
-    'updatedAt': '2024-01-30',
+    'updatedAt': '2023-11-24',
     'letterID' : '1LIMDRE4K0avBrtprE5PzHslUORiJgU9a',
   },
   {
     'letterName':'FJCC 2023 February Prayer Letter',
     'year': 2023,
-    'updatedAt': '2023-02-28',
+    'updatedAt': '2023-02-06',
     'letterID' : '1JFUQKJXYIbbzf_YYHr0r4RE8x8lzNP7H',
   },
   {
@@ -18,9 +18,105 @@ export const LetterBasicInfoData = [
     'letterID' : '1e_1NbBEm3q5pVPfN5KyvyNgkc3hkhOwf',
   },
   {
-    'letterName':'FJCC 2022 October Prayer Letter ',
+    'letterName':'FJCC 2022 October Prayer Letter',
     'year': 2022,
-    'updatedAt': '2022-12-30',
+    'updatedAt': '2022-10-18',
     'letterID' : '14tg1dyFJSwEzUHFcchX_YoTGsNh4LAgJ',
+  },
+  {
+    'letterName':'FJCC 2022 April Prayer Letter',
+    'year': 2022,
+    'updatedAt': '2022-04-27',
+    'letterID' : '1Spo3ZQITLc-mWt6wA5H0HjKxWIYD0nFh',
+  },
+  {
+    'letterName':'FJCC 2021 January Prayer Letter',
+    'year': 2021,
+    'updatedAt': '2021-01-13',
+    'letterID' : '1SidEL2RWcR3HlWFvsZeBCBTOgiQ5ZdAl',
+  },
+  {
+    'letterName':'FJCC 2020 July Prayer Letter',
+    'year': 2020,
+    'updatedAt': '2020-07-22',
+    'letterID' : '1GuuqYGNuFWjG2ZMcsBdQFU5YLfJDz3vi',
+  },
+  {
+    'letterName':'2019 Prayer Letter from Faith Jireh Christian Commission',
+    'year': 2019,
+    'updatedAt': '2019-12-31',
+    'letterID' : '1c0MVEoQB0-0DhmfUAxmwakmCESxik_Fp',
+  },
+  {
+    'letterName':'FJCC 2019 December Prayer Letter',
+    'year': 2019,
+    'updatedAt': '2019-12-24',
+    'letterID' : '10fh2U-h3RO2yXXGUx72Z31nxIZ7ldSPq',
+  },
+  {
+    'letterName':'FJCC 2018 December Prayer Letter',
+    'year': 2018,
+    'updatedAt': '2018-12-23',
+    'letterID' : '1e0kAJVm9XJu_e9X0fbQlSOsKA5Gy2GlN',
+  },
+  {
+    'letterName':'Prayer Letter from Jianming Zhen for Urbana Mission Conference 2018',
+    'year': 2018,
+    'updatedAt': '2018-12-07',
+    'letterID' : '1D69CqaEwMwoWadqMK4j3_8ZpgKPa0rJJ',
+  },
+  {
+    'letterName':'FJCC 2017 November Prayer Letter',
+    'year': 2017,
+    'updatedAt': '2017-11-24',
+    'letterID' : '1hbnFA_YEHxP8lElA2dy22VlaplvBsfXR',
+  },
+  {
+    'letterName':'FJCC 2016 October Prayer Letter',
+    'year': 2016,
+    'updatedAt': '2016-10-19',
+    'letterID' : '0B3Q9hIpeuRj7ZnBPN0xnTTF1QzQ',
+  },
+  {
+    'letterName':'FJCC 2015 December Prayer Letter',
+    'year': 2015,
+    'updatedAt': '2016-01-07',
+    'letterID' : '0B3Q9hIpeuRj7TmhkNmZpNzUyaVk',
+  },
+  {
+    'letterName':'April 2015 Prayer letter',
+    'year': 2015,
+    'updatedAt': '2014-05-02',
+    'letterID' : '0B3Q9hIpeuRj7aDBZMEtyM09qLWs',
+  },
+  {
+    'letterName':'March 2015 Prayer Letter',
+    'year': 2015,
+    'updatedAt': '2015-03-19',
+    'letterID' : '1bsPU8nchpXxx1VPh-YhW8gtdCZQd7pxe',
+  },
+  {
+    'letterName':'End of Year 2014 Prayer Letter',
+    'year': 2014,
+    'updatedAt': '2014-12-31',
+    'letterID' : '1GFSlDXVW1cQvZiiyU4WfMh8ajKnmgM3Z',
+  },
+  {
+    'letterName':'Christmas 2014 Prayer Letter',
+    'year': 2014,
+    'updatedAt': '2014-12-18',
+    'letterID' : '1dPwfwoiYnHQEW2DGi43FgJm14VF0oQ8L',
+  },
+  {
+    'letterName':'June 2014 Prayer Letter',
+    'year': 2014,
+    'updatedAt': '2014-06-17',
+    'letterID' : '1OsLkBXP0xYg0RD_rGJd5a4hTl8Dz0ODp',
+  },
+  {
+    'letterName':'February 2014 Prayer Letter',
+    'year': 2014,
+    'updatedAt': '2014-02-25',
+    'letterID' : '1ve7rKqvCN63h5YB84leEqkCp2GMNdg7-',
   }
 ]

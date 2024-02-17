@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavDropDown from './NavDropDown';
+// import OpenModalButton from '../../context/OpenModalButton';
+// import NavModal from './NavModal';
 import './navbar.css';
 
 function Nav() {

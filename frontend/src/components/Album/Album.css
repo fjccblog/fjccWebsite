@@ -45,20 +45,30 @@
 }
 
 .albumFilterYearContainer {
+  padding: 2rem;
+  margin: 0 auto;
   display: flex;
-  width: fit-content;
-  margin: 15px auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .albumFilterYear {
   cursor: pointer;
   display: block;
-  margin: 0 8px;
   font-size: 1.25rem;
+  padding: 10px;
 }
 
-.albumFilterYear:hover {
-  color: var(--lightBlue);
+.albumFilterYear:hover:not(.letterFilterYearActive) {
+  color: var(--hoverBlue);
+}
+
+.letterFilterYearActive {
+  background-color: black;
+  color: white;
+  border-radius: 15px;
 }
 
 .singleAlbumInfoContainer:hover{

@@ -1,5 +1,5 @@
 .navContainer {
-  background-color: var(--lightWise);
+  background-color: var(--backgroundOrange);
   padding-top: 3px;
   padding-bottom: 3px;
 }
@@ -58,5 +58,11 @@
 }
 
 .navItem:hover {
-  color: var(--lightBlue);
+  color: var(--hoverBlue);
+}
+
+@media screen and (max-width:650px) {
+  .navContainer {
+    display: none;
+  }
 }

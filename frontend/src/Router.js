@@ -8,7 +8,7 @@ import FaithStatementPage from './pages/FaithStatementPage.js';
 import HomePage from './components/Home/HomePage.js';
 import Logo from './components/Logo/Logo.js';
 import MinistryPage from './pages/Ministry.js';
-import Nav from './components/navbar/Nav.js';
+import Nav from './components/Navbar/Nav.js';
 import NotFoundPage from './pages/NotFoundPage';
 import OfferingPage from './pages/OfferingPage.js';
 import PrayerLetterPage from './pages/PrayerLetterPage.js'
