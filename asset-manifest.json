@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/fjccWebsite/static/css/main.d8e8c3ef.css",
-    "main.js": "/fjccWebsite/static/js/main.72c4eedf.js",
+    "main.css": "/fjccWebsite/static/css/main.ea82d975.css",
+    "main.js": "/fjccWebsite/static/js/main.b8431bed.js",
     "index.html": "/fjccWebsite/index.html",
-    "main.d8e8c3ef.css.map": "/fjccWebsite/static/css/main.d8e8c3ef.css.map",
-    "main.72c4eedf.js.map": "/fjccWebsite/static/js/main.72c4eedf.js.map"
+    "main.ea82d975.css.map": "/fjccWebsite/static/css/main.ea82d975.css.map",
+    "main.b8431bed.js.map": "/fjccWebsite/static/js/main.b8431bed.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8e8c3ef.css",
-    "static/js/main.72c4eedf.js"
+    "static/css/main.ea82d975.css",
+    "static/js/main.b8431bed.js"
   ]
 }
