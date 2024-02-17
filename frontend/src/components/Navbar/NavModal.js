@@ -18,69 +18,73 @@ function NavModal() {
     //align modal to the right
     let modalContent = document.querySelector('#modal-content');
     modalContent.style.right = '0px';
+    modalContent.style.animation = 'ShowModal 1.5s ease';
   }, [])
 
   return (
     <div className='navModalContainer'>
-      <button onClick={()=>closeModal()}>close modal</button>
+      <button onClick={()=>closeModal()} className='modalCloseBtn'>
+        <i className="fas fa-times modalCloseBtnIcon"></i>
+        <span className='modalCloseBtnText'>關閉</span>
+      </button>
       <div>
-        <div className="navItem" onClick={()=>setIsMinistryDivOpen(!isMinistryDivOpen)}>
+        <div className="navModalItem" onClick={()=>setIsMinistryDivOpen(!isMinistryDivOpen)}>
           外展事工 <i className="fas fa-chevron-down"></i>
         </div>
-        {isMinistryDivOpen &&  <div className=''>
+        {isMinistryDivOpen &&  <div className='navModalDropdown'>
           <Link to='/childMinistry'>
-            <div >兒童事工</div>
+            <div onClick={()=>closeModal()}>兒童事工</div>
           </Link>
           <Link to='juniorHighMinistry'>
-            <div >初、高中生事工</div>
+            <div onClick={()=>closeModal()}>初、高中生事工</div>
           </Link>
           <Link to='collegeMinistry'>
-            <div >大學事工</div>
+            <div onClick={()=>closeModal()}>大學事工</div>
           </Link>
           <Link to='sportMinistry'>
-            <div >體育事工</div>
+            <div onClick={()=>closeModal()}>體育事工</div>
           </Link>
           <Link to='seniorMinistry'>
-            <div >長者事工</div>
+            <div onClick={()=>closeModal()}>長者事工</div>
           </Link>
         </div>}
       </div>
       <div>
-        <div className="navItem" onClick={()=>setIsAboutDivOpen(!isAboutDivOpen)}>
+        <div className="navModalItem" onClick={()=>setIsAboutDivOpen(!isAboutDivOpen)}>
           關於教會 <i className="fas fa-chevron-down"></i>
         </div>
-        {isAboutDivOpen && <div className=''>
+        {isAboutDivOpen && <div className='navModalDropdown'>
           <Link to='/faithStatement'>
-            <div>信仰立場</div>
+            <div onClick={()=>closeModal()}>信仰立場</div>
           </Link>
           <Link to='purpose'>
-            <div>宗旨 / 使命</div>
+            <div onClick={()=>closeModal()}>宗旨 / 使命</div>
           </Link>
           <Link to='churchHistory'>
-            <div>教會簡史</div>
+            <div onClick={()=>closeModal()}>教會簡史</div>
           </Link>
         </div>}
       </div>
       <div>
-        <div className="navItem" onClick={()=>setIsActivityDivOpen(!isActivityDivOpen)}>
+        <div className="navModalItem" onClick={()=>setIsActivityDivOpen(!isActivityDivOpen)}>
           教會近況 <i className="fas fa-chevron-down"></i>
         </div>
-        {isActivityDivOpen && <div className=''>
+        {isActivityDivOpen && <div className='navModalDropdown'>
           <Link to='/prayerLetter'>
-            <div href="#welcome">代禱信</div>
+            <div onClick={()=>closeModal()}>代禱信</div>
           </Link>
           <Link to='album'>
-            <div href="#meetOurTeam">活動花絮</div>
+            <div onClick={()=>closeModal()}>活動花絮</div>
           </Link>
         </div>}
       </div>
       <div>
-        <div className="navItem" onClick={()=>setIsTestimonyDivOpen(!isTestimonyDivOpen)}>
+        <div className="navModalItem" onClick={()=>setIsTestimonyDivOpen(!isTestimonyDivOpen)}>
           生命見證 <i className="fas fa-chevron-down"></i>
         </div>
-        {isTestimonyDivOpen && <div className=''>
+        {isTestimonyDivOpen && <div className='navModalDropdown'>
           <Link to='/baptism'>
-            <div href="#welcome">得救見證</div>
+            <div onClick={()=>closeModal()}>得救見證</div>
           </Link>
         </div>}
       </div>
