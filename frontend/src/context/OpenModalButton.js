@@ -17,11 +17,11 @@ function OpenModalButton({
     if (onButtonClick) onButtonClick();
   };
 
-  // if (buttonTag === "span") {
-  //   return (
-  //     <span onClick={onClick} className={customizeStyle}>{buttonText}</span>
-  //   )
-  // }
+  if (buttonTag === "span") {
+    return (
+      <span onClick={onClick} className={customizeStyle}>{buttonText}</span>
+    )
+  }
   return (
     <button onClick={onClick} className={customizeStyle}>{buttonText}</button>
   );

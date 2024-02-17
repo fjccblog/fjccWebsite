@@ -1,16 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import OpenModalButton from '../../context/OpenModalButton';
-import NavModal from './NavModal';
+// import OpenModalButton from '../../context/OpenModalButton';
+// import NavModal from './NavModal';
 import './navbar.css';
 
 function Nav() {
 
   return (
     <div className="navContainer">
-      <div>
-        <OpenModalButton modalComponent={<NavModal/>} buttonText='Hello' />
-      </div>
       <ul className='flx-center list-none gap20p'>
         <li className='dropdown-nav-item'>
           <div>

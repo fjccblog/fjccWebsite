@@ -60,3 +60,9 @@
 .navItem:hover {
   color: var(--hoverBlue);
 }
+
+@media screen and (max-width:650px) {
+  .navContainer {
+    display: none;
+  }
+}
