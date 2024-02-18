@@ -24,12 +24,12 @@ function NavModal() {
   let [isTestimonyDivOpen, setIsTestimonyDivOpen] = useState(false);
 
 
-  useEffect(()=> {
-    //align modal to the right
-    let modalContent = document.querySelector('#modal-content');
-    modalContent.style.right = '0px';
-    modalContent.style.animation = 'ShowModal 1.5s ease';
-  }, [])
+  // useEffect(()=> {
+  //   //align modal to the right
+  //   let modalContent = document.querySelector('#modal-content');
+  //   modalContent.style.right = '0px';
+  //   modalContent.style.animation = 'ShowModal 1.5s ease';
+  // }, [])
 
   return (
     <div className='navModalContainer'>

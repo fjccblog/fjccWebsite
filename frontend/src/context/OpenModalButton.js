@@ -7,14 +7,19 @@ function OpenModalButton({
   onButtonClick, // optional: callback function that will be called once the button that opens the modal is clicked
   onModalClose, // optional: callback function that will be called once the modal is closed
   customizeStyle,
-  buttonTag
+  buttonTag,
+  modalCss,
+  modalContentCss
 }) {
-  const { setModalContent, setOnModalClose } = useModal();
+  const { setModalContent, setOnModalClose, setModalCss, setModalContentCss } = useModal();
+
 
   const onClick = () => {
     if (onModalClose) setOnModalClose(onModalClose);
     setModalContent(modalComponent);
     if (onButtonClick) onButtonClick();
+    setModalCss(modalCss);
+    setModalContentCss(modalContentCss);
   };
 
   if (buttonTag === "span") {
