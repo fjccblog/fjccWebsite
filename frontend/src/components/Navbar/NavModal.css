@@ -1,5 +1,53 @@
 .navModalContainer {
-  height: 100vh;
+  height: 100svh;
   background-color: white;
   padding: 10px;
+  margin: 10px;
+}
+
+.modalCloseBtn {
+  background-color: transparent;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  gap:5px;
+}
+
+.modalCloseBtnIcon {
+  font-size: 1.5rem;
+  padding: 3px 5px;
+  background-color: var(--backgroundGray);
+  border-radius: 50%;
+}
+
+.modalCloseBtnText {
+  font-size: 1.25rem;
+}
+
+.modalRight {
+  right: 0px;
+  animation: ShowModalFromRight 1.5s ease;
+}
+
+.navModalItem {
+  font-size: 1.15rem;
+  padding: 0.75rem;
+  border-bottom: 2px solid var(--backgroundGray);
+}
+
+.navModalDropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes ShowModalFromRight {
+  0%   { transform: translateX(100vw); opacity: 0.2;}
+  100% { transform: translateX(0); opacity: 1;}
+}
+
+@keyframes HideModal {
+  0%   { transform: translateX(0); opacity: 1;}
+  100% { transform: translateX(100vw); opacity: 0.2;}
 }

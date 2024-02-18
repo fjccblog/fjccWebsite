@@ -338,6 +338,14 @@ a {
   margin: auto 15px auto;
 }
 
+/*============ modal ================*/
+
+.modalCenter {
+  justify-content: center;
+  align-items: center;
+}
+
+
 /*============ overflow ================*/
 .overflow-h {
   overflow: hidden;
