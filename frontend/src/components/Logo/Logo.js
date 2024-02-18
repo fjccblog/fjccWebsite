@@ -5,6 +5,14 @@ import NavModal from '../Navbar/NavModal';
 import './Logo.css';
 
 function Logo() {
+
+  function ModalBackgroundAnimation() {
+    setTimeout(()=> {
+      let modalBackground = document.querySelector('#modal-background');
+      modalBackground.style.animation = 'ShowModalBackground 3s ease';
+    }, 10)
+  }
+
   return (
     <Link to="/" className="logoLink">
       <div className='logoContainer'>
@@ -13,6 +21,7 @@ function Logo() {
           <div className='logoName'>Faith Jireh Christian Church</div>
           <OpenModalButton modalComponent={<NavModal />}
             buttonText={<i className="fas fa-bars"></i>}
+            onButtonClick={()=>ModalBackgroundAnimation()}
             customizeStyle='menuBtn'/>
       </div>
     </Link>

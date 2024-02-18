@@ -34,3 +34,8 @@
     display: none;
   }
 }
+
+@keyframes ShowModalBackground {
+  0%   { opacity: 0; background-color: rgba(255, 255, 255, 0);}
+  100% { opacity: 1; background-color: rgba(0, 0, 0, 0.7);}
+}
