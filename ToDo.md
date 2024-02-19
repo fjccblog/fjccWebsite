@@ -3,13 +3,13 @@
 * [  ] image on load? https://stackoverflow.com/questions/43115246/how-to-detect-when-a-image-is-loaded-that-is-provided-via-props-and-change-sta
 https://stackoverflow.com/questions/280049/how-can-i-run-a-javascript-callback-when-an-image-is-loaded
 
-* [  ] prayer letters list and simliar structure to album page for prayer letter page
-* [  ] perhaps alternating color for prayer letter
 
 * [  ] faith statement page, add toggle on and off to show content for each section
 
 * [  ] day-night theme
 
+* [done] prayer letters list and simliar structure to album page for prayer letter page
+* [done] perhaps alternating color for prayer letter
 * [done] [bug] navbar modal appear in the middle first for 1 second, then slide from right. Solve: Add className with useContext for modal component from OpenModalButton
 * [done] add more album filter years and more album data
 * [done] album player should take 100vw when in mobile size

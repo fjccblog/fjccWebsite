@@ -1,24 +1,53 @@
 #modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
 
-  #modal-background {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
+#modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
-  #modal-content {
-    position: absolute;
-    background-color:white;
-  }
+#modal-content {
+  position: absolute;
+  background-color:white;
+}
+
+.modalCenter {
+  justify-content: center;
+  align-items: center;
+}
+
+.modalRight {
+  right: 0px;
+  animation: ShowModalFromRight 1.5s ease;
+}
+
+.modalBackgroundFadeIn {
+  animation: ModalBackgroundFadeIn 3s ease-in;
+}
+
+@keyframes ShowModalFromRight {
+  0%   { transform: translateX(100vw); opacity: 0.2;}
+  100% { transform: translateX(0); opacity: 1;}
+}
+
+@keyframes HideModal {
+  0%   { transform: translateX(0); opacity: 1;}
+  100% { transform: translateX(100vw); opacity: 0.2;}
+}
+
+@keyframes ModalBackgroundFadeIn {
+  0%   {  opacity: 0; }
+  100% {  opacity: 1; }
+}
