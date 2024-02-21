@@ -9,9 +9,10 @@ function OpenModalButton({
   customizeStyle,
   buttonTag,
   modalCss,
-  modalContentCss
+  modalContentCss,
+  modalBackgroundCss
 }) {
-  const { setModalContent, setOnModalClose, setModalCss, setModalContentCss } = useModal();
+  const { setModalContent, setOnModalClose, setModalCss, setModalContentCss, setModalBackgroundCss } = useModal();
 
 
   const onClick = () => {
@@ -20,6 +21,7 @@ function OpenModalButton({
     if (onButtonClick) onButtonClick();
     setModalCss(modalCss);
     setModalContentCss(modalContentCss);
+    setModalBackgroundCss(modalBackgroundCss);
   };
 
   if (buttonTag === "span") {

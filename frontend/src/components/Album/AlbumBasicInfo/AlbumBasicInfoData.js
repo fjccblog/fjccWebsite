@@ -1,3 +1,5 @@
+import { AlbumData2018Spring } from "../2018/AlbumData2018";
+import { AlbumData2019 } from "../2019/AlbumData2019";
 import { AlbumData2021 } from "../2021/AlbumData2021";
 import { AlbumData2022 } from "../2022/AlbumData2022";
 import { AlbumData2022Thanksgiving } from "../2022/AlbumData2022Thanksgiving";
@@ -79,5 +81,20 @@ export const AlbumBasicInfoData = [
     'updatedAt': '2021-12-30',
     'albumData' : AlbumData2021,
     'coverImgUrl':'https://lh3.googleusercontent.com/pw/ABLVV862lilSthi53e8IpvPk6zaBcSsbVxT22sZ3qFZk8ilWLfURM5cZuMqYOLNIzUkO4kBvoWe-if3jC9SB2xUNzGAyWf9YZDgJiTQzCLLYQSh4pM-IV7g=w1920-h1080'
+  },
+  {
+    'albumName':'2019 @FJCC',
+    'year': 2019,
+    'updatedAt': '2019-12-30',
+    'albumData' : AlbumData2019,
+    'coverImgUrl':'https://lh3.googleusercontent.com/qBY32bEdR3O99K125QNVhgzr48maBRwKDfyFh0tUKJYp_dJIcIU1JHjIVlI5bMRBQWuT4Fem1MYNf-BePepGZfP6pKyMjJKgV7Gzk0GNGJXXhoNzUMM3IDxmRVZwJzyCkoUOJZab9w=w1920-h1080'
+  },
+  {
+    'albumName':'Spring 2018',
+    'year': 2018,
+    'updatedAt': '2018-12-30',
+    'albumData' : AlbumData2018Spring,
+    'coverImgUrl':'https://live.staticflickr.com/4791/25692559207_427ef8c315_z.jpg'
   }
+
 ]

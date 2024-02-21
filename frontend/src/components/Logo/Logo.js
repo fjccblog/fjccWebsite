@@ -7,13 +7,6 @@ import TestModal from '../Testing/TestingModal';
 
 function Logo() {
 
-  function ModalBackgroundAnimation() {
-    setTimeout(()=> {
-      let modalBackground = document.querySelector('#modal-background');
-      modalBackground.style.animation = 'ShowModalBackground 3s ease';
-    }, 10)
-  }
-
   return (
     <div className='logoContainer'>
       <Link to="/" className="logoLink">
@@ -25,9 +18,9 @@ function Logo() {
       </Link>
       <OpenModalButton modalComponent={<NavModal />}
         buttonText={<i className="fas fa-bars"></i>}
-        onButtonClick={()=>ModalBackgroundAnimation()}
         customizeStyle='menuBtn'
-        modalContentCss='modalRight' />
+        modalContentCss='modalRight'
+        modalBackgroundCss='modalBackgroundFadeIn'/>
     </div>
   )
 }
