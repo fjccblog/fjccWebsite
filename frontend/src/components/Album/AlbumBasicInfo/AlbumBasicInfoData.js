@@ -1,4 +1,4 @@
-import { AlbumData2018 } from "../2018/AlbumData2018";
+import { AlbumData2018Spring } from "../2018/AlbumData2018";
 import { AlbumData2019 } from "../2019/AlbumData2019";
 import { AlbumData2021 } from "../2021/AlbumData2021";
 import { AlbumData2022 } from "../2022/AlbumData2022";
@@ -93,7 +93,7 @@ export const AlbumBasicInfoData = [
     'albumName':'Spring 2018',
     'year': 2018,
     'updatedAt': '2018-12-30',
-    'albumData' : AlbumData2018,
+    'albumData' : AlbumData2018Spring,
     'coverImgUrl':'https://live.staticflickr.com/4791/25692559207_427ef8c315_z.jpg'
   }
 
