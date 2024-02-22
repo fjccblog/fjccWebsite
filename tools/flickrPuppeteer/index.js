@@ -4,12 +4,14 @@ const puppeteer = require('puppeteer');
 
 //Spring 2018
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157688357615070';
+
 // winter 2017
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157668156510049';
 // FJCC 14th Anniversary <<<<<
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157687256052792/';
 // What is Happening in FJCC 2017
-// let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157678808138323/';
+let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157678808138323/';
+
 // Christmas 2016
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157678515174766';
 // 2016 Summer Mission in Taiwan II
@@ -28,6 +30,7 @@ const puppeteer = require('puppeteer');
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157670310149890';
 // Bethlehem Ministry
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157662351707370';
+
 // Togetherness 2015
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157660592535554';
 // Thanksgiving 2015
@@ -41,6 +44,60 @@ const puppeteer = require('puppeteer');
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157653038936682';
 // Northgate Senior Ministry
 // let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157651680717960';
+// The Lord's Day 2015
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157651816287905';
+// In N Out Reach 2015
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157651539690455';
+
+// Christmas Party 2014
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157649501719558';
+// Life Together - Fall 2014
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157646417206803';
+// Summer Local Mission
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157645718461121';
+// Summer Together
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157645730278835';
+// Music Lessons
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157645771034073';
+// Independence Day Church Family BBQ, Basketball & Fireworks
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157645720152862';
+// 屋仔的故事
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157645717169921';
+// Basketball Ministry
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157645728175412';
+// Church Dedication
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157644573172314';
+// 10th Anniversary Baptism
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157644572409995';
+// FJCC 2014
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157644158181279';
+
+// 2013 Christmas
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157639109274154';
+// Welcome Back, Rev. Siu
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157639121653534';
+// 10th Anniversary Thanksgiving Celebration
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157636313158496';
+// SHARP醒好友營
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157634986725358';
+// Leadership & Evangelism Training
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157634986679104';
+// Neighborhood Block Party 2013
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157634986617730';
+// 以勒堂第九屆浸禮
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157634704331032';
+// Summer 2013
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157634681881076';
+// Spring 2013
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157634684555310';
+
+
+
+
+
+
+
+
 
 
 (async () => {

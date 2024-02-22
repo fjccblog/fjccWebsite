@@ -46,7 +46,8 @@ let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157688357615070'
   await page.goto(url);
   const styles = await page.$$eval('div.photo-list-photo-view', el => el.map(x => x.getAttribute('style')));
   // only taking inside url("//...")
-  const urlArr = styles.map(el => el.split('url("//')[1].split('")')[0]);
+  // also add "https:" to the very start
+  const urlArr = styles.map(el => "https:" + el.split('url("')[1].split('")')[0]);
   console.log(urlArr)
   await browser.close();
 })();
