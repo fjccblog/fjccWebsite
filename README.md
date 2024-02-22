@@ -32,6 +32,27 @@ object or emded pose less risk of leaking data
 </div>
 ```
 
+### Time comsuming to copy link of each flickr pictures
+* write a web scrapping tool / code to shorten the time
+
+```
+const puppeteer = require('puppeteer');
+
+let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157688357615070';
+
+(async () => {
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+  await page.goto(url);
+  const styles = await page.$$eval('div.photo-list-photo-view', el => el.map(x => x.getAttribute('style')));
+  // only taking inside url("//...")
+  const urlArr = styles.map(el => el.split('url("//')[1].split('")')[0]);
+  console.log(urlArr)
+  await browser.close();
+})();
+```
+
+
 ### deploy React to GitHub Pages
 * most of the part is very straigt forward with ```https://github.com/gitname/react-gh-pages```
 * The only difference is that this repo has frontend and backend folder, even though at this moment, the backend folder is empty
