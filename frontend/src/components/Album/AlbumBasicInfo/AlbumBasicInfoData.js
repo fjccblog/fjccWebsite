@@ -1,4 +1,10 @@
-import { AlbumData2018Spring } from "../2018/AlbumData2018";
+
+import { AlbumData2016SummerMission } from '../2016/AlbumData2016SummerMission';
+import { AlbumData2016Christmas } from '../2016/AlbumData2016Christmas';
+import { AlbumData2017WhatIsHappeningInFJCC } from '../2017/AlbumData2017WhatIsHappeningInFJCC';
+import { AlbumData2017FJCC14thAnniversary } from '../2017/AlbumData2017FJCC14thAnniversary';
+import {AlbumData2017Winter } from '../2017/AlbumData2017Winter';
+import { AlbumData2018Spring } from "../2018/AlbumData2018Spring";
 import { AlbumData2019 } from "../2019/AlbumData2019";
 import { AlbumData2021 } from "../2021/AlbumData2021";
 import { AlbumData2022 } from "../2022/AlbumData2022";
@@ -95,6 +101,41 @@ export const AlbumBasicInfoData = [
     'updatedAt': '2018-12-30',
     'albumData' : AlbumData2018Spring,
     'coverImgUrl':'https://live.staticflickr.com/4791/25692559207_427ef8c315_z.jpg'
+  },
+  {
+    'albumName':'FJCC Winter 2017',
+    'year': 2017,
+    'updatedAt': '2018-01-15',
+    'albumData' : AlbumData2017Winter,
+    'coverImgUrl':'https://live.staticflickr.com/4734/39450254961_f3ca090aa5_z.jpg'
+  },
+  {
+    'albumName':'FJCC 14th Anniversary',
+    'year': 2017,
+    'updatedAt': '2017-11-11',
+    'albumData' : AlbumData2017FJCC14thAnniversary,
+    'coverImgUrl':'https://live.staticflickr.com/4519/38294169196_c37a174641_z.jpg'
+  },
+  {
+    'albumName':'What is Happening in FJCC 2017',
+    'year': 2017,
+    'updatedAt': '2017-04-02',
+    'albumData' : AlbumData2017WhatIsHappeningInFJCC,
+    'coverImgUrl':'https://live.staticflickr.com/3857/32967128213_8e870a6b31_z.jpg'
+  },
+  {
+    'albumName':'Christmas 2016',
+    'year': 2016,
+    'updatedAt': '2017-01-01',
+    'albumData' : AlbumData2016Christmas,
+    'coverImgUrl':'https://live.staticflickr.com/735/31987902226_7f028fc3e7.jpg'
+  },
+  {
+    'albumName':'2016 Summer Mission',
+    'year': 2016,
+    'updatedAt': '2017-07-26',
+    'albumData' : AlbumData2016SummerMission,
+    'coverImgUrl':'https://live.staticflickr.com/8818/28180683970_c15147da28_z.jpg'
   }
 
 ]
