@@ -29,7 +29,7 @@ const puppeteer = require('puppeteer');
 // 2016 Summer Mission
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157670310149890';
 // Bethlehem Ministry
-let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157662351707370';
+// let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157662351707370';
 
 // Togetherness 2015
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157660592535554';
@@ -47,7 +47,7 @@ let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157662351707370'
 // The Lord's Day 2015
 // let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157651816287905';
 // In N Out Reach 2015
-// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157651539690455';
+let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157651539690455';
 
 // Christmas Party 2014
 // let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157649501719558';
