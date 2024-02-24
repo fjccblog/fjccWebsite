@@ -25,14 +25,16 @@
 }
 
 .albumInfoDescription {
-  height: 50px;
+  height: fit-content;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .albumInfoDescriptionName{
   display: block;
   font-size: 1.30rem;
   margin: 5px;
+  max-width: 300px;
 }
 
 .albumInfoUpdated {

@@ -1,4 +1,23 @@
 
+import { AlbumData2014FJCC } from '../2014/AlbumData2014FJCC'
+import { AlbumData201410thAnniversaryBaptism} from '../2014/AlbumData201410thAnniversaryBaptism'
+import { AlbumData2014ChurchDedication } from '../2014/AlbumData2014ChurchDedication'
+import { AlbumData2014BasketballMinistry } from '../2014/AlbumData2014BasketballMinistry'
+import { AlbumData2014StoryOfLittleHouse } from '../2014/AlbumData2014StoryOfLittleHouse'
+import { AlbumData2014IndependenceDayChurchFamilyBBQ } from '../2014/AlbumData2014IndependenceDayChurchFamilyBBQ'
+import { AlbumData2014MusicLessons } from '../2014/AlbumData2014MusicLessons'
+import { AlbumData2014SummerTogether } from '../2014/AlbumData2014SummerTogether'
+import { AlbumData2014SummerLocalMission } from '../2014/AlbumData2014SummerLocalMission'
+import { AlbumData2014FallLifeTogether } from '../2014/AlbumData2014FallLifeTogether'
+import { AlbumData2014Christmas } from '../2014/AlbumData2014Christmas'
+import { AlbumData2015InNOutReach } from '../2015/AlbumData2015InNOutReach';
+import { AlbumData2015TheLordsDay } from '../2015/AlbumData2015TheLordsDay';
+import { AlbumData2015NorthgateSeniorMinistry } from '../2015/AlbumData2015NorthgateSeniorMinistry';
+import { AlbumData2015WeAreHappyFamily } from '../2015/AlbumData2015WeAreHappyFamily';
+import { AlbumData2015RevivalWeekendWithPastorAnitaLau } from '../2015/AlbumData2015RevivalWeekendWithPastorAnitaLau';
+import { AlbumData2015Togetherness } from '../2015/AlbumData2015Togetherness';
+import { AlbumData2015Thanksgiving } from '../2015/AlbumData2015Thanksgiving';
+import { AlbumData2015Christmas } from '../2015/AlbumData2015Christmas';
 import { AlbumData2016SummerMission } from '../2016/AlbumData2016SummerMission';
 import { AlbumData2016Christmas } from '../2016/AlbumData2016Christmas';
 import { AlbumData2017WhatIsHappeningInFJCC } from '../2017/AlbumData2017WhatIsHappeningInFJCC';
@@ -16,9 +35,16 @@ import { AlbumData2023LifeTogether } from "../2023/AlbumData2023LifeTogether";
 import { AlbumData2023Thanksgiving } from "../2023/AlbumData2023Thanksgiving";
 import { AlbumData2023Christmas } from "../2023/AlbumData2023Christmas";
 import { AlbumData2024LunarNewYear } from "../2024/AlbumData2024LunarNewYear";
+import { AlbumData2024LivingStrongLunarNewYear } from '../2024/></AlbumData2024LivingStrongLunarNewYear';
 
 export const AlbumBasicInfoData = [
   {
+    'albumName':'Living Strong Campus Fellowship celebrating Lunar New Year',
+    'year': 2024,
+    'updatedAt': '2024-02-23',
+    'albumData' : AlbumData2024LivingStrongLunarNewYear,
+    'coverImgUrl':'https://lh3.googleusercontent.com/pw/ABLVV84llKTkTRweF5u4KRWjP0pYPLulTUmYqskokDXf2Y5kAfLuRWDZB533U5vgfdWJ5bTCJnlcwUZWwIJUJ6RhlDggtN06qzN4TexAxpkXuNwg_k9oa8Y=w1920-h1080'
+  },{
     'albumName':'2024 Lunar New Year',
     'year': 2024,
     'updatedAt': '2024-02-14',
@@ -136,6 +162,140 @@ export const AlbumBasicInfoData = [
     'updatedAt': '2017-07-26',
     'albumData' : AlbumData2016SummerMission,
     'coverImgUrl':'https://live.staticflickr.com/8818/28180683970_c15147da28_z.jpg'
+  },
+  {
+    'albumName':'Christmas 2015',
+    'year': 2015,
+    'updatedAt': '2015-12-29',
+    'albumData' : AlbumData2015Christmas,
+    'coverImgUrl':'https://live.staticflickr.com/1631/23989677076_3a5f751293_z.jpg'
+  },
+  {
+    'albumName':'Thanksgiving 2015',
+    'year': 2015,
+    'updatedAt': '2015-12-29',
+    'albumData' : AlbumData2015Thanksgiving,
+    'coverImgUrl':'https://live.staticflickr.com/5770/23411575195_eaf53a3440.jpg'
+  },
+  {
+    'albumName':'Togetherness 2015',
+    'year': 2015,
+    'updatedAt': '2015-12-29',
+    'albumData' : AlbumData2015Togetherness,
+    'coverImgUrl':'https://live.staticflickr.com/7759/18327307126_1363c95cba.jpg'
+  },
+  {
+    'albumName':'A Revival Weekend with Pastor Anita Lau',
+    'year': 2015,
+    'updatedAt': '2015-12-29',
+    'albumData' : AlbumData2015RevivalWeekendWithPastorAnitaLau,
+    'coverImgUrl':'https://live.staticflickr.com/5477/18873619782_55124c52f0.jpg'
+  },
+  {
+    'albumName':'We Are Happy Family',
+    'year': 2015,
+    'updatedAt': '2015-05-18',
+    'albumData' : AlbumData2015WeAreHappyFamily,
+    'coverImgUrl':'https://live.staticflickr.com/5446/17361093289_7b50c6cbe4_c.jpg'
+  },
+  {
+    'albumName':'Northgate Senior Ministry',
+    'year': 2015,
+    'updatedAt': '2015-05-02',
+    'albumData' : AlbumData2015NorthgateSeniorMinistry,
+    'coverImgUrl':'https://live.staticflickr.com/7526/16145107852_015e89bd26_c.jpg'
+  },
+  {
+    'albumName':"The Lord's Day 2015",
+    'year': 2015,
+    'updatedAt': '2015-12-29',
+    'albumData' : AlbumData2015TheLordsDay,
+    'coverImgUrl':'https://live.staticflickr.com/8705/16887643186_3ea6dafaf5_z.jpg'
+  },
+  {
+    'albumName':"In N Out Reach 2015",
+    'year': 2015,
+    'updatedAt': '2015-03-25',
+    'albumData' : AlbumData2015InNOutReach,
+    'coverImgUrl':'https://live.staticflickr.com/8720/16726132780_5c5da25e5c.jpg'
+  },
+  {
+    'albumName':"Christmas Party 2014",
+    'year': 2014,
+    'updatedAt': '2014-12-29',
+    'albumData' : AlbumData2014Christmas,
+    'coverImgUrl':'https://live.staticflickr.com/7581/15906324990_62845a5f99_z.jpg'
+  },
+  {
+    'albumName':"Life Together - Fall 2014",
+    'year': 2014,
+    'updatedAt': '2014-10-15',
+    'albumData' : AlbumData2014FallLifeTogether,
+    'coverImgUrl':'https://live.staticflickr.com/8598/15733222498_73d7794d5f_z.jpg'
+  },
+  {
+    'albumName':"Summer Local Mission",
+    'year': 2014,
+    'updatedAt': '2014-07-17',
+    'albumData' : AlbumData2014SummerLocalMission,
+    'coverImgUrl': AlbumData2014SummerLocalMission[0]
+  },
+  {
+    'albumName':"Summer Together",
+    'year': 2014,
+    'updatedAt': '2014-07-17',
+    'albumData' : AlbumData2014SummerTogether,
+    'coverImgUrl': AlbumData2014SummerTogether[0]
+  },
+  {
+    'albumName':"Music Lessons",
+    'year': 2014,
+    'updatedAt': '2014-07-17',
+    'albumData' : AlbumData2014MusicLessons,
+    'coverImgUrl': AlbumData2014MusicLessons[0]
+  },
+  {
+    'albumName':"Independence Day Church Family BBQ, Basketball & Fireworks",
+    'year': 2014,
+    'updatedAt': '2014-07-17',
+    'albumData' : AlbumData2014IndependenceDayChurchFamilyBBQ,
+    'coverImgUrl': AlbumData2014IndependenceDayChurchFamilyBBQ[0]
+  },
+  {
+    'albumName':"屋仔的故事",
+    'year': 2014,
+    'updatedAt': '2014-07-17',
+    'albumData' : AlbumData2014StoryOfLittleHouse,
+    'coverImgUrl': AlbumData2014StoryOfLittleHouse[0]
+  },
+  {
+    'albumName':"Basketball Ministry",
+    'year': 2014,
+    'updatedAt': '2014-07-17',
+    'albumData' : AlbumData2014BasketballMinistry,
+    'coverImgUrl': AlbumData2014BasketballMinistry[0]
+  },
+  {
+    'albumName':"Church Dedication",
+    'year': 2014,
+    'updatedAt': '2014-05-13',
+    'albumData' : AlbumData2014ChurchDedication,
+    'coverImgUrl': AlbumData2014ChurchDedication[0]
+  },
+  {
+    'albumName':"10th Anniversary Baptism",
+    'year': 2014,
+    'updatedAt': '2014-05-13',
+    'albumData' : AlbumData201410thAnniversaryBaptism,
+    'coverImgUrl': AlbumData201410thAnniversaryBaptism[0]
+  },
+  {
+    'albumName':"FJCC 2014",
+    'year': 2014,
+    'updatedAt': '2014-05-13',
+    'albumData' : AlbumData2014FJCC,
+    'coverImgUrl': AlbumData2014FJCC[0]
   }
+
 
 ]
