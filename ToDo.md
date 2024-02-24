@@ -1,4 +1,3 @@
-* [  ] album player with flicker album
 * [  ] album player could add another button to control div, when click, album player takes the whole space of webpage
 * [  ] album player fullscreen is not working on mobile, because not all device are supported, https://stackoverflow.com/questions/63129806/how-to-open-fullscreen-video-on-tap-for-mobile-browsers
 * [  ] album player show current index out of total
@@ -8,11 +7,16 @@ https://stackoverflow.com/questions/280049/how-can-i-run-a-javascript-callback-w
 
 * [  ] faith statement page, add toggle on and off to show content for each section
 
+* [  ] permanent link for albums and prayer letters
+
 * [  ] day-night theme
 
+
+
+* [done] album player with flicker album -> [[solve]] wrote puppeteer to get links of pictures
 * [done] prayer letters list and simliar structure to album page for prayer letter page
 * [done] perhaps alternating color for prayer letter
-* [done] [bug] navbar modal appear in the middle first for 1 second, then slide from right. Solve: Add className with useContext for modal component from OpenModalButton
+* [done] [bug] navbar modal appear in the middle first for 1 second, then slide from right. -> [[solve]] Add className with useContext for modal component from OpenModalButton
 * [done] add more album filter years and more album data
 * [done] album player should take 100vw when in mobile size
 * [done] click on album info to open album player

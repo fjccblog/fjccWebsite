@@ -22,7 +22,7 @@ import { AlbumData2016SummerMission } from '../2016/AlbumData2016SummerMission';
 import { AlbumData2016Christmas } from '../2016/AlbumData2016Christmas';
 import { AlbumData2017WhatIsHappeningInFJCC } from '../2017/AlbumData2017WhatIsHappeningInFJCC';
 import { AlbumData2017FJCC14thAnniversary } from '../2017/AlbumData2017FJCC14thAnniversary';
-import {AlbumData2017Winter } from '../2017/AlbumData2017Winter';
+import { AlbumData2017Winter } from '../2017/AlbumData2017Winter';
 import { AlbumData2018Spring } from "../2018/AlbumData2018Spring";
 import { AlbumData2019 } from "../2019/AlbumData2019";
 import { AlbumData2021 } from "../2021/AlbumData2021";
