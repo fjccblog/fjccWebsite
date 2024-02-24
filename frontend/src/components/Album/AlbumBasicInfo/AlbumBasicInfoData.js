@@ -1,4 +1,15 @@
 
+
+import { AlbumData2013Fellowship } from '../2013/AlbumData2013Fellowship';
+import { AlbumData2013Spring } from '../2013/AlbumData2013Spring';
+import { AlbumData2013Summer } from '../2013/AlbumData2013Summer';
+import { AlbumData2013Church9thBaptism } from '../2013/AlbumData2013Church9thBaptism';
+import { AlbumData2013NeighborhoodBlockParty } from '../2013/AlbumData2013NeighborhoodBlockParty';
+import { AlbumData2013LeadershipAndEvangelismTraining } from '../2013/AlbumData2013LeadershipAndEvangelismTraining';
+import { AlbumData2013SHARPCamp } from '../2013/AlbumData2013SHARPCamp';
+import { AlbumData2013TenthAnniversaryThanksgivingCelebration } from '../2013/AlbumData2013TenthAnniversaryThanksgivingCelebration';
+import { AlbumData2013WelcomeBackRevSiu } from '../2013/AlbumData2013WelcomeBackRevSiu';
+import { AlbumData2013Christmas } from '../2013/AlbumData2013Christmas';
 import { AlbumData2014FJCC } from '../2014/AlbumData2014FJCC'
 import { AlbumData201410thAnniversaryBaptism} from '../2014/AlbumData201410thAnniversaryBaptism'
 import { AlbumData2014ChurchDedication } from '../2014/AlbumData2014ChurchDedication'
@@ -295,6 +306,76 @@ export const AlbumBasicInfoData = [
     'updatedAt': '2014-05-13',
     'albumData' : AlbumData2014FJCC,
     'coverImgUrl': AlbumData2014FJCC[0]
+  },
+  {
+    'albumName':"2013 Christmas",
+    'year': 2013,
+    'updatedAt': '2014-01-24',
+    'albumData' : AlbumData2013Christmas,
+    'coverImgUrl': AlbumData2013Christmas[0]
+  },
+  {
+    'albumName':"Welcome Back, Rev. Siu",
+    'year': 2013,
+    'updatedAt': '2014-01-23',
+    'albumData' : AlbumData2013WelcomeBackRevSiu,
+    'coverImgUrl': AlbumData2013WelcomeBackRevSiu[0]
+  },
+  {
+    'albumName':"10th Anniversary Thanksgiving Celebration",
+    'year': 2013,
+    'updatedAt': '2014-10-08',
+    'albumData' : AlbumData2013TenthAnniversaryThanksgivingCelebration,
+    'coverImgUrl': AlbumData2013TenthAnniversaryThanksgivingCelebration[0]
+  },
+  {
+    'albumName':"SHARP醒好友營",
+    'year': 2013,
+    'updatedAt': '2014-08-08',
+    'albumData' : AlbumData2013SHARPCamp,
+    'coverImgUrl': AlbumData2013SHARPCamp[0]
+  },
+  {
+    'albumName':"Leadership & Evangelism Training",
+    'year': 2013,
+    'updatedAt': '2014-08-08',
+    'albumData' : AlbumData2013LeadershipAndEvangelismTraining,
+    'coverImgUrl': AlbumData2013LeadershipAndEvangelismTraining[0]
+  },
+  {
+    'albumName':"Neighborhood Block Party 2013",
+    'year': 2013,
+    'updatedAt': '2014-08-08',
+    'albumData' : AlbumData2013NeighborhoodBlockParty,
+    'coverImgUrl': AlbumData2013NeighborhoodBlockParty[0]
+  },
+  {
+    'albumName':"以勒堂第九屆浸禮",
+    'year': 2013,
+    'updatedAt': '2014-07-19',
+    'albumData' : AlbumData2013Church9thBaptism,
+    'coverImgUrl': AlbumData2013Church9thBaptism[0]
+  },
+  {
+    'albumName':"Summer 2013",
+    'year': 2013,
+    'updatedAt': '2014-07-17',
+    'albumData' : AlbumData2013Summer,
+    'coverImgUrl': AlbumData2013Summer[0]
+  },
+  {
+    'albumName':"Spring 2013",
+    'year': 2013,
+    'updatedAt': '2014-07-17',
+    'albumData' : AlbumData2013Spring,
+    'coverImgUrl': AlbumData2013Spring[0]
+  },
+  {
+    'albumName':"Fellowship 2013",
+    'year': 2013,
+    'updatedAt': '2014-01-06',
+    'albumData' : AlbumData2013Fellowship,
+    'coverImgUrl': AlbumData2013Fellowship[0]
   }
 
 

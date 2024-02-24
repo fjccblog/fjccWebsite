@@ -1,4 +1,4 @@
-export const AlbumData201310thAnniversaryThanksgivingCelebration = [
+export const AlbumData2013TenthAnniversaryThanksgivingCelebration = [
   'https://live.staticflickr.com/3703/10149347813_50763536ce_w.jpg',
   'https://live.staticflickr.com/5495/10149294334_33ba7bd957_b.jpg',
   'https://live.staticflickr.com/7397/10149390805_22da48aec8_h.jpg',

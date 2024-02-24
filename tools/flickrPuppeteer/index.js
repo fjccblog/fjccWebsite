@@ -93,8 +93,8 @@ const puppeteer = require('puppeteer');
 // Fellowship 2013
 // let url = 'https://www.flickr.com/photos/91949468@N06/albums/72157632446585883';
 
-// Helen and Zike
-let url = 'https://www.flickr.com/photos/92484020@N02/albums/72157632585137733';
+// Helen and Zike 2
+// let url = 'https://www.flickr.com/photos/92484020@N02/albums/72157632585137733';
 // Helen and Zike
 // let url = 'https://www.flickr.com/photos/91949468@N06/albums/72157632506661488';
 // Christmas Party
@@ -132,7 +132,7 @@ let url = 'https://www.flickr.com/photos/92484020@N02/albums/72157632585137733';
 
 //label:2011
 // Trip to LA
-// let url = 'https://www.flickr.com/photos/51284919@N03/albums/72157628584296415';
+let url = 'https://www.flickr.com/photos/51284919@N03/albums/72157628584296415';
 // FJCC UC Davis Graduates of 2011
 // let url = 'https://www.flickr.com/photos/69398250@N05/albums/72157628384435117';
 // 2011 Walk Thru Christmas Story
