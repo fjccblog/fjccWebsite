@@ -8,7 +8,7 @@ import './index.css';
 ReactDOM.render(
   <React.StrictMode>
     <ModalProvider>
-      <BrowserRouter>
+      <BrowserRouter basename='fjccWebsite'>
         <App />
         <Modal />
       </BrowserRouter>

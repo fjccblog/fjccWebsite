@@ -1,5 +1,25 @@
 
-
+import { AlbumData2012TheBeginningOfNewYear } from '../2012/AlbumData2012TheBeginningOfNewYear';
+import { AlbumData2012TheFunContinues } from '../2012/AlbumData2012TheFunContinues';
+// import { } from '../2012/'; // pastor appreaciation 2?
+// import { } from '../2012/'; // pastor appreaciation
+import { AlbumData2012JoyOfStudyBible } from '../2012/AlbumData2012JoyOfStudyBible';
+import { AlbumData2012BibleSeminarRevivalMeetingGraduation } from '../2012/AlbumData2012BibleSeminarRevivalMeetingGraduation';
+import { AlbumData2012SummerRetreat } from '../2012/AlbumData2012SummerRetreat';
+import { AlbumData2012RetreatAndSummerOutdoorActivities } from '../2012/AlbumData2012RetreatAndSummerOutdoorActivities';
+// import { } from '../2012'; // retreat 2 ?
+// import { } from '../2012/'; // summer 2 ?
+import { AlbumData2012Retreat } from '../2012/AlbumData2012Retreat';
+import { AlbumData2012StrongFriendCamp } from '../2012/AlbumData2012StrongFriendCamp';
+import { AlbumData2012Fellowship } from '../2012/AlbumData2012Fellowship';
+import { AlbumData2012Summer } from '../2012/AlbumData2012Summer';
+import { AlbumData2012SecondAnnualNeighborhoodBlockParty } from '../2012/AlbumData2012SecondAnnualNeighborhoodBlockParty';
+import { AlbumData2012ChurchPaintingDay } from '../2012/AlbumData2012ChurchPaintingDay';
+import { AlbumData2012NinethAnniversaryEvanglismAndBibleSeminar } from '../2012/AlbumData2012NinethAnniversaryEvanglismAndBibleSeminar';
+import { AlbumData2012PreparingForChristmas } from '../2012/AlbumData2012PreparingForChristmas';
+import { AlbumData2012Christmas } from '../2012/AlbumData2012Christmas';
+import { AlbumData2012HelenAndZike } from '../2012/AlbumData2012HelenAndZike';
+import { AlbumData2012HelenAndZike2 } from '../2012/AlbumData2012HelenAndZike2';
 import { AlbumData2013Fellowship } from '../2013/AlbumData2013Fellowship';
 import { AlbumData2013Spring } from '../2013/AlbumData2013Spring';
 import { AlbumData2013Summer } from '../2013/AlbumData2013Summer';
@@ -376,6 +396,125 @@ export const AlbumBasicInfoData = [
     'updatedAt': '2014-01-06',
     'albumData' : AlbumData2013Fellowship,
     'coverImgUrl': AlbumData2013Fellowship[0]
+  },
+  {
+    'albumName':"Helen and Zike Part 2",
+    'year': 2012,
+    'updatedAt': '2013-01-23',
+    'albumData' : AlbumData2012HelenAndZike2,
+    'coverImgUrl': AlbumData2012HelenAndZike2[0]
+  },
+  {
+    'albumName':"Helen and Zike",
+    'year': 2012,
+    'updatedAt': '2013-01-23',
+    'albumData' : AlbumData2012HelenAndZike,
+    'coverImgUrl': AlbumData2012HelenAndZike[0]
+  },
+  {
+    'albumName':"Christmas Party",
+    'year': 2012,
+    'updatedAt': '2013-01-06',
+    'albumData' : AlbumData2012Christmas,
+    'coverImgUrl': AlbumData2012Christmas[0]
+  },
+  {
+    'albumName':"FJCC Preparing For Christmas",
+    'year': 2012,
+    'updatedAt': '2013-01-06',
+    'albumData' : AlbumData2012PreparingForChristmas,
+    'coverImgUrl': AlbumData2012PreparingForChristmas[0]
+  },
+  {
+    'albumName':"以勒堂九週年佈道和培靈雙週",
+    'year': 2012,
+    'updatedAt': '2012-10-07',
+    'albumData' : AlbumData2012NinethAnniversaryEvanglismAndBibleSeminar,
+    'coverImgUrl': AlbumData2012NinethAnniversaryEvanglismAndBibleSeminar[0]
+  },
+  {
+    'albumName':"Church Painting Day",
+    'year': 2012,
+    'updatedAt': '2012-08-30',
+    'albumData' : AlbumData2012ChurchPaintingDay,
+    'coverImgUrl': AlbumData2012ChurchPaintingDay[0]
+  },
+  {
+    'albumName':"2nd Annual Neighborhood Block Party",
+    'year': 2012,
+    'updatedAt': '2012-08-14',
+    'albumData' : AlbumData2012SecondAnnualNeighborhoodBlockParty,
+    'coverImgUrl': AlbumData2012SecondAnnualNeighborhoodBlockParty[0]
+  },
+  {
+    'albumName':"Summer 2012",
+    'year': 2012,
+    'updatedAt': '2012-08-14',
+    'albumData' : AlbumData2012Summer,
+    'coverImgUrl': AlbumData2012Summer[0]
+  },
+  {
+    'albumName':"Fellowship 2012",
+    'year': 2012,
+    'updatedAt': '2012-07-29',
+    'albumData' : AlbumData2012Fellowship,
+    'coverImgUrl': AlbumData2012Fellowship[0]
+  },
+  {
+    'albumName':"勁友營2012",
+    'year': 2012,
+    'updatedAt': '2012-07-16',
+    'albumData' : AlbumData2012StrongFriendCamp,
+    'coverImgUrl': AlbumData2012StrongFriendCamp[0]
+  },
+  {
+    'albumName':"Retreat 2012",
+    'year': 2012,
+    'updatedAt': '2012-07-16',
+    'albumData' : AlbumData2012Retreat,
+    'coverImgUrl': AlbumData2012Retreat[0]
+  },
+  {
+    'albumName':"2012 Retreat and Summer Outdoor Activities",
+    'year': 2012,
+    'updatedAt': '2012-07-16',
+    'albumData' : AlbumData2012RetreatAndSummerOutdoorActivities,
+    'coverImgUrl': AlbumData2012RetreatAndSummerOutdoorActivities[0]
+  },
+  {
+    'albumName':"2012 Summer Retreat",
+    'year': 2012,
+    'updatedAt': '2012-07-06',
+    'albumData' : AlbumData2012SummerRetreat,
+    'coverImgUrl': AlbumData2012SummerRetreat[0]
+  },
+  {
+    'albumName':"Bible Seminar, Revival Meeting, Graduation",
+    'year': 2012,
+    'updatedAt': '2012-06-21',
+    'albumData' : AlbumData2012BibleSeminarRevivalMeetingGraduation,
+    'coverImgUrl': AlbumData2012BibleSeminarRevivalMeetingGraduation[0]
+  },
+  {
+    'albumName':"聖經研究的樂趣研討會 2012",
+    'year': 2012,
+    'updatedAt': '2012-06-08',
+    'albumData' : AlbumData2012JoyOfStudyBible,
+    'coverImgUrl': AlbumData2012JoyOfStudyBible[0]
+  },
+  {
+    'albumName':"The Fun Continues",
+    'year': 2012,
+    'updatedAt': '2012-04-25',
+    'albumData' : AlbumData2012TheFunContinues,
+    'coverImgUrl': AlbumData2012TheFunContinues[0]
+  },
+  {
+    'albumName':"The Beginning of a New Year",
+    'year': 2012,
+    'updatedAt': '2012-02-16',
+    'albumData' : AlbumData2012TheBeginningOfNewYear,
+    'coverImgUrl': AlbumData2012TheBeginningOfNewYear[0]
   }
 
 
