@@ -132,7 +132,7 @@ const puppeteer = require('puppeteer');
 
 //label:2011
 // Trip to LA
-let url = 'https://www.flickr.com/photos/51284919@N03/albums/72157628584296415';
+// let url = 'https://www.flickr.com/photos/51284919@N03/albums/72157628584296415';
 // FJCC UC Davis Graduates of 2011
 // let url = 'https://www.flickr.com/photos/69398250@N05/albums/72157628384435117';
 // 2011 Walk Thru Christmas Story
@@ -175,7 +175,7 @@ let url = 'https://www.flickr.com/photos/51284919@N03/albums/72157628584296415';
 // let url = 'https://www.flickr.com/photos/51319644@N03/albums/72157626192897070';
 
 // Christmas and New Year's Eve
-// let url = 'https://www.flickr.com/photos/53159062@N06/albums/72157625743937708';
+let url = 'https://www.flickr.com/photos/53159062@N06/albums/72157625743937708';
 // Having fun at the farm
 // let url = 'https://www.flickr.com/photos/53159062@N06/albums/72157625352335620';
 // True Friends Camp

@@ -1,4 +1,28 @@
 
+import {  } from '../2011';
+import {  } from '../2011';
+import {  } from '../2011';
+import { AlbumData2011CNYTournament } from '../2011/AlbumData2011CNYTournament';
+import { AlbumData2011JapanDisasterReliefProject } from '../2011/AlbumData2011JapanDisasterReliefProject';
+import { AlbumData2011NinethBaptismalService } from '../2011/AlbumData2011NinethBaptismalService';
+import { AlbumData2011GoodFridayEasterBBQ } from '../2011/AlbumData2011GoodFridayEasterBBQ';
+import { AlbumData2011Easter } from '../2011/AlbumData2011Easter';
+import { AlbumData2011SpringLivingStrong } from '../2011/AlbumData2011SpringLivingStrong';
+import { AlbumData2011Fellowship1 } from '../2011/AlbumData2011Fellowship1';
+import { AlbumData2011ChildrenMinistry } from '../2011/AlbumData2011ChildrenMinistry';
+import { AlbumData2011SummerEatDrinkPlayFun } from '../2011/AlbumData2011SummerEatDrinkPlayFun';
+import { AlbumData2011BalloonEvangelismWorkshop } from '../2011/AlbumData2011BalloonEvangelismWorkshop';
+import { AlbumData2011NeighborhoodBlockParty } from '../2011/AlbumData2011NeighborhoodBlockParty';
+import { AlbumData2011NationalNightOutBlockParty } from '../2011/AlbumData2011NationalNightOutBlockParty';
+import { AlbumData2011JirehBasketballTournament } from '../2011/AlbumData2011JirehBasketballTournament';
+import { AlbumData2011WelcomeBackBBQ } from '../2011/AlbumData2011WelcomeBackBBQ';
+import { AlbumData2011MusicCafe } from '../2011/AlbumData2011MusicCafe';
+import { AlbumData2011GospelToOaklandChinatown } from '../2011/AlbumData2011GospelToOaklandChinatown';
+import { AlbumData2011EighthAnniversaryLuncheon } from '../2011/AlbumData2011EighthAnniversaryLuncheon';
+import { AlbumData2011Fellowship2 } from '../2011/AlbumData2011Fellowship2';
+import { AlbumData2011WalkThruChristmasStory } from '../2011/AlbumData2011WalkThruChristmasStory';
+import { AlbumData2011UCDavisGraduates } from '../2011/AlbumData2011UCDavisGraduates';
+import { AlbumData2011TripToLA } from '../2011/AlbumData2011TripToLA';
 import { AlbumData2012TheBeginningOfNewYear } from '../2012/AlbumData2012TheBeginningOfNewYear';
 import { AlbumData2012TheFunContinues } from '../2012/AlbumData2012TheFunContinues';
 // import { } from '../2012/'; // pastor appreaciation 2?
@@ -515,6 +539,153 @@ export const AlbumBasicInfoData = [
     'updatedAt': '2012-02-16',
     'albumData' : AlbumData2012TheBeginningOfNewYear,
     'coverImgUrl': AlbumData2012TheBeginningOfNewYear[0]
+  },
+  {
+    'albumName':"Trip to LA",
+    'year': 2011,
+    'updatedAt': '2011-12-26',
+    'albumData' : AlbumData2011TripToLA,
+    'coverImgUrl': AlbumData2011TripToLA[0]
+  },
+  {
+    'albumName':"FJCC UC Davis Graduates of 2011",
+    'year': 2011,
+    'updatedAt': '2011-12-12',
+    'albumData' : AlbumData2011UCDavisGraduates,
+    'coverImgUrl': AlbumData2011UCDavisGraduates[0]
+  },
+  {
+    'albumName':"2011 Walk Thru Christmas Story",
+    'year': 2011,
+    'updatedAt': '2011-12-12',
+    'albumData' : AlbumData2011WalkThruChristmasStory,
+    'coverImgUrl': AlbumData2011WalkThruChristmasStory[0]
+  },
+  {
+    'albumName':"2011 Fellowship",
+    'year': 2011,
+    'updatedAt': '2011-12-12',
+    'albumData' : AlbumData2011Fellowship2,
+    'coverImgUrl': AlbumData2011Fellowship2[0]
+  },
+  {
+    'albumName':"FJCC 8th Anniversary Luncheon",
+    'year': 2011,
+    'updatedAt': '2011-12-01',
+    'albumData' : AlbumData2011EighthAnniversaryLuncheon,
+    'coverImgUrl': AlbumData2011EighthAnniversaryLuncheon[0]
+  },
+  {
+    'albumName':"暑期活動 福音傳遍Oakland華埠",
+    'year': 2011,
+    'updatedAt': '2011-11-04',
+    'albumData' : AlbumData2011GospelToOaklandChinatown,
+    'coverImgUrl': AlbumData2011GospelToOaklandChinatown[0]
+  },
+  {
+    'albumName':"FJCC Music Cafe",
+    'year': 2011,
+    'updatedAt': '2011-09-20',
+    'albumData' : AlbumData2011MusicCafe,
+    'coverImgUrl': AlbumData2011MusicCafe[0]
+  },
+  {
+    'albumName':"Fall 2011 Welcome Back BBQ",
+    'year': 2011,
+    'updatedAt': '2011-08-29',
+    'albumData' : AlbumData2011WelcomeBackBBQ,
+    'coverImgUrl': AlbumData2011WelcomeBackBBQ[0]
+  },
+  {
+    'albumName':"Jireh Basketball Tournament",
+    'year': 2011,
+    'updatedAt': '2011-08-21',
+    'albumData' : AlbumData2011JirehBasketballTournament,
+    'coverImgUrl': AlbumData2011JirehBasketballTournament[0]
+  },
+  {
+    'albumName':"FJCC National Night Out Block Party",
+    'year': 2011,
+    'updatedAt': '2011-08-12',
+    'albumData' : AlbumData2011NationalNightOutBlockParty,
+    'coverImgUrl': AlbumData2011NationalNightOutBlockParty[0]
+  },
+  {
+    'albumName':"FJCC Neighborhood Block Party",
+    'year': 2011,
+    'updatedAt': '2011-08-05',
+    'albumData' : AlbumData2011NeighborhoodBlockParty,
+    'coverImgUrl': AlbumData2011NeighborhoodBlockParty[0]
+  },
+  {
+    'albumName':"Balloon Evangelism Workshop",
+    'year': 2011,
+    'updatedAt': '2011-07-24',
+    'albumData' : AlbumData2011BalloonEvangelismWorkshop,
+    'coverImgUrl': AlbumData2011BalloonEvangelismWorkshop[0]
+  },
+  {
+    'albumName':"夏日吃喝玩樂",
+    'year': 2011,
+    'updatedAt': '2011-07-10',
+    'albumData' : AlbumData2011SummerEatDrinkPlayFun,
+    'coverImgUrl': AlbumData2011SummerEatDrinkPlayFun[0]
+  },
+  {
+    'albumName':"FJCC 2010-2011 Children Ministry",
+    'year': 2011,
+    'updatedAt': '2011-06-18',
+    'albumData' : AlbumData2011ChildrenMinistry,
+    'coverImgUrl': AlbumData2011ChildrenMinistry[0]
+  },
+  {
+    'albumName':"Fellowship 2011",
+    'year': 2011,
+    'updatedAt': '2011-06-11',
+    'albumData' : AlbumData2011Fellowship1,
+    'coverImgUrl': AlbumData2011Fellowship1[0]
+  },
+  {
+    'albumName':"Spring 2011 Living Strong",
+    'year': 2011,
+    'updatedAt': '2011-05-17',
+    'albumData' : AlbumData2011SpringLivingStrong,
+    'coverImgUrl': AlbumData2011SpringLivingStrong[0]
+  },
+  {
+    'albumName':"2011 Easter",
+    'year': 2011,
+    'updatedAt': '2011-05-07',
+    'albumData' : AlbumData2011Easter,
+    'coverImgUrl': AlbumData2011Easter[0]
+  },
+  {
+    'albumName':"Good Friday, Easter BBQ",
+    'year': 2011,
+    'updatedAt': '2011-05-07',
+    'albumData' : AlbumData2011GoodFridayEasterBBQ,
+    'coverImgUrl': AlbumData2011GoodFridayEasterBBQ[0]
+  },
+  {
+    'albumName':"FJCC 9th Baptismal Service",
+    'year': 2011,
+    'updatedAt': '2011-04-29',
+    'albumData' : AlbumData2011NinethBaptismalService,
+    'coverImgUrl': AlbumData2011NinethBaptismalService[0]
+  },
+  {
+    'albumName':"Japan Disaster Relief Project",
+    'year': 2011,
+    'updatedAt': '2011-04-25',
+    'albumData' : AlbumData2011JapanDisasterReliefProject,
+    'coverImgUrl': AlbumData2011JapanDisasterReliefProject[0]
+  },
+  {
+    'albumName':"2011 CNY Tournament",
+    'year': 2011,
+    'updatedAt': '2011-03-15',
+    'albumData' : AlbumData2011CNYTournament,
+    'coverImgUrl': AlbumData2011CNYTournament[0]
   }
 
 

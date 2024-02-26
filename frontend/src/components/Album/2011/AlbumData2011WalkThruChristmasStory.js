@@ -1,0 +1,23 @@
+export const AlbumData2011WalkThruChristmasStory = [
+  'https://live.staticflickr.com/7170/6498068367_bd405993d1_z.jpg',
+  'https://live.staticflickr.com/7159/6498068097_502de939d1_z.jpg',
+  'https://live.staticflickr.com/7155/6498068647_5ccd1380be_z.jpg',
+  'https://live.staticflickr.com/7020/6498069687_b3f6ac43aa_z.jpg',
+  'https://live.staticflickr.com/7168/6498071433_59d026dff1_h.jpg',
+  'https://live.staticflickr.com/7007/6498071913_6996b24dca_z.jpg',
+  'https://live.staticflickr.com/7148/6498073669_fd82513640_z.jpg',
+  'https://live.staticflickr.com/7161/6498074581_4dc66531f3_z.jpg',
+  'https://live.staticflickr.com/7154/6498076239_ab858a2aef_z.jpg',
+  'https://live.staticflickr.com/7148/6498076895_444a7b04e8_w.jpg',
+  'https://live.staticflickr.com/7157/6498077407_229e10da37_w.jpg',
+  'https://live.staticflickr.com/7145/6498077939_02762def72.jpg',
+  'https://live.staticflickr.com/7156/6498078419_2aed568987_z.jpg',
+  'https://live.staticflickr.com/7011/6498079391_695a345320_z.jpg',
+  'https://live.staticflickr.com/7155/6498080017_7b62d01342.jpg',
+  'https://live.staticflickr.com/7158/6498092489_b90daed4d8_z.jpg',
+  'https://live.staticflickr.com/7019/6498233365_9ffbdc53ab_h.jpg',
+  'https://live.staticflickr.com/7157/6498230611_cfb3a7b516_z.jpg',
+  'https://live.staticflickr.com/7004/6498227609_770cb65032_z.jpg',
+  'https://live.staticflickr.com/7163/6498224561_faa4d3c172_z.jpg',
+  'https://live.staticflickr.com/7021/6498221095_c39c7e4976_c.jpg'
+]

@@ -3,16 +3,17 @@
 * [  ] album player show current index out of total
 * [  ] image on load? https://stackoverflow.com/questions/43115246/how-to-detect-when-a-image-is-loaded-that-is-provided-via-props-and-change-sta
 https://stackoverflow.com/questions/280049/how-can-i-run-a-javascript-callback-when-an-image-is-loaded
-
+* [  ] [bug] better album player animation when it enters screen
+* [  ]  permanent link for single album and single prayer letter, revise url when the element is loaded ?
 
 * [  ] faith statement page, add toggle on and off to show content for each section
 
-* [  ] permanent link for albums and prayer letters
 
 * [  ] day-night theme
 
 
 
+* [done] [unintentional] permanent link for album page and prayer letter page for gh-pages [[solve]] copy index.html to 404.html in predeploy command line before runing the deploy command line
 * [done] album player with flicker album -> [[solve]] wrote puppeteer to get links of pictures
 * [done] prayer letters list and simliar structure to album page for prayer letter page
 * [done] perhaps alternating color for prayer letter

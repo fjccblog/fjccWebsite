@@ -1,0 +1,21 @@
+export const AlbumData2011GoodFridayEasterBBQ = [
+  'https://live.staticflickr.com/5308/5665445786_47677cd7f6_h.jpg',
+  'https://live.staticflickr.com/3648/5695096755_63af5c31ed_z.jpg',
+  'https://live.staticflickr.com/2541/5695078491_535b42bafe_z.jpg',
+  'https://live.staticflickr.com/2349/5695648572_8f8bb4eafa_h.jpg',
+  'https://live.staticflickr.com/3187/5695068873_cf1ce14cc7_z.jpg',
+  'https://live.staticflickr.com/2796/5695064095_cc2ee572cf_z.jpg',
+  'https://live.staticflickr.com/3421/5695629626_47c6aa2e08_z.jpg',
+  'https://live.staticflickr.com/3024/5695048419_ce56c3e31b_z.jpg',
+  'https://live.staticflickr.com/5030/5695616886_1f79624225_h.jpg',
+  'https://live.staticflickr.com/5265/5695606420_918b9a7d1f_z.jpg',
+  'https://live.staticflickr.com/2351/5695027159_9be282d835_z.jpg',
+  'https://live.staticflickr.com/2650/5695023309_b839ec9764_z.jpg',
+  'https://live.staticflickr.com/2300/5695593602_1b7da97cd4_z.jpg',
+  'https://live.staticflickr.com/3294/5695588502_50786200cf_z.jpg',
+  'https://live.staticflickr.com/5222/5695583786_81f35b3f09_z.jpg',
+  'https://live.staticflickr.com/2458/5695004677_6c8fb1d03b_z.jpg',
+  'https://live.staticflickr.com/5183/5695575258_074845ee04_z.jpg',
+  'https://live.staticflickr.com/5063/5694993371_9a2db386bd_z.jpg',
+  'https://live.staticflickr.com/2026/5694988589_8043699cb7_z.jpg'
+]
