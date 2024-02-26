@@ -1,4 +1,8 @@
 
+// import {  } from '../2009'; // True Friends Camp at Anthony Chabot Campground
+// import {  } from '../2009'; // 燒烤旅行 2
+import { AlbumData2009Ordination } from '../2009/AlbumData2009Ordination';
+import { AlbumData2009FJCC } from '../2009/AlbumData2009FJCC';
 // import {  } from '../2010'; //燒烤旅行 1
 import { AlbumData2010BaptismalService } from '../2010/AlbumData2010BaptismalService';
 // import {  } from '../2010'; // 团契
@@ -773,6 +777,20 @@ export const AlbumBasicInfoData = [
     'updatedAt': '2010-06-08',
     'albumData' : AlbumData2010BaptismalService,
     'coverImgUrl': AlbumData2010BaptismalService[0]
+  },
+  {
+    'albumName':"FJCC @2019",
+    'year': 2009,
+    'updatedAt': '2009-01-01',
+    'albumData' : AlbumData2009FJCC,
+    'coverImgUrl': AlbumData2009FJCC[0]
+  },
+  {
+    'albumName':"2009 Ordination",
+    'year': 2009,
+    'updatedAt': '2009-01-01',
+    'albumData' : AlbumData2009Ordination,
+    'coverImgUrl': AlbumData2009Ordination[0]
   }
 
 
