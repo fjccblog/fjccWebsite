@@ -3,7 +3,7 @@ import { AlbumData2012TheBeginningOfNewYear } from '../2012/AlbumData2012TheBegi
 import { AlbumData2012TheFunContinues } from '../2012/AlbumData2012TheFunContinues';
 // import { } from '../2012/'; // pastor appreaciation 2?
 // import { } from '../2012/'; // pastor appreaciation
-import { AlbumData2012JoyOfStudyBible } from '../2012/AlbumData2012JoyOfStudyBible';
+// import { AlbumData2012JoyOfStudyBible } from '../2012/AlbumData2012JoyOfStudyBible';
 import { AlbumData2012BibleSeminarRevivalMeetingGraduation } from '../2012/AlbumData2012BibleSeminarRevivalMeetingGraduation';
 import { AlbumData2012SummerRetreat } from '../2012/AlbumData2012SummerRetreat';
 import { AlbumData2012RetreatAndSummerOutdoorActivities } from '../2012/AlbumData2012RetreatAndSummerOutdoorActivities';
@@ -495,13 +495,13 @@ export const AlbumBasicInfoData = [
     'albumData' : AlbumData2012BibleSeminarRevivalMeetingGraduation,
     'coverImgUrl': AlbumData2012BibleSeminarRevivalMeetingGraduation[0]
   },
-  {
-    'albumName':"聖經研究的樂趣研討會 2012",
-    'year': 2012,
-    'updatedAt': '2012-06-08',
-    'albumData' : AlbumData2012JoyOfStudyBible,
-    'coverImgUrl': AlbumData2012JoyOfStudyBible[0]
-  },
+  // {
+  //   'albumName':"聖經研究的樂趣研討會 2012",
+  //   'year': 2012,
+  //   'updatedAt': '2012-06-08',
+  //   'albumData' : AlbumData2012JoyOfStudyBible,
+  //   'coverImgUrl': AlbumData2012JoyOfStudyBible[0]
+  // },
   {
     'albumName':"The Fun Continues",
     'year': 2012,
