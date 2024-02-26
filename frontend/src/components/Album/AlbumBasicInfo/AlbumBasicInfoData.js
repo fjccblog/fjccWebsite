@@ -1,7 +1,17 @@
 
-import {  } from '../2011';
-import {  } from '../2011';
-import {  } from '../2011';
+// import {  } from '../2010'; //燒烤旅行 1
+import { AlbumData2010BaptismalService } from '../2010/AlbumData2010BaptismalService';
+// import {  } from '../2010'; // 团契
+import { AlbumData2010BasketballMatchWithZhengSheng } from '../2010/AlbumData2010BasketballMatchWithZhengSheng';
+import { AlbumData2010CCULeagueFJCCvsSFMandarinBaptistChurch } from '../2010/AlbumData2010CCULeagueFJCCvsSFMandarinBaptistChurch';
+import { AlbumData2010CCULeagueFJCCvsCumberlandPresbyterianChiineseChurch } from '../2010/AlbumData2010CCULeagueFJCCvsCumberlandPresbyterianChiineseChurch';
+import { AlbumData2010CCULeagueFJCCvsSunset } from '../2010/AlbumData2010CCULeagueFJCCvsSunset';
+import { AlbumData2010SummerOysterFarmBBQ } from '../2010/AlbumData2010SummerOysterFarmBBQ';
+import { AlbumData2010CCUSummerLeague } from '../2010/AlbumData2010CCUSummerLeague';
+import { AlbumData2010TrueFriendsFunDay } from '../2010/AlbumData2010TrueFriendsFunDay';
+import { AlbumData2010TrueFriendsCamp } from '../2010/AlbumData2010TrueFriendsCamp';
+import { AlbumData2010HavingFunAtTheFarm } from '../2010/AlbumData2010HavingFunAtTheFarm';
+import { AlbumData2010ChristmasAndNewYearEve } from '../2010/AlbumData2010ChristmasAndNewYearEve';
 import { AlbumData2011CNYTournament } from '../2011/AlbumData2011CNYTournament';
 import { AlbumData2011JapanDisasterReliefProject } from '../2011/AlbumData2011JapanDisasterReliefProject';
 import { AlbumData2011NinethBaptismalService } from '../2011/AlbumData2011NinethBaptismalService';
@@ -686,6 +696,83 @@ export const AlbumBasicInfoData = [
     'updatedAt': '2011-03-15',
     'albumData' : AlbumData2011CNYTournament,
     'coverImgUrl': AlbumData2011CNYTournament[0]
+  },
+  {
+    'albumName':"Christmas and New Year's Eve",
+    'year': 2010,
+    'updatedAt': '2011-08-09',
+    'albumData' : AlbumData2010ChristmasAndNewYearEve,
+    'coverImgUrl': AlbumData2010ChristmasAndNewYearEve[0]
+  },
+  {
+    'albumName':"Having Fun At The Farm",
+    'year': 2010,
+    'updatedAt': '2010-11-15',
+    'albumData' : AlbumData2010HavingFunAtTheFarm,
+    'coverImgUrl': AlbumData2010HavingFunAtTheFarm[0]
+  },
+  {
+    'albumName':"True Friends Camp",
+    'year': 2010,
+    'updatedAt': '2010-08-19',
+    'albumData' : AlbumData2010TrueFriendsCamp,
+    'coverImgUrl': AlbumData2010TrueFriendsCamp[0]
+  },
+  {
+    'albumName':"True Friends Fun Day",
+    'year': 2010,
+    'updatedAt': '2010-08-19',
+    'albumData' : AlbumData2010TrueFriendsFunDay,
+    'coverImgUrl': AlbumData2010TrueFriendsFunDay[0]
+  },
+  {
+    'albumName':"CCU 2010 Summer League",
+    'year': 2010,
+    'updatedAt': '2010-07-15',
+    'albumData' : AlbumData2010CCUSummerLeague,
+    'coverImgUrl': AlbumData2010CCUSummerLeague[0]
+  },
+  {
+    'albumName':"Summer Oyster Farm BBQ",
+    'year': 2010,
+    'updatedAt': '2010-07-07',
+    'albumData' : AlbumData2010SummerOysterFarmBBQ,
+    'coverImgUrl': AlbumData2010SummerOysterFarmBBQ[0]
+  },
+  {
+    'albumName':"CCU League: FJCC vs Sunset",
+    'year': 2010,
+    'updatedAt': '2010-06-26',
+    'albumData' : AlbumData2010CCULeagueFJCCvsSunset,
+    'coverImgUrl': AlbumData2010CCULeagueFJCCvsSunset[0]
+  },
+  {
+    'albumName':"CCU League - FJCC vs Cumberland Presbyterian Chiinese Church (Crusaders)",
+    'year': 2010,
+    'updatedAt': '2010-06-16',
+    'albumData' : AlbumData2010CCULeagueFJCCvsCumberlandPresbyterianChiineseChurch,
+    'coverImgUrl': AlbumData2010CCULeagueFJCCvsCumberlandPresbyterianChiineseChurch[0]
+  },
+  {
+    'albumName':"CCU League - FJCC vs SF Mandarin Baptist Church",
+    'year': 2010,
+    'updatedAt': '2010-06-10',
+    'albumData' : AlbumData2010CCULeagueFJCCvsSFMandarinBaptistChurch,
+    'coverImgUrl': AlbumData2010CCULeagueFJCCvsSFMandarinBaptistChurch[0]
+  },
+  {
+    'albumName':"Basketball Match with Zheng Sheng",
+    'year': 2010,
+    'updatedAt': '2010-06-08',
+    'albumData' : AlbumData2010BasketballMatchWithZhengSheng,
+    'coverImgUrl': AlbumData2010BasketballMatchWithZhengSheng[0]
+  },
+  {
+    'albumName':"FJCC Baptismal Service",
+    'year': 2010,
+    'updatedAt': '2010-06-08',
+    'albumData' : AlbumData2010BaptismalService,
+    'coverImgUrl': AlbumData2010BaptismalService[0]
   }
 
 
