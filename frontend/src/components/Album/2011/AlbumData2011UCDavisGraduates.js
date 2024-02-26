@@ -1,0 +1,19 @@
+export const AlbumData2011UCDavisGraduates = [
+  'https://live.staticflickr.com/7027/6498040269_a1df04ae1f_z.jpg',
+  'https://live.staticflickr.com/7144/6498036163_941c346ef5_z.jpg',
+  'https://live.staticflickr.com/7007/6498030351_e8caedc8e5_z.jpg',
+  'https://live.staticflickr.com/7164/6498041167_8d8a23e47d_z.jpg',
+  'https://live.staticflickr.com/7167/6498040371_64fc545e78_h.jpg',
+  'https://live.staticflickr.com/7147/6498039607_ef34e21b4e_c.jpg',
+  'https://live.staticflickr.com/7155/6498023623_2ddf2d5336_z.jpg',
+  'https://live.staticflickr.com/7029/6498038061_2aecd4a9bc_z.jpg',
+  'https://live.staticflickr.com/7153/6498022825_3ab3687950_c.jpg',
+  'https://live.staticflickr.com/7142/6498022753_e5e3aafee6_h.jpg',
+  'https://live.staticflickr.com/7011/6498036547_a61ca5ef03_c.jpg',
+  'https://live.staticflickr.com/7157/6498022119_d3d0f194ab_z.jpg',
+  'https://live.staticflickr.com/7015/6498021505_2ecd9f6770_z.jpg',
+  'https://live.staticflickr.com/7022/6498019119_3290af9046_z.jpg',
+  'https://live.staticflickr.com/7141/6498029515_30fd5e8746_h.jpg',
+  'https://live.staticflickr.com/7162/6498027629_cac0b0e023.jpg',
+  'https://live.staticflickr.com/7005/6498026701_4350e829cf.jpg'
+]

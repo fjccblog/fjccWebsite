@@ -7,7 +7,7 @@ const puppeteer = require('puppeteer');
 
 // winter 2017
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157668156510049';
-// FJCC 14th Anniversary <<<<<
+// FJCC 14th Anniversary
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157687256052792/';
 // What is Happening in FJCC 2017
 // let url = 'https://www.flickr.com/photos/132430613@N08/albums/72157678808138323/';
@@ -47,7 +47,7 @@ const puppeteer = require('puppeteer');
 // The Lord's Day 2015
 // let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157651816287905';
 // In N Out Reach 2015
-let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157651539690455';
+// let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157651539690455';
 
 // Christmas Party 2014
 // let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157649501719558';
@@ -93,7 +93,7 @@ let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157651539690455';
 // Fellowship 2013
 // let url = 'https://www.flickr.com/photos/91949468@N06/albums/72157632446585883';
 
-// Helen and Zike
+// Helen and Zike 2
 // let url = 'https://www.flickr.com/photos/92484020@N02/albums/72157632585137733';
 // Helen and Zike
 // let url = 'https://www.flickr.com/photos/91949468@N06/albums/72157632506661488';
@@ -175,7 +175,7 @@ let url = 'https://www.flickr.com/photos/98992990@N05/albums/72157651539690455';
 // let url = 'https://www.flickr.com/photos/51319644@N03/albums/72157626192897070';
 
 // Christmas and New Year's Eve
-// let url = 'https://www.flickr.com/photos/53159062@N06/albums/72157625743937708';
+let url = 'https://www.flickr.com/photos/53159062@N06/albums/72157625743937708';
 // Having fun at the farm
 // let url = 'https://www.flickr.com/photos/53159062@N06/albums/72157625352335620';
 // True Friends Camp
