@@ -1,4 +1,9 @@
 
+import { AlbumData2006ChristmasPuppetShow } from '../2006/AlbumData2006ChristmasPuppetShow'
+import { AlbumData2007JointChurchPicnicWithCCCC } from '../2007/AlbumData2007JointChurchPicnicWithCCCC'
+import { AlbumData2008NinethStreetChurchDedication } from '../2008/AlbumData2008NinethStreetChurchDedication';
+import { AlbumData2008TrueFriendsCamp } from '../2008/AlbumData2008TrueFriendsCamp';
+import { AlbumData2008FifthAnniversaryEvangelicalMeeting } from '../2008/AlbumData2008FifthAnniversaryEvangelicalMeeting';
 // import {  } from '../2009'; // True Friends Camp at Anthony Chabot Campground
 // import {  } from '../2009'; // 燒烤旅行 2
 import { AlbumData2009Ordination } from '../2009/AlbumData2009Ordination';
@@ -791,6 +796,41 @@ export const AlbumBasicInfoData = [
     'updatedAt': '2009-01-01',
     'albumData' : AlbumData2009Ordination,
     'coverImgUrl': AlbumData2009Ordination[0]
+  },
+  {
+    'albumName':"FJCC 5th Anniversary Evangelical Meeting",
+    'year': 2008,
+    'updatedAt': '2008-11-01',
+    'albumData' : AlbumData2008FifthAnniversaryEvangelicalMeeting,
+    'coverImgUrl': AlbumData2008FifthAnniversaryEvangelicalMeeting[0]
+  },
+  {
+    'albumName':"2008 True Friends Camp",
+    'year': 2008,
+    'updatedAt': '2008-05-01',
+    'albumData' : AlbumData2008TrueFriendsCamp,
+    'coverImgUrl': AlbumData2008TrueFriendsCamp[0]
+  },
+  {
+    'albumName':"9th street church dedication",
+    'year': 2008,
+    'updatedAt': '2008-04-06',
+    'albumData' : AlbumData2008NinethStreetChurchDedication,
+    'coverImgUrl': AlbumData2008NinethStreetChurchDedication[0]
+  },
+  {
+    'albumName':"9th street church dedication",
+    'year': 2007,
+    'updatedAt': '2007-10-01',
+    'albumData' : AlbumData2007JointChurchPicnicWithCCCC,
+    'coverImgUrl': AlbumData2007JointChurchPicnicWithCCCC[0]
+  },
+  {
+    'albumName':"2006 Christmas Puppet Show",
+    'year': 2006,
+    'updatedAt': '2006-01-01',
+    'albumData' : AlbumData2006ChristmasPuppetShow,
+    'coverImgUrl': AlbumData2006ChristmasPuppetShow[0]
   }
 
 

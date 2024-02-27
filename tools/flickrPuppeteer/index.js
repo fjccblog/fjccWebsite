@@ -175,7 +175,7 @@ const puppeteer = require('puppeteer');
 // let url = 'https://www.flickr.com/photos/51319644@N03/albums/72157626192897070';
 
 // Christmas and New Year's Eve
-let url = 'https://www.flickr.com/photos/53159062@N06/albums/72157625743937708';
+// let url = 'https://www.flickr.com/photos/53159062@N06/albums/72157625743937708';
 // Having fun at the farm
 // let url = 'https://www.flickr.com/photos/53159062@N06/albums/72157625352335620';
 // True Friends Camp
@@ -235,7 +235,7 @@ let url = 'https://www.flickr.com/photos/53159062@N06/albums/72157625743937708';
 // let url = '';
 
 // 2006 Christmas Puppet Show
-// let url = 'https://www.flickr.com/photos/51319644@N03/albums/72157624227611283';
+let url = 'https://www.flickr.com/photos/51319644@N03/albums/72157624227611283';
 //
 // let url = '';
 //

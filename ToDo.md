@@ -1,15 +1,16 @@
-* [  ] album player could add another button to control div, when click, album player takes the whole space of webpage
-* [  ] album player fullscreen is not working on mobile, because not all device are supported, https://stackoverflow.com/questions/63129806/how-to-open-fullscreen-video-on-tap-for-mobile-browsers
-* [  ] album player show current index out of total
-* [  ] image on load? https://stackoverflow.com/questions/43115246/how-to-detect-when-a-image-is-loaded-that-is-provided-via-props-and-change-sta
+* [  ] [to-do] album player could add another button to control div, when click, album player takes the whole space of webpage
+* [  ] [to-find-out] album player fullscreen is not working on mobile, because not all device are supported, https://stackoverflow.com/questions/63129806/how-to-open-fullscreen-video-on-tap-for-mobile-browsers
+* [  ] [low-Priority] album player show current index out of total
+* [  ] [good-feature-to-add] image on load? https://stackoverflow.com/questions/43115246/how-to-detect-when-a-image-is-loaded-that-is-provided-via-props-and-change-sta
 https://stackoverflow.com/questions/280049/how-can-i-run-a-javascript-callback-when-an-image-is-loaded
-* [  ] [bug] better album player animation when it enters screen
-* [  ]  permanent link for single album and single prayer letter, revise url when the element is loaded ?
+* [  ] [bug] better album player animation when it enters screen -> [potential-Solution-Idea] bottom of the album player hits the bottom of the page?
+* [  ] [low-Priority] check number of albums in website vs in blog, choose new preview image if have better image
+* [  ] [mid-Priority] permanent link for single album and single prayer letter, revise url when the element is loaded ?
 
-* [  ] faith statement page, add toggle on and off to show content for each section
+* [  ] [to-do] faith statement page, add toggle on and off to show content for each section
 
 
-* [  ] day-night theme
+* [  ] [low-Priority] day-night theme
 
 
 
