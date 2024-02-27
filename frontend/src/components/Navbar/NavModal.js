@@ -98,6 +98,11 @@ function NavModal() {
           </Link>
         </div>}
       </div>
+      <Link to='/offering'>
+        <div className="navModalItem" onClick={()=>HideModal()}>
+          奉獻 <i className="fas fa-envelope"></i>
+        </div>
+      </Link>
     </div>
   )
 }
