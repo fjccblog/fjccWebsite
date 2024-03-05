@@ -8,9 +8,9 @@ function OpenModalButton({
   onModalClose, // optional: callback function that will be called once the modal is closed
   customizeStyle,
   buttonTag,
-  modalCss,
+  modalCss='modalCenter', // be default, modal is center
   modalContentCss,
-  modalBackgroundCss
+  modalBackgroundCss='' // be default, modal background has no effect
 }) {
   const { setModalContent, setOnModalClose, setModalCss, setModalContentCss, setModalBackgroundCss } = useModal();
 

@@ -42,7 +42,7 @@ function Router() {
         <Route path="/faithStatement">
           <FaithStatementPage />
         </Route>
-        <Route path="/ministry*">
+        <Route path="/ministry">
           <MinistryPage />
         </Route>
         <Route path="/offering">

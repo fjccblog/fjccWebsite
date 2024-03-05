@@ -41,6 +41,8 @@ function Offering() {
         Faith Jireh Christian Church
       </p>
 
+      <img alt="qrcode" src='https://lh3.googleusercontent.com/pw/AP1GczOGgsCK1BrZKN84_lsyWHTwwP_8GmtNp_ChsqdhXKamGNq64ZlEPN4nWC9JhSRhiOBe9FwqN_LSNGBU5MhpwxHH7Wg6a8IXrPOxs_yKr3VeOQvDw4E=w1920-h1080' />
+      <img alt='thank you' src='https://lh3.googleusercontent.com/pw/AP1GczP4G0geertuTXzNTyK8zwZI6Q97HVFhfWo9EBOlQmIHFNZX2pQucXyava2h7cNOip1IKJZNvUjBbsdIO8V-_4kpSvnd0VODjxiODm58fGSKeMxVAgo=w1920-h1080"' />
     </div>
   )
 }
