@@ -1,0 +1,19 @@
+.OfferingModalContainer {
+  width: 500px;
+  padding: 15px;
+}
+
+.OfferingModalConfirmBtn {
+  background-color: var(--hoverBlue);
+  color: white;
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.OfferingModalConfirmBtn:hover {
+  color: var(--hoverBlue);
+  background-color: white;
+  border: 2px solid var(--hoverBlue);
+}

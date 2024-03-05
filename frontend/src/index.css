@@ -16,13 +16,15 @@ a {
 /*============ custom global className ================*/
 :root {
   --lightBlue: #8dc7f2;
+  --deepBlue: #004182;
+  --hoverBlue:#007aff;
   --lightPurple: rgb(115,60,180);
   --lightWise: #f2b88d4f;
   --lightgray:rgb(243, 242, 241);
   --backgroundGray:#f2f3f4;
   --backgroundGreen: #2db55d;
   --backgroundOrange: #fbc847;
-  --hoverBlue:#007aff;
+
 }
 
 /*============ background-color ================*/

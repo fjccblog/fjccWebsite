@@ -3,3 +3,9 @@
   margin: 0 auto;
   padding: 15px 3rem;
 }
+
+@media screen and (max-width:600px) {
+  .OfferingImg {
+    width: 80vw;
+  }
+}
