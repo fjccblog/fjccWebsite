@@ -7,6 +7,8 @@ function OfferingModal() {
   const { closeModal } = useModal();
 
   function confirmMessage() {
+    let churchPayPalURL = 'https://www.paypal.com/US/fundraiser/charity/1462809';
+    window.open(churchPayPalURL, "_blank", "noreferrer");
     closeModal();
   }
 
@@ -22,7 +24,7 @@ function OfferingModal() {
       </p>
       <div className='flx-center'>
         <button className='OfferingModalConfirmBtn'
-          onClick={()=> confirmMessage}>
+          onClick={()=> confirmMessage()}>
           確定
         </button>
       </div>
