@@ -72,7 +72,7 @@ function Nav() {
               生命見證 <i className="fas fa-chevron-down"></i>
             </button>
             <div className='dropdown-content'>
-              <Link to='/baptism'>
+              <Link to='/testimony'>
                 <a href="#welcome">得救見證</a>
               </Link>
             </div>

@@ -93,7 +93,7 @@ function NavModal() {
           生命見證 <i className="fas fa-chevron-down"></i>
         </div>
         {isTestimonyDivOpen && <div className='navModalDropdown'>
-          <Link to='/baptism'>
+          <Link to='/testimony'>
             <div onClick={()=>HideModal()}>得救見證</div>
           </Link>
         </div>}
