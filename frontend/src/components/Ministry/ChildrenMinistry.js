@@ -2,7 +2,7 @@ import React from 'react';
 
 function ChildrenMinistry() {
   return (
-    <div>
+    <div className='container-common'>
         <p>
           In the midst of a consuming ministry to adults,
           Jesus regularly ministered to children.

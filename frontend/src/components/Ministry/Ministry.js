@@ -2,7 +2,7 @@ import React from 'react';
 
 function Ministry() {
   return (
-    <div>
+    <div className='container-common'>
       This is Ministry page
     </div>
   )

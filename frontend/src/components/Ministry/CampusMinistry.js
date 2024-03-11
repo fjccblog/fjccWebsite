@@ -2,7 +2,7 @@ import React from 'react';
 
 function CampusMinistry() {
   return (
-    <div>
+    <div className='container-common'>
         <p>
           Mission : Helping the spiritually lost to come to Jesus;
           encouraging Christians to grow in their relationship with Christ;

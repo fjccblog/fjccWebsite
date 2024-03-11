@@ -17,9 +17,15 @@ function HomePage() {
           <div className='item-container color-blk' key={element.English}>
             <Link to={element.English}>
               <div className='img-container '>
+                { element.imgurl !== null ?
+                <img className="width100 height-max-100 obj-fit-cover bor-rad-15"
+                  src={element.imgurl}
+                  alt={element.English} />
+                :
                 <img className="width100 height-max-100 obj-fit-cover bor-rad-15"
                   src="https://lh3.googleusercontent.com/pw/ABLVV84t3azys4HaG3Fwwbj-FnQhjPbGLqYTiXUb10YG5-lBXjevXfZUE-6yk78FQ0ZPSZR0QY4zi_RSSFyKozzBBfYI5Xlw5ZzODoRjCDL4V9jYubnPzj8=w1920-h1080"
                   alt="walk in faith" />
+                }
               </div>
               <div className='pad15p font15' >
                 {element.Chinese}
