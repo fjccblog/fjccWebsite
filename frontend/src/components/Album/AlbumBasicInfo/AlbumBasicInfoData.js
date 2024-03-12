@@ -819,7 +819,7 @@ export const AlbumBasicInfoData = [
     'coverImgUrl': AlbumData2008NinethStreetChurchDedication[0]
   },
   {
-    'albumName':"9th street church dedication",
+    'albumName':"Joint Church Picnic with CCCC",
     'year': 2007,
     'updatedAt': '2007-10-01',
     'albumData' : AlbumData2007JointChurchPicnicWithCCCC,

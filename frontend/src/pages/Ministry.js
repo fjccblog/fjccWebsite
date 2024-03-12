@@ -1,9 +1,20 @@
 import React from 'react';
-import Ministry from '../components/Ministry/Ministry';
+import { Route, Switch} from 'react-router-dom';
+import ChildrenMinistry from '../components/Ministry/ChildrenMinistry';
+import CampusMinistry from '../components/Ministry/CampusMinistry';
 
 function MinistryPage() {
   return (
-    <Ministry />
+    <div>
+    <Switch>
+      <Route path='/ministry/children'>
+        <ChildrenMinistry />
+      </Route>
+      <Route path='/ministry/campus'>
+        <CampusMinistry />
+      </Route>
+    </Switch>
+    </div>
   )
 }
 

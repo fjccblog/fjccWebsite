@@ -3,3 +3,25 @@
   margin: 0 auto;
   padding: 15px 3rem;
 }
+
+.OfferingMethods {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 15px;
+}
+
+.DonateBtn {
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.OfferingQRCode {
+  width: 200px;
+}
+
+.OfferingImg {
+  width: 80vw;
+  max-width: 600px;
+}

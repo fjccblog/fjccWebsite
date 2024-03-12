@@ -8,11 +8,14 @@ https://stackoverflow.com/questions/280049/how-can-i-run-a-javascript-callback-w
 * [  ] [mid-Priority] permanent link for single album and single prayer letter, revise url when the element is loaded ?
 
 * [  ] [to-do] faith statement page, add toggle on and off to show content for each section
-
+* [  ] [to-do] 2018 album after spring from facebook
 
 * [  ] [low-Priority] day-night theme
 
 
+* [  ] [low-Priority] page container css - padding
+
+* [  ] [fun-things] add easter eggs discover, like album source page, bible verse
 
 * [done] [unintentional] permanent link for album page and prayer letter page for gh-pages [[solve]] copy index.html to 404.html in predeploy command line before runing the deploy command line
 * [done] album player with flicker album -> [[solve]] wrote puppeteer to get links of pictures

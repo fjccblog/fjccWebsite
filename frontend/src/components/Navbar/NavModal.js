@@ -42,21 +42,21 @@ function NavModal() {
           外展事工 <i className="fas fa-chevron-down"></i>
         </div>
         {isMinistryDivOpen &&  <div className='navModalDropdown'>
-          <Link to='/childMinistry'>
+          <Link to='/ministry/children'>
             <div onClick={()=>HideModal()}>兒童事工</div>
           </Link>
-          <Link to='juniorHighMinistry'>
+          <Link to='/ministry/juniorHigh'>
             <div onClick={()=>HideModal()}>初、高中生事工</div>
           </Link>
-          <Link to='collegeMinistry'>
+          <Link to='/ministry/campus'>
             <div onClick={()=>HideModal()}>大學事工</div>
           </Link>
-          <Link to='sportMinistry'>
+          <Link to='/ministry/sport'>
             <div onClick={()=>HideModal()}>體育事工</div>
           </Link>
-          <Link to='seniorMinistry'>
+          {/* <Link to='seniorMinistry'>
             <div onClick={()=>HideModal()}>長者事工</div>
-          </Link>
+          </Link> */}
         </div>}
       </div>
       <div>
@@ -93,11 +93,16 @@ function NavModal() {
           生命見證 <i className="fas fa-chevron-down"></i>
         </div>
         {isTestimonyDivOpen && <div className='navModalDropdown'>
-          <Link to='/baptism'>
+          <Link to='/testimony'>
             <div onClick={()=>HideModal()}>得救見證</div>
           </Link>
         </div>}
       </div>
+      <Link to='/offering'>
+        <div className="navModalItem" onClick={()=>HideModal()}>
+          奉獻 <i className="fas fa-envelope"></i>
+        </div>
+      </Link>
     </div>
   )
 }

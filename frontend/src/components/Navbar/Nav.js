@@ -15,21 +15,21 @@ function Nav() {
               外展事工 <i className="fas fa-chevron-down"></i>
             </button>
             <div className='dropdown-content'>
-              <Link to='/childMinistry'>
+              <Link to='/ministry/children'>
                 <a href="#welcome">兒童事工</a>
               </Link>
-              <Link to='juniorHighMinistry'>
+              <Link to='/ministry/juniorHigh'>
                 <a href="#meetOurTeam">初、高中生事工</a>
               </Link>
-              <Link to='collegeMinistry'>
+              <Link to='/ministry/campus'>
                 <a href="#whoWeAre">大學事工</a>
               </Link>
-              <Link to='sportMinistry'>
+              <Link to='/ministry/sport'>
                 <a href="#whoWeAre">體育事工</a>
               </Link>
-              <Link to='seniorMinistry'>
+              {/* <Link to='seniorMinistry'>
                 <a href="#whoWeAre">長者事工</a>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </li>
@@ -42,10 +42,10 @@ function Nav() {
               <Link to='/faithStatement'>
                 <a href="#welcome">信仰立場</a>
               </Link>
-              <Link to='purpose'>
+              <Link to='/purpose'>
                 <a href="#meetOurTeam">宗旨 / 使命</a>
               </Link>
-              <Link to='churchHistory'>
+              <Link to='/churchHistory'>
                 <a href="#whoWeAre">教會簡史</a>
               </Link>
             </div>
@@ -60,7 +60,7 @@ function Nav() {
               <Link to='/prayerLetter'>
                 <a href="#welcome">代禱信</a>
               </Link>
-              <Link to='album'>
+              <Link to='/album'>
                 <a href="#meetOurTeam">活動花絮</a>
               </Link>
             </div>
@@ -72,7 +72,7 @@ function Nav() {
               生命見證 <i className="fas fa-chevron-down"></i>
             </button>
             <div className='dropdown-content'>
-              <Link to='/baptism'>
+              <Link to='/testimony'>
                 <a href="#welcome">得救見證</a>
               </Link>
             </div>

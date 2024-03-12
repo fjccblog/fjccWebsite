@@ -8,9 +8,10 @@ function OpenModalButton({
   onModalClose, // optional: callback function that will be called once the modal is closed
   customizeStyle,
   buttonTag,
-  modalCss,
+  imgSrc,
+  modalCss='modalCenter', // be default, modal is center
   modalContentCss,
-  modalBackgroundCss
+  modalBackgroundCss='' // be default, modal background has no effect
 }) {
   const { setModalContent, setOnModalClose, setModalCss, setModalContentCss, setModalBackgroundCss } = useModal();
 
@@ -27,6 +28,10 @@ function OpenModalButton({
   if (buttonTag === "span") {
     return (
       <span onClick={onClick} className={customizeStyle}>{buttonText}</span>
+    )
+  } else if (buttonTag === "img") {
+    return (
+      <img onClick={onClick} className={customizeStyle} src={imgSrc} />
     )
   }
   return (

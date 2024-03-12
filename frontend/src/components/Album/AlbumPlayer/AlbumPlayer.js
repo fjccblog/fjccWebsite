@@ -5,6 +5,12 @@ import './AlbumPlayer.css';
 function AlbumPlayer({data}) {
 
   let [albumIndex, setAlbumIndex] = useState(0);
+  let [isListViewActive, setIsListViewActive] = useState(false);
+
+  document.addEventListener("keypress", (e) => {
+    // console.log(e.code, e.key)
+    if (e.key === 'a') setIsListViewActive(true)
+  })
 
   function setPrevImg() {
     let currIndex = albumIndex;
@@ -61,11 +67,11 @@ function AlbumPlayer({data}) {
           </button>
         </div>
       </div>
-      {/* <div className='reference'>
+      { isListViewActive && <div className='listViewImgContainer'>
         {data.map((ele)=>{
-          return <img src={ele} alt="" className='width300p' key={ele}/>
+          return <img src={ele} alt="" className='listViewImg' key={ele}/>
         })}
-      </div> */}
+      </div>}
     </div>
   )
 }
