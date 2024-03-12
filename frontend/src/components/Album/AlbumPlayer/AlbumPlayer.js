@@ -67,7 +67,7 @@ function AlbumPlayer({data}) {
           </button>
         </div>
       </div>
-      { isListViewActive && <div className='reference'>
+      { isListViewActive && <div className='listViewImgContainer'>
         {data.map((ele)=>{
           return <img src={ele} alt="" className='listViewImg' key={ele}/>
         })}

@@ -82,11 +82,18 @@
   height: 2rem;
 }
 
+.listViewImgContainer {
+  text-align: center;
+  margin-top: 15px;
+}
+
 .listViewImg {
   width: 300px;
   height: 225px;
   object-fit: contain;
   background-color: black;
+  border-radius: 8px;
+  margin: 5px 10px;
 }
 
 /* @keyframes ShowAlbum1 {
