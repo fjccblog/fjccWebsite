@@ -1,11 +1,11 @@
 
-import { XieLiZhenSalvation } from '../2023/XieLiZhenSalvation'
-import { HuangXiMinSalvation } from '../2023/HuangXiMinSalvation'
-import { CaoRuZhenSalavation } from '../2023/CaoRuZhenSalavation'
-import { JinFengLiSalavation } from '../2023/JinFengLiSalavation'
-import { ShaoTaiGongSalavation } from '../2023/ShaoTaiGongSalavation'
-import { ShaoFenYangSalavation } from "../2024/ShaoFenYangSalavation";
-import { JunFengLeiSalavation } from "../2024/JunFengLeiSalavation";
+import { XieLiZhenSalvation } from '../2022/XieLiZhenSalvation'
+import { HuangXiMinSalvation } from '../2022/HuangXiMinSalvation'
+import { CaoRuZhenSalavation } from '../2022/CaoRuZhenSalavation'
+import { JinFengLiSalavation } from '../2022/JinFengLiSalavation'
+import { ShaoTaiGongSalavation } from '../2022/ShaoTaiGongSalavation'
+import { ShaoFenYangSalavation } from "../2023/ShaoFenYangSalavation";
+import { JunFengLeiSalavation } from "../2023/JunFengLeiSalavation";
 
 export const TestimonyBasicInfoData = [
   {
