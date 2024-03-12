@@ -7,13 +7,13 @@ function Testimony() {
 
   function filterAlbumByYear(year, index) {
     setCurrYearAlbums(TestimonyBasicInfoData.filter((infoData)=>infoData.year === year))
-    setIsAlbumPlayerActive(false);
+    setIsContentActive(false);
     setSelectedYearIndex(index);
   }
 
-  function updateAlbumData (albumData) {
+  function updateContentData (albumData) {
     setCurrTestimonyData(albumData);
-    setIsAlbumPlayerActive(true);
+    setIsContentActive(true);
   }
 
   function isAlbumRecent (currTime, albumTime) {
@@ -25,8 +25,8 @@ function Testimony() {
   let yearSet = new Set();
   let [selectedYearIndex, setSelectedYearIndex] = useState(0);
   let [currYearAlbums, setCurrYearAlbums] = useState([]);
-  let [currTestimonyData, setCurrTestimonyData] = useState([]);
-  let [isAlbumPlayerActive, setIsAlbumPlayerActive] = useState(false);
+  let [currTestimonyData, setCurrTestimonyData] = useState({});
+  let [isContentActive, setIsContentActive] = useState(false);
 
   TestimonyBasicInfoData.forEach((infoData) => {
     if (!(yearSet.has(infoData.year))) {
@@ -57,10 +57,10 @@ function Testimony() {
         })}
       </div>
       <div className='allAlbumInfoContainer'>
-        {currYearAlbums.map((testimonyInfo)=>{
+        {!isContentActive && currYearAlbums.map((testimonyInfo)=>{
           return (
-            <div className='singleAlbumInfoContainer' onClick={() => updateAlbumData(testimonyInfo.content)}>
-              <img src={testimonyInfo.coverImgUrl} className='albumInfoImg'/>
+            <div className='singleAlbumInfoContainer' onClick={() => updateContentData(testimonyInfo)}>
+              <img src={testimonyInfo.coverImgUrl} alt='testimony' className='albumInfoImg'/>
               <div className='albumInfoDescription'>
                 <strong className='albumInfoDescriptionName'>{testimonyInfo.title}</strong>
                 <div className='albumInfoDescriptionUpdateAt'>
@@ -75,7 +75,7 @@ function Testimony() {
             </div>
           )})}
       </div>
-      {currTestimonyData.length !== 0 && isAlbumPlayerActive && <TestimonyContainer data={currTestimonyData} />}
+      {currTestimonyData.length !== 0 && isContentActive && <TestimonyContainer data={currTestimonyData} />}
     </div>
   )
 }

@@ -2,14 +2,20 @@ import React from 'react';
 import './TestimonyContainer.css';
 
 function TestimonyContainer({data}) {
+  // data is object with properties {title,year,updatedAt,content,coverImgUrl}
+  // content is array with strings
 
   return (
     <div className='container-common'>
-      {data.map(paragraph => {
+      <div className='flx-center'>
+        <img src={data.coverImgUrl} alt='testimony' className='albumInfoImg'/>
+      </div>
+      <h1 className='flx-center'> {data.title} </h1>
+      {data.content.map(paragraph => {
         return (
-          <div className='testimonyParagraph'>
+          <p className='testimonyParagraph'>
             {paragraph}
-          </div>
+          </p>
         )
       })}
     </div>
