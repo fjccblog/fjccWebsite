@@ -109,7 +109,7 @@ import { AlbumData2023LifeTogether } from "../2023/AlbumData2023LifeTogether";
 import { AlbumData2023Thanksgiving } from "../2023/AlbumData2023Thanksgiving";
 import { AlbumData2023Christmas } from "../2023/AlbumData2023Christmas";
 import { AlbumData2024LunarNewYear } from "../2024/AlbumData2024LunarNewYear";
-import { AlbumData2024LivingStrongLunarNewYear } from '../2024/></AlbumData2024LivingStrongLunarNewYear';
+import { AlbumData2024LivingStrongLunarNewYear } from '../2024/AlbumData2024LivingStrongLunarNewYear';
 
 export const AlbumBasicInfoData = [
   {

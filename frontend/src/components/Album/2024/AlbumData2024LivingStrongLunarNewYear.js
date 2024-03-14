@@ -10,7 +10,6 @@ export const  AlbumData2024LivingStrongLunarNewYear = [
   "https://lh3.googleusercontent.com/pw/ABLVV85pYfUxHBNEWkL8ak09l1p0FV9ISZGxAA6X19eyL0h2wkVj2cwqgBbFBbCXXaNUR3G3eGHqOFZ_SbupbwYda1m0-_7q7slzqSqvVbg1UW_CmVF9BMw=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV86CCvX7BEqspiJnUU4U99E4dqDgSl8LucCP6Qbu48NWavP4lr9VVue631qA0M2dj2AQl5pBoxEdA7o_rpufw82ryb4MWnFDuHFtcq2LA0yaqb8JG0I=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV84OF_2Ys1Z-a22FxCQnJmIaAdrrwE5JsXIbOAyhM-OQh5M6_5HRh28nRNhvknT_YEUB8PwBrtm2abbAGH6PdpzIPFAnAiijFSww07efo0dA4kmyHBU=w1920-h1080",
-  "https://lh3.googleusercontent.com/pw/ABLVV86-LWB3ZZrRLDPmGYb4jZgAS73tEkOYFYpgUxFz3ReW0H1ARWbhcRkpv8xWWSurGDbPTRUSEknpshqC6RfgM8TZk2G70QaMtpkVVCIY9spYhJ7sFc0=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV86UftfRaL9fs4I4J44aWXpMw4DNZ8KIgWyAPEB_P9x3At3Fn81haO_w061snVzWGOGXJfg5P-M3EvAhe-JV5H5H-aiwQZ-Ni16BwS6_JGNJ1U3W-mo=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV84C_IgMcII4LbO4C1HZ8eJ6bsl7zz6g4B8U84oKsfOpAsk0T5NxSZQHqxu3yL49AJE-CazhEA-46e8uMB6OfceiugMW7fvP45KcpOP-rGM1DPPltH0=w1920-h1080",
   "https://lh3.googleusercontent.com/pw/ABLVV873Gd_13j8vQsUSD2_L-GLsdlxzNy5KLcQH46GYQy-T-RJmGlv8AIAxrEOo4HLWmEB4d0V1v7dO-ECaB8uhse2M_n2cHu_jAmCegi3zwW_5Y2QhVE0=w1920-h1080",
