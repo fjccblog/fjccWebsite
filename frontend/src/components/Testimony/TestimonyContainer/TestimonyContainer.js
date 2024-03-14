@@ -8,7 +8,7 @@ function TestimonyContainer({data}) {
   return (
     <div className='container-common'>
       <div className='flx-center'>
-        <img src={data.coverImgUrl} alt='testimony' className='albumInfoImg'/>
+        {(data.coverImgUrl !== null) && <img src={data.coverImgUrl} alt='testimony' className='albumInfoImg'/>}
       </div>
       <h1 className='flx-center'> {data.title} </h1>
       {data.content.map(paragraph => {

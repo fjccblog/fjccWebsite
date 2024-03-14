@@ -60,7 +60,7 @@ function Testimony() {
         {!isContentActive && currYearAlbums.map((testimonyInfo)=>{
           return (
             <div className='singleAlbumInfoContainer' onClick={() => updateContentData(testimonyInfo)}>
-              <img src={testimonyInfo.coverImgUrl} alt='testimony' className='albumInfoImg'/>
+              {(testimonyInfo.coverImgUrl !== null) && <img src={testimonyInfo.coverImgUrl} alt='testimony' className='albumInfoImg'/>}
               <div className='albumInfoDescription'>
                 <strong className='albumInfoDescriptionName'>{testimonyInfo.title}</strong>
                 <div className='albumInfoDescriptionUpdateAt'>
