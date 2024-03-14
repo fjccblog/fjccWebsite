@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import OpenModalButton from '../../../context/OpenModalButton';
+import AlbumListViewModal from './AlbumListViewModal';
 import './AlbumPlayer.css';
 
 function AlbumPlayer({data}) {
@@ -65,6 +67,9 @@ function AlbumPlayer({data}) {
           <button onClick={()=>enterFullScreen()} className='albumBtn albumControlBtn exitFullscreen'>
             <i className="fas fa-compress"></i>
           </button>
+          <OpenModalButton modalComponent={<AlbumListViewModal setIsListViewActive={setIsListViewActive}/>}
+            buttonText={<i className="fas fa-list"></i>}
+            customizeStyle = "albumBtn albumControlBtn" />
         </div>
       </div>
       { isListViewActive && <div className='listViewImgContainer'>
