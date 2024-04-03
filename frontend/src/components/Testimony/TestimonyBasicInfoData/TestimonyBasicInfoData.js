@@ -1,5 +1,17 @@
 
 // import {  } from '../'
+// import {  } from '../2010'
+import { IvanHoSalvation2 } from '../2010/IvanHoSalvation2'
+import { IvanHoSalvation1 } from '../2010/IvanHoSalvation1'
+import { PakKanLeungSalvation } from '../2010/PakKanLeungSalvation'
+import { JoeyHuangSalvation } from '../2010/JoeyHuangSalvation'
+import { HenryHuynhSalvation } from '../2010/HenryHuynhSalvation'
+import { MoonLeungSalvation } from '../2010/MoonLeungSalvation'
+import { PakKanLeung2010 } from '../2010/PakKanLeung2010'
+import { ChristineLi2010 } from '../2010/ChristineLi2010'
+import { HelenHuang2010 } from '../2010/HelenHuang2010'
+import { ZikeLiao2011 } from '../2011/ZikeLiao2011'
+import { IvanHo2012 } from '../2012/IvanHo2012'
 import { JialingKellyLuoSalvation } from '../2013/JialingKellyLuoSalvation';
 import { JunningHuangSalvation } from '../2013/JunningHuangSalvation';
 import { ZhiliangLuoSalvation } from '../2013/ZhiliangLuoSalvation';
@@ -144,6 +156,83 @@ export const TestimonyBasicInfoData = [
     year: 2013,
     updatedAt: '2013-07-14',
     content: JunningHuangSalvation,
+    coverImgUrl: null
+  },
+  {
+    title: '何兆鈞蒙召見證',
+    year: 2012,
+    updatedAt: '2012-01-30',
+    content: IvanHo2012,
+    coverImgUrl: null
+  },
+  {
+    title: '廖子科, Zike',
+    year: 2011,
+    updatedAt: '2011-01-01',
+    content: ZikeLiao2011,
+    coverImgUrl: null
+  },
+  {
+    title: '『你不要害怕，因為我與你同在』黄淑賢 Helen Huang',
+    year: 2010,
+    updatedAt: '2010-05-01',
+    content: HelenHuang2010,
+    coverImgUrl: null
+  },
+  {
+    title: '李錦虹 Christine Li',
+    year: 2010,
+    updatedAt: '2010-04-01',
+    content: ChristineLi2010,
+    coverImgUrl: null
+  },
+  {
+    title: '梁百勤 Pak Ken Leung',
+    year: 2010,
+    updatedAt: '2010-04-01',
+    content: PakKanLeung2010,
+    coverImgUrl: null
+  },
+  {
+    title: '梁琰玟 Moon Leung',
+    year: 2010,
+    updatedAt: '2010-03-01',
+    content: MoonLeungSalvation,
+    coverImgUrl: null
+  },
+  {
+    title: '黄國富 Henry Huynh',
+    year: 2010,
+    updatedAt: '2010-03-01',
+    content: HenryHuynhSalvation,
+    coverImgUrl: null
+  },
+  {
+    title: '黄月丹 Joey Huang',
+    year: 2010,
+    updatedAt: '2010-03-01',
+    content: JoeyHuangSalvation,
+    coverImgUrl: null
+  },
+  {
+    title: '梁百勤 Pak Kan Leung (Baptism Testimony)',
+    year: 2010,
+    updatedAt: '2010-03-01',
+    content: PakKanLeungSalvation,
+    coverImgUrl: null
+  },
+  {
+    title: '『有真神庇佑』何兆鈞 Ivan He',
+    year: 2010,
+    updatedAt: '2010-03-01',
+    content: IvanHoSalvation1,
+    coverImgUrl: null
+  },
+  {
+    title: '『脫離作弊的深淵』何兆鈞 Ivan He',
+    year: 2010,
+    updatedAt: '2010-03-01',
+    content: IvanHoSalvation2,
     coverImgUrl: null
   }
 ];
