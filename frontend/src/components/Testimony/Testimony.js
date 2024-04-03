@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { TestimonyBasicInfoData } from './TestimonyBasicInfoData/TestimonyBasicInfoData';
 import TestimonyContainer from './TestimonyContainer/TestimonyContainer';
+import './Testimony.css';
 
 function Testimony() {
 
@@ -56,13 +57,13 @@ function Testimony() {
           )
         })}
       </div>
-      <div className='allAlbumInfoContainer'>
+      <div className='allTestimonyContainer'>
         {!isContentActive && currYearAlbums.map((testimonyInfo)=>{
           return (
-            <div className='singleAlbumInfoContainer' onClick={() => updateContentData(testimonyInfo)}>
-              {(testimonyInfo.coverImgUrl !== null) && <img src={testimonyInfo.coverImgUrl} alt='testimony' className='albumInfoImg'/>}
-              <div className='albumInfoDescription'>
-                <strong className='albumInfoDescriptionName'>{testimonyInfo.title}</strong>
+            <div className='singleTestimonyContainer' onClick={() => updateContentData(testimonyInfo)}>
+              {(testimonyInfo.coverImgUrl !== null) && <img src={testimonyInfo.coverImgUrl} alt='testimony' className='testimonyImg'/>}
+              <div className='testimonyDescription'>
+                <strong className='testimonyDescriptionName'>{testimonyInfo.title}</strong>
                 <div className='albumInfoDescriptionUpdateAt'>
                   <div>
                     <div>
