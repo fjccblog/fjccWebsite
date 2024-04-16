@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import sections from './HomePageSections';
+import HomeBanner from './HomeBanner';
 import "./HomePage.css"
 
 
@@ -10,7 +11,8 @@ function HomePage() {
 
   return (
     <div>
-      <div className='landingHeader'></div>
+      {/* <div className='landingHeader'></div> */}
+      <HomeBanner />
       <div className='flx flx-center flx-wrap gap10p'>
         {sections.map(element => {
           return (

@@ -13,6 +13,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import OfferingPage from './pages/OfferingPage.js';
 import PrayerLetterPage from './pages/PrayerLetterPage.js'
 import PurposePage from './pages/PurposePage.js';
+import Footer from './components/Footer/Footer.js';
 
 function Router() {
   return (
@@ -58,6 +59,7 @@ function Router() {
           <NotFoundPage />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }
