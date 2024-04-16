@@ -110,9 +110,23 @@ import { AlbumData2023Thanksgiving } from "../2023/AlbumData2023Thanksgiving";
 import { AlbumData2023Christmas } from "../2023/AlbumData2023Christmas";
 import { AlbumData2024LunarNewYear } from "../2024/AlbumData2024LunarNewYear";
 import { AlbumData2024LivingStrongLunarNewYear } from '../2024/AlbumData2024LivingStrongLunarNewYear';
+import { AlbumData2024EasterCelebration } from '../2024/AlbumData2024EasterCelebration';
+import { AlbumData2024Together } from "../2024/AlbumData2024Together";
 
 export const AlbumBasicInfoData = [
   {
+    'albumName':'Easter Celebration',
+    'year': 2024,
+    'updatedAt': '2024-04-01',
+    'albumData' : AlbumData2024Together,
+    'coverImgUrl':AlbumData2024Together[0]
+  },{
+    'albumName':'Easter Celebration',
+    'year': 2024,
+    'updatedAt': '2024-04-01',
+    'albumData' : AlbumData2024EasterCelebration,
+    'coverImgUrl':'https://lh3.googleusercontent.com/pw/AP1GczNyqC5UHa5JXhBq4O70tiNC4ieINGmsvSI92OaXLrTx-6cNz6xw1wPgzxKyWMk8EEGeoQ5TP3BbmFPKOuHkm5xSYlKHely_f2lo1UlBZzS6sVlT1y4=w1920-h1080'
+  },{
     'albumName':'Living Strong Campus Fellowship celebrating Lunar New Year',
     'year': 2024,
     'updatedAt': '2024-02-23',
