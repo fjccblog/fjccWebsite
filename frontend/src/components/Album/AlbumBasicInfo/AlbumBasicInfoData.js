@@ -119,7 +119,7 @@ export const AlbumBasicInfoData = [
     'year': 2024,
     'updatedAt': '2024-04-01',
     'albumData' : AlbumData2024Together,
-    'coverImgUrl':AlbumData2024Together[0]
+    'coverImgUrl':AlbumData2024Together[1]
   },{
     'albumName':'Easter Celebration',
     'year': 2024,
