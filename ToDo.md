@@ -8,6 +8,7 @@ https://stackoverflow.com/questions/280049/how-can-i-run-a-javascript-callback-w
 * [  ] [mid-Priority] permanent link for single album and single prayer letter, revise url when the element is loaded ?
 * [  ] [low-Priority] hide filter when album player and testimony are active, show one row
 
+* [  ] [to-do] schedule page
 
 * [  ] [to-do] faith statement page, add toggle on and off to show content for each section
 * [  ] [to-do] 2018 album after spring from facebook

@@ -112,10 +112,17 @@ import { AlbumData2024LunarNewYear } from "../2024/AlbumData2024LunarNewYear";
 import { AlbumData2024LivingStrongLunarNewYear } from '../2024/AlbumData2024LivingStrongLunarNewYear';
 import { AlbumData2024EasterCelebration } from '../2024/AlbumData2024EasterCelebration';
 import { AlbumData2024Together } from "../2024/AlbumData2024Together";
+import { AlbumData2024MothersDay } from '../2024/AlbumData2024MothersDay'
 
 export const AlbumBasicInfoData = [
   {
-    'albumName':'Easter Celebration',
+    'albumName':"Mother's Day",
+    'year': 2024,
+    'updatedAt': '2024-04-01',
+    'albumData' : AlbumData2024MothersDay,
+    'coverImgUrl':AlbumData2024MothersDay[0]
+  }, {
+    'albumName':'Together 2024',
     'year': 2024,
     'updatedAt': '2024-04-01',
     'albumData' : AlbumData2024Together,
