@@ -1,10 +1,32 @@
 .bannerContainer {
-  background-color: orange;
-  height: 50vh;
+  /* background-color: orange; */
+  height: 100vh;
   margin: 2rem 0;
 }
 
+.bannerBgImg {
+  position: relative;
+  background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNd6ZFzsKdWBZH7Su73m2JcQm9ptPQuhR-UCEGMJX9idLG6mi-Dark2IDS4nhloS1G5LjajP_3zuA3cNfFguX_ymHQzHOnBcFtdjbLOcVDjkZ_xa1Q=w1920-h1080');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bannerBgImg::before {
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .textWorship {
+  position: absolute;
   text-align:center;
   font-size: 3rem;
+  top: 50%;
+  left: 50%;
+  color: white;
 }

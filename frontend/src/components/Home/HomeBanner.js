@@ -3,8 +3,8 @@ import './HomeBanner.css';
 
 function HomeBanner () {
   return (
-  <div className="bannerContainer">
-    <div className="textWorship">Join our worship on Sunday</div>
+  <div className="bannerContainer bannerBgImg">
+    <div className="textWorship ">Join our worship on Sunday</div>
   </div>
   )
 }
