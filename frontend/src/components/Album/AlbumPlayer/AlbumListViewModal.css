@@ -3,6 +3,10 @@
   padding: 15px;
 }
 
+.AlbumListViewModalTip {
+  font-size: 0.85rem;
+}
+
 .AlbumListViewModalBtns {
   display: flex;
   justify-content: center;
@@ -39,5 +43,12 @@
 @media screen and (max-width: 600px) {
   .AlbumListViewModalContainer {
     width: 80vw;
+  }
+  .AlbumListViewModalConfirmQues {
+    font-size: 1.15rem;
+  }
+  .AlbumListViewModalBtns {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -13,8 +13,11 @@ function AlbumListViewModal({setIsListViewActive}) {
 
   return (
     <div className='AlbumListViewModalContainer'>
-      <p className='flx-center'>
+      <p className='AlbumListViewModalConfirmQues flx-center'>
         確定要打開圖片列表嗎？
+      </p>
+      <p className='AlbumListViewModalTip flx-center'>
+        請盡量在連接Wi-Fi時查看圖片
       </p>
       <div className='AlbumListViewModalBtns'>
         <button className='AlbumListViewModalConfirmBtn'

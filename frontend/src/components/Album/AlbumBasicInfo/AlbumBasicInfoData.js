@@ -116,17 +116,17 @@ import { AlbumData2024MothersDay } from '../2024/AlbumData2024MothersDay'
 
 export const AlbumBasicInfoData = [
   {
+    'albumName':'Together 2024',
+    'year': 2024,
+    'updatedAt': '2024-05-29',
+    'albumData' : AlbumData2024Together,
+    'coverImgUrl':AlbumData2024Together[AlbumData2024Together.length - 1]
+  },{
     'albumName':"Mother's Day",
     'year': 2024,
     'updatedAt': '2024-04-01',
     'albumData' : AlbumData2024MothersDay,
     'coverImgUrl':AlbumData2024MothersDay[0]
-  }, {
-    'albumName':'Together 2024',
-    'year': 2024,
-    'updatedAt': '2024-04-01',
-    'albumData' : AlbumData2024Together,
-    'coverImgUrl':AlbumData2024Together[1]
   },{
     'albumName':'Easter Celebration',
     'year': 2024,

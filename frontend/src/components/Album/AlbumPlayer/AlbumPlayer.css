@@ -111,4 +111,7 @@
   .albumPlayerContainer {
     width: 95vw;
   }
+  .listViewImg {
+    width: 95%;
+  }
 }
