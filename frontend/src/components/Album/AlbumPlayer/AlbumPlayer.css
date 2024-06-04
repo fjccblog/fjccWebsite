@@ -12,11 +12,19 @@
   display: flex;
   flex-direction: row-reverse;
   position: absolute;
-  bottom: 0;
-  right: 0;
   height: 2.5rem;
   margin-right: 10px;
   gap: 10px;
+}
+
+.bottomRight {
+  bottom: 0;
+  right: 0;
+}
+
+.topRight {
+  top: 5px;
+  right: 5px;
 }
 
 .albumImg {

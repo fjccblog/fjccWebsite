@@ -31,14 +31,31 @@ function AlbumPlayer({data}) {
   function enterFullScreen() {
     let albumPlayerContainer = document.querySelector(".albumPlayerContainer")
     if (document.fullscreenElement === null) {
-      albumPlayerContainer.requestFullscreen()
+      // albumPlayerContainer.requestFullscreen()
+      if (albumPlayerContainer.requestFullscreen) {
+        albumPlayerContainer.requestFullscreen();
+      } else if (albumPlayerContainer.webkitRequestFullscreen) { // Safari compatibility
+        albumPlayerContainer.webkitRequestFullscreen();
+      } else if (albumPlayerContainer.msRequestFullscreen) { // IE11 compatibility
+        albumPlayerContainer.msRequestFullscreen();
+      }
       albumPlayerContainer.classList.add("fullscreen")
     } else {
-      document.exitFullscreen()
+      // document.exitFullscreen()
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) { // Safari compatibility
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { // IE11 compatibility
+        document.msExitFullscreen();
+      }
       albumPlayerContainer.classList.remove("fullscreen")
     }
   }
 
+  function shareAlbumLink() {
+
+  }
 
   return (
     <div>
@@ -60,7 +77,7 @@ function AlbumPlayer({data}) {
         <button onClick={()=>setNextImg()} className='albumBtn albumArrowBtn albumRightBtn'>
           <i className="fas fa-chevron-right"></i>
         </button>
-        <div className='albumControlDiv'>
+        <div className='albumControlDiv bottomRight'>
           <button onClick={()=>enterFullScreen()} className='albumBtn albumControlBtn enterFullscreen'>
             <i className="fas fa-expand"></i>
           </button>
@@ -71,6 +88,11 @@ function AlbumPlayer({data}) {
             buttonText={<i className="fas fa-list"></i>}
             customizeStyle = "albumBtn albumControlBtn" />
         </div>
+        {/* <div className='albumControlDiv topRight'>
+          <button onClick={()=>shareAlbumLink()} className='albumBtn albumControlBtn'>
+            <i className="far fa-share-square"></i>
+          </button>
+        </div> */}
       </div>
       { isListViewActive && <div className='listViewImgContainer'>
         {data.map((ele)=>{
