@@ -3,9 +3,10 @@ import './MeetingTime.css';
 
 function MeetingTime () {
   return (
-  <div>
-    <h1>教會聚會時間</h1>
-    <img scr='https://lh3.googleusercontent.com/pw/AP1GczM3KtUEA_xG8a0LO7qFJWGNrgDDwMyHTyIQmVu_eGtNOXlDHDzZeeGgtaxo31Ti7jwsAdkFwl-JxrTLfcojHqGaWUPbHiilnH9RIPFAvNETcVgDqeE=w1920-h1080'></img>
+  <div className="meetingTimeContainer">
+    <h1 className="txt-center">教會聚會時間</h1>
+    <img scr='https://lh3.googleusercontent.com/pw/AP1GczM3KtUEA_xG8a0LO7qFJWGNrgDDwMyHTyIQmVu_eGtNOXlDHDzZeeGgtaxo31Ti7jwsAdkFwl-JxrTLfcojHqGaWUPbHiilnH9RIPFAvNETcVgDqeE=w1920-h1080'
+      alt ="worship the lord" className="meetingTimeImg"></img>
     <div>
       <h3>主日崇拜 Corporate Worship Service:</h3>
       <div><div>以勒堂</div> <div>星期日 11:00 AM - 12:15 PM</div></div>

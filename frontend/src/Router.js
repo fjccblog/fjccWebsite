@@ -8,6 +8,7 @@ import FaithStatementPage from './pages/FaithStatementPage.js';
 import HomePage from './components/Home/HomePage.js';
 import Logo from './components/Logo/Logo.js';
 import MinistryPage from './pages/Ministry.js';
+import MeetingTimePage from './pages/MeetingTimePage.js';
 import Nav from './components/Navbar/Nav.js';
 import NotFoundPage from './pages/NotFoundPage';
 import OfferingPage from './pages/OfferingPage.js';
@@ -39,6 +40,9 @@ function Router() {
         </Route>
         <Route path="/faithStatement">
           <FaithStatementPage />
+        </Route>
+        <Route path="/meetingTime">
+          <MeetingTimePage />
         </Route>
         <Route path="/ministry">
           <MinistryPage />
