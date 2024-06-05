@@ -5,6 +5,18 @@
 }
 
 .meetingTimeImg {
-  width: 20vw;
   border-radius: 5px;
 }
+
+.scheduleDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 3px;
+}
+
+/* @media screen and (max-width: 600px) {
+  .scheduleDiv {
+    flex-direction: column;
+  }
+} */
