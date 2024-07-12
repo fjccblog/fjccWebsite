@@ -25,7 +25,7 @@ function Footer() {
               <i className="fab fa-facebook socialBtn"></i>
           </div>
           <div className="" onClick={()=> {
-                let fBURL = "https://www.facebook.com/FaithJirehChristianChurch";
+                let fBURL = "https://www.youtube.com/@faithjirehchristianchurch2082";
                 window.open(fBURL, "_blank", "noreferrer")
               }}>
               <i className="fab fa-youtube socialBtn"></i>

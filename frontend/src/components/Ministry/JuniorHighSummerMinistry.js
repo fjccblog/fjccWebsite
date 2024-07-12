@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlbumData2008HighSchoolSummer } from '../Album/2008/AlbumData2008HighSchoolSummer';
+import { AlbumData2008HighSchoolSummer } from '../../data/albumData/2008/AlbumData2008HighSchoolSummer';
 import AlbumPlayer  from '../Album/AlbumPlayer/AlbumPlayer'
 
 

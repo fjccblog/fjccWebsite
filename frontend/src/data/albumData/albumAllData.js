@@ -1,120 +1,120 @@
 
-import { AlbumData2006ChristmasPuppetShow } from '../2006/AlbumData2006ChristmasPuppetShow'
-import { AlbumData2007JointChurchPicnicWithCCCC } from '../2007/AlbumData2007JointChurchPicnicWithCCCC'
-import { AlbumData2008NinethStreetChurchDedication } from '../2008/AlbumData2008NinethStreetChurchDedication';
-import { AlbumData2008TrueFriendsCamp } from '../2008/AlbumData2008TrueFriendsCamp';
-import { AlbumData2008FifthAnniversaryEvangelicalMeeting } from '../2008/AlbumData2008FifthAnniversaryEvangelicalMeeting';
-// import {  } from '../2009'; // True Friends Camp at Anthony Chabot Campground
-// import {  } from '../2009'; // 燒烤旅行 2
-import { AlbumData2009Ordination } from '../2009/AlbumData2009Ordination';
-import { AlbumData2009FJCC } from '../2009/AlbumData2009FJCC';
-// import {  } from '../2010'; //燒烤旅行 1
-import { AlbumData2010BaptismalService } from '../2010/AlbumData2010BaptismalService';
-// import {  } from '../2010'; // 团契
-import { AlbumData2010BasketballMatchWithZhengSheng } from '../2010/AlbumData2010BasketballMatchWithZhengSheng';
-import { AlbumData2010CCULeagueFJCCvsSFMandarinBaptistChurch } from '../2010/AlbumData2010CCULeagueFJCCvsSFMandarinBaptistChurch';
-import { AlbumData2010CCULeagueFJCCvsCumberlandPresbyterianChiineseChurch } from '../2010/AlbumData2010CCULeagueFJCCvsCumberlandPresbyterianChiineseChurch';
-import { AlbumData2010CCULeagueFJCCvsSunset } from '../2010/AlbumData2010CCULeagueFJCCvsSunset';
-import { AlbumData2010SummerOysterFarmBBQ } from '../2010/AlbumData2010SummerOysterFarmBBQ';
-import { AlbumData2010CCUSummerLeague } from '../2010/AlbumData2010CCUSummerLeague';
-import { AlbumData2010TrueFriendsFunDay } from '../2010/AlbumData2010TrueFriendsFunDay';
-import { AlbumData2010TrueFriendsCamp } from '../2010/AlbumData2010TrueFriendsCamp';
-import { AlbumData2010HavingFunAtTheFarm } from '../2010/AlbumData2010HavingFunAtTheFarm';
-import { AlbumData2010ChristmasAndNewYearEve } from '../2010/AlbumData2010ChristmasAndNewYearEve';
-import { AlbumData2011CNYTournament } from '../2011/AlbumData2011CNYTournament';
-import { AlbumData2011JapanDisasterReliefProject } from '../2011/AlbumData2011JapanDisasterReliefProject';
-import { AlbumData2011NinethBaptismalService } from '../2011/AlbumData2011NinethBaptismalService';
-import { AlbumData2011GoodFridayEasterBBQ } from '../2011/AlbumData2011GoodFridayEasterBBQ';
-import { AlbumData2011Easter } from '../2011/AlbumData2011Easter';
-import { AlbumData2011SpringLivingStrong } from '../2011/AlbumData2011SpringLivingStrong';
-import { AlbumData2011Fellowship1 } from '../2011/AlbumData2011Fellowship1';
-import { AlbumData2011ChildrenMinistry } from '../2011/AlbumData2011ChildrenMinistry';
-import { AlbumData2011SummerEatDrinkPlayFun } from '../2011/AlbumData2011SummerEatDrinkPlayFun';
-import { AlbumData2011BalloonEvangelismWorkshop } from '../2011/AlbumData2011BalloonEvangelismWorkshop';
-import { AlbumData2011NeighborhoodBlockParty } from '../2011/AlbumData2011NeighborhoodBlockParty';
-import { AlbumData2011NationalNightOutBlockParty } from '../2011/AlbumData2011NationalNightOutBlockParty';
-import { AlbumData2011JirehBasketballTournament } from '../2011/AlbumData2011JirehBasketballTournament';
-import { AlbumData2011WelcomeBackBBQ } from '../2011/AlbumData2011WelcomeBackBBQ';
-import { AlbumData2011MusicCafe } from '../2011/AlbumData2011MusicCafe';
-import { AlbumData2011GospelToOaklandChinatown } from '../2011/AlbumData2011GospelToOaklandChinatown';
-import { AlbumData2011EighthAnniversaryLuncheon } from '../2011/AlbumData2011EighthAnniversaryLuncheon';
-import { AlbumData2011Fellowship2 } from '../2011/AlbumData2011Fellowship2';
-import { AlbumData2011WalkThruChristmasStory } from '../2011/AlbumData2011WalkThruChristmasStory';
-import { AlbumData2011UCDavisGraduates } from '../2011/AlbumData2011UCDavisGraduates';
-import { AlbumData2011TripToLA } from '../2011/AlbumData2011TripToLA';
-import { AlbumData2012TheBeginningOfNewYear } from '../2012/AlbumData2012TheBeginningOfNewYear';
-import { AlbumData2012TheFunContinues } from '../2012/AlbumData2012TheFunContinues';
-// import { } from '../2012/'; // pastor appreaciation 2?
-// import { } from '../2012/'; // pastor appreaciation
-// import { AlbumData2012JoyOfStudyBible } from '../2012/AlbumData2012JoyOfStudyBible';
-import { AlbumData2012BibleSeminarRevivalMeetingGraduation } from '../2012/AlbumData2012BibleSeminarRevivalMeetingGraduation';
-import { AlbumData2012SummerRetreat } from '../2012/AlbumData2012SummerRetreat';
-import { AlbumData2012RetreatAndSummerOutdoorActivities } from '../2012/AlbumData2012RetreatAndSummerOutdoorActivities';
-// import { } from '../2012'; // retreat 2 ?
-// import { } from '../2012/'; // summer 2 ?
-import { AlbumData2012Retreat } from '../2012/AlbumData2012Retreat';
-import { AlbumData2012StrongFriendCamp } from '../2012/AlbumData2012StrongFriendCamp';
-import { AlbumData2012Fellowship } from '../2012/AlbumData2012Fellowship';
-import { AlbumData2012Summer } from '../2012/AlbumData2012Summer';
-import { AlbumData2012SecondAnnualNeighborhoodBlockParty } from '../2012/AlbumData2012SecondAnnualNeighborhoodBlockParty';
-import { AlbumData2012ChurchPaintingDay } from '../2012/AlbumData2012ChurchPaintingDay';
-import { AlbumData2012NinethAnniversaryEvanglismAndBibleSeminar } from '../2012/AlbumData2012NinethAnniversaryEvanglismAndBibleSeminar';
-import { AlbumData2012PreparingForChristmas } from '../2012/AlbumData2012PreparingForChristmas';
-import { AlbumData2012Christmas } from '../2012/AlbumData2012Christmas';
-import { AlbumData2012HelenAndZike } from '../2012/AlbumData2012HelenAndZike';
-import { AlbumData2012HelenAndZike2 } from '../2012/AlbumData2012HelenAndZike2';
-import { AlbumData2013Fellowship } from '../2013/AlbumData2013Fellowship';
-import { AlbumData2013Spring } from '../2013/AlbumData2013Spring';
-import { AlbumData2013Summer } from '../2013/AlbumData2013Summer';
-import { AlbumData2013Church9thBaptism } from '../2013/AlbumData2013Church9thBaptism';
-import { AlbumData2013NeighborhoodBlockParty } from '../2013/AlbumData2013NeighborhoodBlockParty';
-import { AlbumData2013LeadershipAndEvangelismTraining } from '../2013/AlbumData2013LeadershipAndEvangelismTraining';
-import { AlbumData2013SHARPCamp } from '../2013/AlbumData2013SHARPCamp';
-import { AlbumData2013TenthAnniversaryThanksgivingCelebration } from '../2013/AlbumData2013TenthAnniversaryThanksgivingCelebration';
-import { AlbumData2013WelcomeBackRevSiu } from '../2013/AlbumData2013WelcomeBackRevSiu';
-import { AlbumData2013Christmas } from '../2013/AlbumData2013Christmas';
-import { AlbumData2014FJCC } from '../2014/AlbumData2014FJCC'
-import { AlbumData201410thAnniversaryBaptism} from '../2014/AlbumData201410thAnniversaryBaptism'
-import { AlbumData2014ChurchDedication } from '../2014/AlbumData2014ChurchDedication'
-import { AlbumData2014BasketballMinistry } from '../2014/AlbumData2014BasketballMinistry'
-import { AlbumData2014StoryOfLittleHouse } from '../2014/AlbumData2014StoryOfLittleHouse'
-import { AlbumData2014IndependenceDayChurchFamilyBBQ } from '../2014/AlbumData2014IndependenceDayChurchFamilyBBQ'
-import { AlbumData2014MusicLessons } from '../2014/AlbumData2014MusicLessons'
-import { AlbumData2014SummerTogether } from '../2014/AlbumData2014SummerTogether'
-import { AlbumData2014SummerLocalMission } from '../2014/AlbumData2014SummerLocalMission'
-import { AlbumData2014FallLifeTogether } from '../2014/AlbumData2014FallLifeTogether'
-import { AlbumData2014Christmas } from '../2014/AlbumData2014Christmas'
-import { AlbumData2015InNOutReach } from '../2015/AlbumData2015InNOutReach';
-import { AlbumData2015TheLordsDay } from '../2015/AlbumData2015TheLordsDay';
-import { AlbumData2015NorthgateSeniorMinistry } from '../2015/AlbumData2015NorthgateSeniorMinistry';
-import { AlbumData2015WeAreHappyFamily } from '../2015/AlbumData2015WeAreHappyFamily';
-import { AlbumData2015RevivalWeekendWithPastorAnitaLau } from '../2015/AlbumData2015RevivalWeekendWithPastorAnitaLau';
-import { AlbumData2015Togetherness } from '../2015/AlbumData2015Togetherness';
-import { AlbumData2015Thanksgiving } from '../2015/AlbumData2015Thanksgiving';
-import { AlbumData2015Christmas } from '../2015/AlbumData2015Christmas';
-import { AlbumData2016SummerMission } from '../2016/AlbumData2016SummerMission';
-import { AlbumData2016Christmas } from '../2016/AlbumData2016Christmas';
-import { AlbumData2017WhatIsHappeningInFJCC } from '../2017/AlbumData2017WhatIsHappeningInFJCC';
-import { AlbumData2017FJCC14thAnniversary } from '../2017/AlbumData2017FJCC14thAnniversary';
-import { AlbumData2017Winter } from '../2017/AlbumData2017Winter';
-import { AlbumData2018Spring } from "../2018/AlbumData2018Spring";
-import { AlbumData2019 } from "../2019/AlbumData2019";
-import { AlbumData2021 } from "../2021/AlbumData2021";
-import { AlbumData2022 } from "../2022/AlbumData2022";
-import { AlbumData2022Thanksgiving } from "../2022/AlbumData2022Thanksgiving";
-import { AlbumData2022Christmas } from "../2022/AlbumData2022Christmas";
-import { AlbumData2023CampusMinistry } from "../2023/AlbumData2023CampusMinistry";
-import { AlbumData2023ElderlyCareMinistry } from "../2023/AlbumData2023ElderlyCareMinistry";
-import { AlbumData2023LifeTogether } from "../2023/AlbumData2023LifeTogether";
-import { AlbumData2023Thanksgiving } from "../2023/AlbumData2023Thanksgiving";
-import { AlbumData2023Christmas } from "../2023/AlbumData2023Christmas";
-import { AlbumData2024LunarNewYear } from "../2024/AlbumData2024LunarNewYear";
-import { AlbumData2024LivingStrongLunarNewYear } from '../2024/AlbumData2024LivingStrongLunarNewYear';
-import { AlbumData2024EasterCelebration } from '../2024/AlbumData2024EasterCelebration';
-import { AlbumData2024Together } from "../2024/AlbumData2024Together";
-import { AlbumData2024MothersDay } from '../2024/AlbumData2024MothersDay'
+import { AlbumData2006ChristmasPuppetShow } from './2006/AlbumData2006ChristmasPuppetShow'
+import { AlbumData2007JointChurchPicnicWithCCCC } from './2007/AlbumData2007JointChurchPicnicWithCCCC'
+import { AlbumData2008NinethStreetChurchDedication } from './2008/AlbumData2008NinethStreetChurchDedication';
+import { AlbumData2008TrueFriendsCamp } from './2008/AlbumData2008TrueFriendsCamp';
+import { AlbumData2008FifthAnniversaryEvangelicalMeeting } from './2008/AlbumData2008FifthAnniversaryEvangelicalMeeting';
+// import {  } from './2009'; // True Friends Camp at Anthony Chabot Campground
+// import {  } from './2009'; // 燒烤旅行 2
+import { AlbumData2009Ordination } from './2009/AlbumData2009Ordination';
+import { AlbumData2009FJCC } from './2009/AlbumData2009FJCC';
+// import {  } from './2010'; //燒烤旅行 1
+import { AlbumData2010BaptismalService } from './2010/AlbumData2010BaptismalService';
+// import {  } from './2010'; // 团契
+import { AlbumData2010BasketballMatchWithZhengSheng } from './2010/AlbumData2010BasketballMatchWithZhengSheng';
+import { AlbumData2010CCULeagueFJCCvsSFMandarinBaptistChurch } from './2010/AlbumData2010CCULeagueFJCCvsSFMandarinBaptistChurch';
+import { AlbumData2010CCULeagueFJCCvsCumberlandPresbyterianChiineseChurch } from './2010/AlbumData2010CCULeagueFJCCvsCumberlandPresbyterianChiineseChurch';
+import { AlbumData2010CCULeagueFJCCvsSunset } from './2010/AlbumData2010CCULeagueFJCCvsSunset';
+import { AlbumData2010SummerOysterFarmBBQ } from './2010/AlbumData2010SummerOysterFarmBBQ';
+import { AlbumData2010CCUSummerLeague } from './2010/AlbumData2010CCUSummerLeague';
+import { AlbumData2010TrueFriendsFunDay } from './2010/AlbumData2010TrueFriendsFunDay';
+import { AlbumData2010TrueFriendsCamp } from './2010/AlbumData2010TrueFriendsCamp';
+import { AlbumData2010HavingFunAtTheFarm } from './2010/AlbumData2010HavingFunAtTheFarm';
+import { AlbumData2010ChristmasAndNewYearEve } from './2010/AlbumData2010ChristmasAndNewYearEve';
+import { AlbumData2011CNYTournament } from './2011/AlbumData2011CNYTournament';
+import { AlbumData2011JapanDisasterReliefProject } from './2011/AlbumData2011JapanDisasterReliefProject';
+import { AlbumData2011NinethBaptismalService } from './2011/AlbumData2011NinethBaptismalService';
+import { AlbumData2011GoodFridayEasterBBQ } from './2011/AlbumData2011GoodFridayEasterBBQ';
+import { AlbumData2011Easter } from './2011/AlbumData2011Easter';
+import { AlbumData2011SpringLivingStrong } from './2011/AlbumData2011SpringLivingStrong';
+import { AlbumData2011Fellowship1 } from './2011/AlbumData2011Fellowship1';
+import { AlbumData2011ChildrenMinistry } from './2011/AlbumData2011ChildrenMinistry';
+import { AlbumData2011SummerEatDrinkPlayFun } from './2011/AlbumData2011SummerEatDrinkPlayFun';
+import { AlbumData2011BalloonEvangelismWorkshop } from './2011/AlbumData2011BalloonEvangelismWorkshop';
+import { AlbumData2011NeighborhoodBlockParty } from './2011/AlbumData2011NeighborhoodBlockParty';
+import { AlbumData2011NationalNightOutBlockParty } from './2011/AlbumData2011NationalNightOutBlockParty';
+import { AlbumData2011JirehBasketballTournament } from './2011/AlbumData2011JirehBasketballTournament';
+import { AlbumData2011WelcomeBackBBQ } from './2011/AlbumData2011WelcomeBackBBQ';
+import { AlbumData2011MusicCafe } from './2011/AlbumData2011MusicCafe';
+import { AlbumData2011GospelToOaklandChinatown } from './2011/AlbumData2011GospelToOaklandChinatown';
+import { AlbumData2011EighthAnniversaryLuncheon } from './2011/AlbumData2011EighthAnniversaryLuncheon';
+import { AlbumData2011Fellowship2 } from './2011/AlbumData2011Fellowship2';
+import { AlbumData2011WalkThruChristmasStory } from './2011/AlbumData2011WalkThruChristmasStory';
+import { AlbumData2011UCDavisGraduates } from './2011/AlbumData2011UCDavisGraduates';
+import { AlbumData2011TripToLA } from './2011/AlbumData2011TripToLA';
+import { AlbumData2012TheBeginningOfNewYear } from './2012/AlbumData2012TheBeginningOfNewYear';
+import { AlbumData2012TheFunContinues } from './2012/AlbumData2012TheFunContinues';
+// import { } from './2012/'; // pastor appreaciation 2?
+// import { } from './2012/'; // pastor appreaciation
+// import { AlbumData2012JoyOfStudyBible } from './2012/AlbumData2012JoyOfStudyBible';
+import { AlbumData2012BibleSeminarRevivalMeetingGraduation } from './2012/AlbumData2012BibleSeminarRevivalMeetingGraduation';
+import { AlbumData2012SummerRetreat } from './2012/AlbumData2012SummerRetreat';
+import { AlbumData2012RetreatAndSummerOutdoorActivities } from './2012/AlbumData2012RetreatAndSummerOutdoorActivities';
+// import { } from './2012'; // retreat 2 ?
+// import { } from './2012/'; // summer 2 ?
+import { AlbumData2012Retreat } from './2012/AlbumData2012Retreat';
+import { AlbumData2012StrongFriendCamp } from './2012/AlbumData2012StrongFriendCamp';
+import { AlbumData2012Fellowship } from './2012/AlbumData2012Fellowship';
+import { AlbumData2012Summer } from './2012/AlbumData2012Summer';
+import { AlbumData2012SecondAnnualNeighborhoodBlockParty } from './2012/AlbumData2012SecondAnnualNeighborhoodBlockParty';
+import { AlbumData2012ChurchPaintingDay } from './2012/AlbumData2012ChurchPaintingDay';
+import { AlbumData2012NinethAnniversaryEvanglismAndBibleSeminar } from './2012/AlbumData2012NinethAnniversaryEvanglismAndBibleSeminar';
+import { AlbumData2012PreparingForChristmas } from './2012/AlbumData2012PreparingForChristmas';
+import { AlbumData2012Christmas } from './2012/AlbumData2012Christmas';
+import { AlbumData2012HelenAndZike } from './2012/AlbumData2012HelenAndZike';
+import { AlbumData2012HelenAndZike2 } from './2012/AlbumData2012HelenAndZike2';
+import { AlbumData2013Fellowship } from './2013/AlbumData2013Fellowship';
+import { AlbumData2013Spring } from './2013/AlbumData2013Spring';
+import { AlbumData2013Summer } from './2013/AlbumData2013Summer';
+import { AlbumData2013Church9thBaptism } from './2013/AlbumData2013Church9thBaptism';
+import { AlbumData2013NeighborhoodBlockParty } from './2013/AlbumData2013NeighborhoodBlockParty';
+import { AlbumData2013LeadershipAndEvangelismTraining } from './2013/AlbumData2013LeadershipAndEvangelismTraining';
+import { AlbumData2013SHARPCamp } from './2013/AlbumData2013SHARPCamp';
+import { AlbumData2013TenthAnniversaryThanksgivingCelebration } from './2013/AlbumData2013TenthAnniversaryThanksgivingCelebration';
+import { AlbumData2013WelcomeBackRevSiu } from './2013/AlbumData2013WelcomeBackRevSiu';
+import { AlbumData2013Christmas } from './2013/AlbumData2013Christmas';
+import { AlbumData2014FJCC } from './2014/AlbumData2014FJCC'
+import { AlbumData201410thAnniversaryBaptism} from './2014/AlbumData201410thAnniversaryBaptism'
+import { AlbumData2014ChurchDedication } from './2014/AlbumData2014ChurchDedication'
+import { AlbumData2014BasketballMinistry } from './2014/AlbumData2014BasketballMinistry'
+import { AlbumData2014StoryOfLittleHouse } from './2014/AlbumData2014StoryOfLittleHouse'
+import { AlbumData2014IndependenceDayChurchFamilyBBQ } from './2014/AlbumData2014IndependenceDayChurchFamilyBBQ'
+import { AlbumData2014MusicLessons } from './2014/AlbumData2014MusicLessons'
+import { AlbumData2014SummerTogether } from './2014/AlbumData2014SummerTogether'
+import { AlbumData2014SummerLocalMission } from './2014/AlbumData2014SummerLocalMission'
+import { AlbumData2014FallLifeTogether } from './2014/AlbumData2014FallLifeTogether'
+import { AlbumData2014Christmas } from './2014/AlbumData2014Christmas'
+import { AlbumData2015InNOutReach } from './2015/AlbumData2015InNOutReach';
+import { AlbumData2015TheLordsDay } from './2015/AlbumData2015TheLordsDay';
+import { AlbumData2015NorthgateSeniorMinistry } from './2015/AlbumData2015NorthgateSeniorMinistry';
+import { AlbumData2015WeAreHappyFamily } from './2015/AlbumData2015WeAreHappyFamily';
+import { AlbumData2015RevivalWeekendWithPastorAnitaLau } from './2015/AlbumData2015RevivalWeekendWithPastorAnitaLau';
+import { AlbumData2015Togetherness } from './2015/AlbumData2015Togetherness';
+import { AlbumData2015Thanksgiving } from './2015/AlbumData2015Thanksgiving';
+import { AlbumData2015Christmas } from './2015/AlbumData2015Christmas';
+import { AlbumData2016SummerMission } from './2016/AlbumData2016SummerMission';
+import { AlbumData2016Christmas } from './2016/AlbumData2016Christmas';
+import { AlbumData2017WhatIsHappeningInFJCC } from './2017/AlbumData2017WhatIsHappeningInFJCC';
+import { AlbumData2017FJCC14thAnniversary } from './2017/AlbumData2017FJCC14thAnniversary';
+import { AlbumData2017Winter } from './2017/AlbumData2017Winter';
+import { AlbumData2018Spring } from "./2018/AlbumData2018Spring";
+import { AlbumData2019 } from "./2019/AlbumData2019";
+import { AlbumData2021 } from "./2021/AlbumData2021";
+import { AlbumData2022 } from "./2022/AlbumData2022";
+import { AlbumData2022Thanksgiving } from "./2022/AlbumData2022Thanksgiving";
+import { AlbumData2022Christmas } from "./2022/AlbumData2022Christmas";
+import { AlbumData2023CampusMinistry } from "./2023/AlbumData2023CampusMinistry";
+import { AlbumData2023ElderlyCareMinistry } from "./2023/AlbumData2023ElderlyCareMinistry";
+import { AlbumData2023LifeTogether } from "./2023/AlbumData2023LifeTogether";
+import { AlbumData2023Thanksgiving } from "./2023/AlbumData2023Thanksgiving";
+import { AlbumData2023Christmas } from "./2023/AlbumData2023Christmas";
+import { AlbumData2024LunarNewYear } from "./2024/AlbumData2024LunarNewYear";
+import { AlbumData2024LivingStrongLunarNewYear } from './2024/AlbumData2024LivingStrongLunarNewYear';
+import { AlbumData2024EasterCelebration } from './2024/AlbumData2024EasterCelebration';
+import { AlbumData2024Together } from "./2024/AlbumData2024Together";
+import { AlbumData2024MothersDay } from './2024/AlbumData2024MothersDay'
 
-export const AlbumBasicInfoData = [
+export const albumAllData = [
   {
     'albumName':'Together 2024',
     'year': 2024,

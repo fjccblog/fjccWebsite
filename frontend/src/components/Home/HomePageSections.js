@@ -1,4 +1,4 @@
-import {AlbumBasicInfoData} from "../Album/AlbumBasicInfo/AlbumBasicInfoData";
+import { albumAllData } from '../../data/albumData/albumAllData';
 import {LetterBasicInfoData} from '../PrayerLetter/LetterBasicInfo/LetterBasicInfoData';
 import {TestimonyBasicInfoData} from "../Testimony/TestimonyBasicInfoData/TestimonyBasicInfoData";
 
@@ -12,8 +12,8 @@ let sections = [
     imgurl:TestimonyBasicInfoData[0].coverImgUrl
   },
   {English: 'album', Chinese: '活動花絮',
-    lastUpdate: AlbumBasicInfoData[0].updatedAt,
-    imgurl: AlbumBasicInfoData[0].coverImgUrl},
+    lastUpdate: albumAllData[0].updatedAt,
+    imgurl: albumAllData[0].coverImgUrl},
   {English: 'spiritalFood', Chinese: '靈糧寶庫',
     lastUpdate:null,
     imgurl:null

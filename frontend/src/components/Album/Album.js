@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { AlbumBasicInfoData } from './AlbumBasicInfo/AlbumBasicInfoData';
+import { albumAllData } from '../../data/albumData/albumAllData';
 import AlbumPlayer from './AlbumPlayer/AlbumPlayer';
 import './Album.css';
 
@@ -9,7 +9,7 @@ function Album() {
   let albumPlayerContainer = document.querySelector('.albumPlayerContainer');
 
   function filterAlbumByYear(year, index) {
-    setCurrYearAlbums(AlbumBasicInfoData.filter((infoData)=>infoData.year === year))
+    setCurrYearAlbums(albumAllData.filter((infoData)=>infoData.year === year))
     setIsAlbumPlayerActive(false);
     setSelectedYearIndex(index);
   }
@@ -31,7 +31,7 @@ function Album() {
   let [currAlbumData, setCurrAlbumData] = useState([]);
   let [isAlbumPlayerActive, setIsAlbumPlayerActive] = useState(false);
 
-  AlbumBasicInfoData.forEach((infoData) => {
+  albumAllData.forEach((infoData) => {
     if (!(yearSet.has(infoData.year))) {
       yearSet.add(infoData.year)
     }
