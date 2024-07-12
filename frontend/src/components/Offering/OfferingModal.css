@@ -7,7 +7,7 @@
   background-color: var(--hoverBlue);
   color: white;
   padding: 10px;
-  border: 2px solid white;
+  border: 2px solid var(--hoverBlue);
   border-radius: 5px;
   cursor: pointer;
 }

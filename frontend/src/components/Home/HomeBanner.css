@@ -1,0 +1,62 @@
+.bannerContainer {
+  /* background-color: orange; */
+  height: 100vh;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.bannerBgImg {
+  position: relative;
+  background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNd6ZFzsKdWBZH7Su73m2JcQm9ptPQuhR-UCEGMJX9idLG6mi-Dark2IDS4nhloS1G5LjajP_3zuA3cNfFguX_ymHQzHOnBcFtdjbLOcVDjkZ_xa1Q=w1920-h1080');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bannerBgImg::before {
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.textWorship {
+  position: absolute;
+  text-align:center;
+  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.BannerBibleVerse {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  padding: 0px 10% 10px;
+  bottom: 10px;
+  text-align:center;
+  color: white;
+}
+
+.lineBreak {
+  height: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .bannerContainer {
+    height: 75vh;
+  }
+  .textWorship {
+    font-size: 25px;
+  }
+  .BannerBibleVerse {
+    padding: 0px 12%;
+    left: unset;
+    transform: unset;;
+  }
+}

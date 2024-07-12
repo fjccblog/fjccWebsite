@@ -1,0 +1,43 @@
+.footerContainer {
+  margin-top: 4rem;
+  padding: 3rem;
+  background-color: black;
+  color: white;
+}
+
+.footerContentContainer {
+  max-width: 1100px;
+}
+
+.footerContentContainer > div {
+  margin: 10px 0px;
+}
+
+.footerLogo {
+  display: flex;
+  gap: 10px;
+}
+
+.footerLogoImg {
+  width: 2.5rem;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.footerLogoName {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 8px;
+}
+
+.socialBtn {
+  background-color: transparent;
+  color: white;
+  font-size: 1.65rem;
+}

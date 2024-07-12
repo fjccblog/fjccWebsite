@@ -1,0 +1,12 @@
+export const HenryHuynhSalvation = [
+
+  'Hi, my name is Henry Huynh. I am 15 years old and I am a sophomore at Oakland Tech. High School. Before I accept Jesus Christ as my God, I was always depressed because most of my school years I didn’t know anybody in school. I did not talk at all in school and I had no courage to go up to talk to them because I thought I was weird and abnormal for the way I talk or dress. I worried how others might think of me so I always lied about myself. When I was in 7th grade my girlfriend dumped me for another guy. After that I felt horrible and I said to myself, “what was the point of living in this world?” One time I was so depressed that I thought of suicide, cutting or hanging myself. When I was mad I couldn’t control my temper, I would say foul language or punch on the walls.',
+
+  'This is how I come to believe in Jesus Christ. It all started in the summer of 2009 when I went to the summer program of Faith Jireh Christian church. After several weeks of going to the summer program, I took the advice of the teachers and the ministers and returned every week to church meetings. At the end of the summer program I joined the church camp. On the last day of the camp, a minister told me about Jesus Christ and invited me to accept Jesus as my God. I admit that I am a sinner because I have done really bad things that God wouldn’t approve. I believe Jesus Christ is God and He died on the cross for my sins. So that day I asked Jesus to forgive my sins and invited Jesus to come into my heart as my God and my savior.',
+
+  'Jesus Christ helped me get through the hard time and thanks to Him I was able to survive it. Jesus always watches over me and guides me. After I accepted Jesus Christ I start to feel happy again. One time I asked Jesus to help me make friends, now I have friends both in church and in school. A few weeks ago in a P.E. class I was mad at some classmates who cheated when playing badminton with me. This time I just walked away and calmed down. Now I tell less lies and try to tell more truth because I know it is not right to lie.',
+
+  'Today I obey the teaching of the bible to witness that I am a Christian and be baptized.',
+
+  'I would like to share with you a bible scripture from Romans chapter 12 verse 20, it says, “If your enemy is hungry feed him. If he is thirsty give him a drink. If you do this you will make him feel guilty and ashamed.”'
+]

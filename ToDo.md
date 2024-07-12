@@ -6,6 +6,9 @@ https://stackoverflow.com/questions/280049/how-can-i-run-a-javascript-callback-w
 * [  ] [bug] better album player animation when it enters screen -> [potential-Solution-Idea] bottom of the album player hits the bottom of the page?
 * [  ] [low-Priority] check number of albums in website vs in blog, choose new preview image if have better image
 * [  ] [mid-Priority] permanent link for single album and single prayer letter, revise url when the element is loaded ?
+* [  ] [low-Priority] hide filter when album player and testimony are active, show one row
+
+* [  ] [to-do] schedule page
 
 * [  ] [to-do] faith statement page, add toggle on and off to show content for each section
 * [  ] [to-do] 2018 album after spring from facebook

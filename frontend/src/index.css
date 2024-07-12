@@ -310,6 +310,10 @@ a {
   margin-bottom: 5px;
 }
 
+.mrg-b-10p {
+  margin-bottom: 10px;
+}
+
 .mrg-b-15p {
   margin-bottom: 15px;
 }
@@ -398,6 +402,10 @@ a {
 
 .txt-decor-none {
   text-decoration: none;
+}
+
+.txt-underline {
+  text-decoration: underline;
 }
 /*============ top ================*/
 .top15 {

@@ -1,0 +1,10 @@
+export const AlbumData2008HighSchoolSummer = [
+  "https://lh3.googleusercontent.com/pw/AP1GczPInDXjo1DhsBKs0v_uyi9QmuLSUpJB3Ds5VV7EFhTpVPlQopwivVFiqDwJ04o0kpfFNcBhRhgDNRKZIXvWHjWT94Bf0sL9a45afNJdBQ8gomeu_ok=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczPUPek3jI1cADgUPKXULIMVhg4JluNgT2RTjX9Bu8y0XRG7W3KnYW0p1Lm5vm8HHrKwmaaHtHen0W6rsv94jossTpTDl8mDH0ELevKutA2DBCK11oc=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczNc9SJVPoV0EZU3Dm_Qk7ncx8L87_rj-Mzn1RH1CXKgBF4v0nzH3Vq3_Mm04eF4loDUPtz2OP0iI1UofedxQK5Z4PMLgGgI5wTwEILeocIEKlnAct8=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczNBdGYnVdPvLgaeGZdXyR2-Dc3yPD5hpJeqnUIB6HPcZAp6S0TaRt7SptJMdOjX99ZN-qnRMa7iTbS6i1SzNL09LVIIV-2Fe5MHsJmuHGf-zTpf0aQ=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczPCZmo8BsmVG61EDCTa8rJe1o-dp3vEzGfovTLJ2kwcU05rc__elYi4sowUiLaxYNa2e_DTkTgDkCzBpz8XwxVzNNJzru57NCpb13JjBrJx5z1EwIw=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczNqV6co4hLd8SdfyXFtXunhvZbj6TzLDGN6wtSG_wOflyXtZjXIQtAjqRd42m5xxMtakRT24rCegndwhhClgBXNzEgqiJ-l3klx20x0DiGcFeF-Iic=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczOCTdsJVF_Qr4H5sOT5wIiQ2o56K6dyROeU5G3JVhzjjEIwODRyFcir32Qb6W7-H-0Oc0aA5V1vfmkgHZMhq0zxoBvSsWgFVdD5Lx-omfUazkNTeQ0=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczMQSrToPlxEsd-p-_YuD9-PhGZq9EaTpsPiNipl_cJH_c9ZDYj6sf9Ei69cOVOBYJYtkNyX56jy0Tx7Zb9P3TULZ1yq6l3qS94IHx8YLEZejO_ELrg=w1920-h1080",
+]

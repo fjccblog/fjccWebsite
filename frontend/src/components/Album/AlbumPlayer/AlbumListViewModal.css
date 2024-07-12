@@ -1,0 +1,54 @@
+.AlbumListViewModalContainer {
+  width: 400px;
+  padding: 15px;
+}
+
+.AlbumListViewModalTip {
+  font-size: 0.85rem;
+}
+
+.AlbumListViewModalBtns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.AlbumListViewModalConfirmBtn {
+  background-color: var(--hoverBlue);
+  color: white;
+  padding: 10px;
+  border: 2px solid var(--hoverBlue);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.AlbumListViewModalConfirmBtn:hover {
+  color: var(--hoverBlue);
+  background-color: white;
+  border: 2px solid var(--hoverBlue);
+}
+
+.AlbumListViewModalCancelBtn {
+  border: 2px solid var(--hoverBlue);
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.AlbumListViewModalCancelBtn:hover {
+  color: var(--hoverBlue);
+}
+
+@media screen and (max-width: 600px) {
+  .AlbumListViewModalContainer {
+    width: 80vw;
+  }
+  .AlbumListViewModalConfirmQues {
+    font-size: 1.15rem;
+  }
+  .AlbumListViewModalBtns {
+    display: flex;
+    flex-direction: column;
+  }
+}
