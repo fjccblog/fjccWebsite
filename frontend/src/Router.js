@@ -5,7 +5,7 @@ import AlbumPage from './pages/AlbumPage.js';
 import TestimonyPage from './pages/TestimonyPage.js';
 import ChurchHistoryPage from './pages/ChurchHistoryPage.js';
 import FaithStatementPage from './pages/FaithStatementPage.js';
-import HomePage from './components/Home/HomePage.js';
+import HomePageIndex from './components/Home/HomePageIndex.js';
 import Logo from './components/Logo/Logo.js';
 import MinistryPage from './pages/Ministry.js';
 import MeetingTimePage from './pages/MeetingTimePage.js';
@@ -23,7 +23,7 @@ function Router() {
       <Nav />
       <Switch>
         <Route exact path="/">
-          <HomePage />
+          <HomePageIndex />
         </Route>
         <Route path="/fjccWebsite">
           <Redirect to="/" />

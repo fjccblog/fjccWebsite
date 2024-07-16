@@ -1,0 +1,90 @@
+:root {
+  --sectionIconWidth: 100px;
+}
+
+.homeCompactSectionContainer {
+  display: grid;
+  grid-template-areas:
+  "calendar pray testimony album"
+  "calendarSub praySub testimonySub albumSub"
+  "building ministry spiritFood sectionEmpty"
+  "buildingSub ministrySub spiritFoodSub .";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  aspect-ratio: 16 / 8;
+  background-color: bisque;
+  padding: 20px 20px 20px;
+  gap: 5%;
+}
+
+.sectionCalendar {
+  grid-area: "calendar";
+}
+.sectionCalendarSub {
+  grid-area: "calendarSub";
+}
+
+.sectionPray {
+  grid-area: "pray";
+}
+.sectionPraySub {
+  grid-area: "praySub";
+}
+
+.sectionTestimony {
+  grid-area: "testimony";
+}
+.sectionTestimonySub {
+  grid-area: "testimonySub";
+}
+
+.sectionAlbum {
+  grid-area: "album";
+}
+.sectionAlbumSub {
+  grid-area: "albumSub";
+}
+
+.sectionBuilding {
+  grid-area: "building";
+}
+.sectionBuildingSub {
+  grid-area: "buildingSub";
+}
+
+.sectionMinistry {
+  grid-area: "ministry";
+}
+.sectionMinistrySub {
+  grid-area: "ministrySub";
+}
+
+.sectionSpiritFood {
+  grid-area: "spiritFood";
+}
+.sectionSpiritFoodSub {
+  grid-area: "spiritFoodSub";
+}
+
+.sectionEmpty {
+  grid-area: "sectionEmpty";
+}
+
+.sectionTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.circularNavyBg {
+  background-color: #013237;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.sectionIcon {
+  color: white;
+  position: absolute;
+  font-size: calc((100vw - 80px) / 4 / 2);
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
