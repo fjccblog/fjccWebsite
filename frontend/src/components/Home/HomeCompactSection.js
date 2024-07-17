@@ -6,78 +6,73 @@ function HomeCompactSection () {
   return (
     <div className='homeCompactSectionContainer'>
 
+        <Link to="meetingTime">
+        <div className="sectionCalendar">
+          <div className="circularNavyBg">
+            <i className="far fa-calendar-alt sectionIcon"></i>
+          </div>
+          <div className="sectionCalendarSub sectionTitle">聚会时间</div>
+        </div>
+        </Link>
 
-        <div className="circularNavyBg sectionCalendar">
-          <i className="far fa-calendar-alt sectionIcon"></i>
+        <Link to="prayerLetter">
+        <div className="sectionPray">
+          <div className="circularNavyBg">
+            <i className="fas fa-pray sectionIcon"></i>
+          </div>
+          <div className="sectionPraySub sectionTitle">代祷</div>
         </div>
-        <div className="circularNavyBg sectionPray">
-          <i className="fas fa-pray sectionIcon"></i>
-        </div>
-        <div className="circularNavyBg sectionTestimony">
-          <i className="fas fa-fire sectionIcon"></i>
-        </div>
-        <div className="circularNavyBg sectionAlbum">
-          <i className="fas fa-icons sectionIcon"></i>
-        </div>
+        </Link>
 
-        <div className="sectionCalendarSub sectionTitle">聚会时间</div>
-        <div className="sectionPraySub sectionTitle">聚会时间</div>
-        <div className="sectionTestimonySub sectionTitle">聚会时间</div>
-        <div className="sectionAlbumSub sectionTitle">聚会时间</div>
+        <Link to="testimony">
+        <div className="sectionTestimony">
+          <div className="circularNavyBg">
+            <i className="fas fa-fire  sectionIcon"></i>
+          </div>
+          <div className="sectionTestimonySub sectionTitle">生命见证</div>
+        </div>
+        </Link>
 
-        <div className="circularNavyBg sectionBuilding">
-          <i className="fas fa-building sectionIcon"></i>
+        <Link to="album">
+        <div className="sectionAlbum">
+          <div className="circularNavyBg">
+            <i className="fas fa-icons sectionIcon"></i>
+          </div>
+          <div className="sectionAlbumSub sectionTitle">活动花絮</div>
         </div>
-        <div className="circularNavyBg sectionMinistry">
-          <i className="fas fa-walking sectionIcon"></i>
+        </Link>
+
+        <Link to="building">
+        <div className="sectionBuilding">
+          <div className="circularNavyBg">
+            <i className="fas fa-building sectionIcon"></i>
+          </div>
+          <div className="sectionCalendarSub sectionTitle">大楼</div>
         </div>
-        <div className="circularNavyBg sectionSpiritFood">
-          <i className="fas fa-hamburger sectionIcon"></i>
+        </Link>
+
+        <Link to="ministry">
+        <div className="sectionMinistry">
+          <div className="circularNavyBg">
+            <i className="fas fa-walking sectionIcon"></i>
+          </div>
+          <div className="sectionBuildingSub sectionTitle">外展事工</div>
         </div>
+        </Link>
+
+        <Link to="spiritalFood">
+        <div className="sectionSpiritFood">
+          <div className="circularNavyBg">
+            <i className="fas fa-hamburger sectionIcon"></i>
+          </div>
+          <div className="sectionSpiritFoodSub sectionTitle">灵粮宝库</div>
+        </div>
+        </Link>
+
         <div className="sectionEmpty"></div>
-
-        <div className="sectionBuildingSub sectionTitle">聚会时间</div>
-        <div className="sectionMinistrySub sectionTitle">聚会时间</div>
-        <div className="sectionSpiritFoodSub sectionTitle">聚会时间</div>
 
     </div>
   )
 }
 
 export default HomeCompactSection;
-
-
-/**
-<div className="circularNavyBg sectionCalendar">
-          <i className="far fa-calendar-alt sectionIcon"></i>
-        </div>
-        <div className="circularNavyBg sectionPray">
-          <i className="fas fa-pray sectionIcon"></i>
-        </div>
-        <div className="circularNavyBg sectionTestimony">
-          <i className="fas fa-fire sectionIcon"></i>
-        </div>
-        <div className="circularNavyBg sectionAlbum">
-          <i className="fas fa-icons sectionIcon"></i>
-        </div>
-
-        <div className="sectionCalendarSub sectionTitle">聚会时间</div>
-        <div className="sectionPraySub sectionTitle">聚会时间</div>
-        <div className="sectionTestimonySub sectionTitle">聚会时间</div>
-        <div className="sectionAlbumSub sectionTitle">聚会时间</div>
-
-        <div className="circularNavyBg sectionBuilding">
-          <i className="fas fa-building sectionIcon"></i>
-        </div>
-        <div className="circularNavyBg sectionMinistry">
-          <i className="fas fa-walking sectionIcon"></i>
-        </div>
-        <div className="circularNavyBg sectionSpiritFood">
-          <i className="fas fa-hamburger sectionIcon"></i>
-        </div>
-        <div className="sectionEmpty"></div>
-
-        <div className="sectionBuildingSub sectionTitle">聚会时间</div>
-        <div className="sectionMinistrySub sectionTitle">聚会时间</div>
-        <div className="sectionSpiritFoodSub sectionTitle">聚会时间</div>
- */

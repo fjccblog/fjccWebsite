@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch} from 'react-router-dom';
+import Ministry from '../components/Ministry/Ministry'
 import ChildrenMinistry from '../components/Ministry/ChildrenMinistry';
 import CampusMinistry from '../components/Ministry/CampusMinistry';
 import JuniorHighSummerMinistry from '../components/Ministry/JuniorHighSummerMinistry';
@@ -8,6 +9,9 @@ function MinistryPage() {
   return (
     <div>
     <Switch>
+      <Route path='/ministry' exact>
+        <Ministry />
+      </Route>
       <Route path='/ministry/children'>
         <ChildrenMinistry />
       </Route>

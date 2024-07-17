@@ -6,12 +6,11 @@
   display: grid;
   grid-template-areas:
   "calendar pray testimony album"
-  "calendarSub praySub testimonySub albumSub"
-  "building ministry spiritFood sectionEmpty"
-  "buildingSub ministrySub spiritFoodSub .";
+  "building ministry spiritFood sectionEmpty";
   grid-template-columns: 1fr 1fr 1fr 1fr;
   aspect-ratio: 16 / 8;
   background-color: bisque;
+  margin: auto;
   padding: 20px 20px 20px;
   gap: 5%;
 }
@@ -19,59 +18,33 @@
 .sectionCalendar {
   grid-area: "calendar";
 }
-.sectionCalendarSub {
-  grid-area: "calendarSub";
-}
 
 .sectionPray {
   grid-area: "pray";
-}
-.sectionPraySub {
-  grid-area: "praySub";
 }
 
 .sectionTestimony {
   grid-area: "testimony";
 }
-.sectionTestimonySub {
-  grid-area: "testimonySub";
-}
 
 .sectionAlbum {
   grid-area: "album";
-}
-.sectionAlbumSub {
-  grid-area: "albumSub";
 }
 
 .sectionBuilding {
   grid-area: "building";
 }
-.sectionBuildingSub {
-  grid-area: "buildingSub";
-}
 
 .sectionMinistry {
   grid-area: "ministry";
-}
-.sectionMinistrySub {
-  grid-area: "ministrySub";
 }
 
 .sectionSpiritFood {
   grid-area: "spiritFood";
 }
-.sectionSpiritFoodSub {
-  grid-area: "spiritFoodSub";
-}
 
 .sectionEmpty {
   grid-area: "sectionEmpty";
-}
-
-.sectionTitle {
-  display: flex;
-  justify-content: center;
 }
 
 .circularNavyBg {
@@ -84,7 +57,24 @@
 .sectionIcon {
   color: white;
   position: absolute;
-  font-size: calc((100vw - 80px) / 4 / 2);
+  font-size: calc((100vw - 40px - 15vw) / 4 / 2);
+  /* subtract padding, 3 of 5% gap, into 4 sections, only want half size */
   left: 50%;
   transform: translate(-50%, 50%);
+}
+
+.sectionTitle {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+@media screen and (max-width:600px) {
+  .homeCompactSectionContainer {
+    padding: 20px;
+  }
+  .sectionIcon {
+    font-size: calc((100vw - 40px - 15vw) / 4 / 2);
+    /* subtract padding, 3 of 5% gap, into 4 sections, only want half size */
+  }
 }
