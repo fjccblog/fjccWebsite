@@ -1,3 +1,7 @@
+.homePageContaner {
+  position: relative;
+}
+
 .width1-3 {
   width: 33.3333%;
 }

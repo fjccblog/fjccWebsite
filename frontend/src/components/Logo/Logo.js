@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import OpenModalButton from '../../context/OpenModalButton';
-import NavModal from '../Navbar/NavModal';
 import './Logo.css';
-import TestModal from '../Testing/TestingModal';
 
 function Logo() {
 
