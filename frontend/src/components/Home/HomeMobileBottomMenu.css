@@ -1,0 +1,17 @@
+.menuBtn {
+  border: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.75rem;
+  padding: 1rem;
+}
+
+.menuBtn:hover {
+  color: var(--hoverBlue);
+}
+
+@media screen and (min-width:650px) {
+  .menuBtn{
+    display: none;
+  }
+}
