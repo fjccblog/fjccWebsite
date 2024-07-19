@@ -1,0 +1,15 @@
+export const AlbumData2024Tahoe = [
+  "https://lh3.googleusercontent.com/pw/AP1GczMn7jp7VFqmP2t0ygskIG0JyENhkjNQgFR5zStSKPd440GsGkX8bvFY3CdDIt9LPk_abwIK6L6_lsAZgA0j4U3vMyHRrzvC0WQclJBHmWz8K6u1qY4=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczNlANAlNSBxxN6u_Pw21Ea7K6TjgI0bHs6CakHsKRnAMeDaFpPvhcQbkQd9fAaMswAfARVGPqvDGCekRJ7VSAxRw0_2IKrmoow88zaNGeFp891E4YE=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczO5Tbe2F1i-iJIosSAV6E7XN8qi5oo77IR9R7Z6xZ9Ss9Cu920Ix9wdynNjRm9KmABWTouN8KGmOphJnKS18uD5i-_STD8-o1qqv8UAs5t91ifMIfA=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczO88buIOl4WJeO_KzTocXdPFv9z7OuqKHHkqfDXMiizERYAbdKF3YIWgKsQcsr1YXQIE-Gzd6-uIlnAsLOVXBn2ePhXx9F-mB5NN4P2enDlfgrv49A=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczN_ZrN7GPGu-C2eHw_t-bw49VnvNlq28eIL8waPmt2QqDfz5YXZVqT8U0XrHFogJcWjouxyVqSIIHMkoUHnBMbN4CNLNplOEDVJ_XrrW9UHgz2Oe4A=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczOBPavuwQTUY3Mn8MX5P0OtCjqxCVcq8AiS8VrruVNAdOJwpM1f7LuGzIaUSSrzIF-pzy4mTVOaYlo5fF6rFQhu4NJa6f0H5qZ2cA8c0xpVSeJybNo=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczNKXxdJShzZYAd4TfHgQfpd8VffMQh9WQnC6Xi4cNOdRDgymmFHXQ0NRQAV9lDMr0iHTiRfEFSZH4ogSlse4NQr6ciFCJL0fgxkjqztn_fKvqgosq0=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczOB9MXeFfRxSwB6O5D2G9Z7FtYkLhqkBwZmO5KROtxgoIlM-jvaZf7ybBgWfn5jIS9xxtz96ACmuaiS8SuK6nXgwscIakUNBKaiHflKdLYSEVn3lQs=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczNAijBYtniQFWUq7kn5xDp0AvJaheIiRsW8XpT0gV0-858HNDyEz8LF6Vszqczoyk9vjrh18wNvq44sfRXp2QTP44CrMYPZThcxrl0SgsEO22t3OiY=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczMOH5l2DvnruBa70uvKlXFaABDkcPmesaGau2eFM-d0bUuu2hkwSqLR8cAU9S6UhHg34-8J9f73EsmizVr9IMkeLsSRMNEJkWYaITnB4Q_NWssipfc=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczNnRGpTbrFEM87o_pHRZJq5kuuHSNZkGyFv_bxQHVb4qL2Z9ognrksY8thA-zMOcERc7gu-dphHzFRc0BDAnweAP_cIKREZJHaYzTT31-N8V2mvViA=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczMCw2rf5bYeKqA1MkXLyXOj1YpLNzk3HBm5FsgDxfxZdEwPAR0zZgm4JoHwWyG9e-AHec7uTnh47NpXAzeWXWlWxzhhKbL9Qpd-PcgAsVdKVE6B8zM=w1920-h1080",
+  "https://lh3.googleusercontent.com/pw/AP1GczNmCIVRAkuV1C5kv3kZ_eq1O6BEjaIDFm_IlrUN3MsWyoSAlFhPomZXzl5oqhpPHCuAnMmtw05FP_KBz0qw_svcLw96pbnB0FPwuXh2GeBhhDIpsKw=w1920-h1080",
+]
