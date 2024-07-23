@@ -152,6 +152,16 @@ a {
 .flx-wrap {
   flex-wrap: wrap;
 }
+
+/*============ font-family ================*/
+.fontFMSong {
+  font-family: '宋体',sans-serif;
+}
+
+.fontFMKaiTi {
+  font-family: 'KaiTi',sans-serif;
+}
+
 /*============ font-size ================*/
 .font15p {
   font-size: 14px;

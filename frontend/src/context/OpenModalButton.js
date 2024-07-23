@@ -34,7 +34,7 @@ function OpenModalButton({
       <img onClick={onClick} className={customizeStyle} src={imgSrc} />
     )
   } else if (buttonTag === "div") {
-    return <div onClick={onClick}>{buttonText}</div>
+    return <div onClick={onClick} className={customizeStyle}>{buttonText}</div>
   }
   return (
     <button onClick={onClick} className={customizeStyle}>{buttonText}</button>

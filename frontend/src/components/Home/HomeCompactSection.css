@@ -67,6 +67,10 @@
   display: flex;
   justify-content: center;
   margin-top: 8px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  font-family: '宋体',sans-serif;
+  color: rgb(101, 101, 101);
 }
 
 @media screen and (max-width:600px) {
