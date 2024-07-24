@@ -1,0 +1,22 @@
+.introDiv {
+  display: flex;
+}
+
+.introDiv:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+
+.ministryIntroImgDiv {
+  max-width: 50vw;
+  width: 50vw;
+  aspect-ratio: 1/1;
+}
+
+.ministryIntroImgDiv > img {
+  width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  mask-image: radial-gradient(circle, black 30%, transparent 100%);
+  object-fit:cover;
+}
