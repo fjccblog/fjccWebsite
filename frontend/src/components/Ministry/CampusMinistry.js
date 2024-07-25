@@ -3,6 +3,7 @@ import React from 'react';
 function CampusMinistry() {
   return (
     <div className='container-common'>
+        <h1 className='txt-center fontFMSong'>校园事工</h1>
         <p>
           Mission : Helping the spiritually lost to come to Jesus;
           encouraging Christians to grow in their relationship with Christ;
