@@ -1,8 +1,10 @@
 import React from 'react';
+import BackToMinistryPageBtn from './BackToMinistryPageBtn';
 
 function ChildrenMinistry() {
   return (
     <div className='container-common'>
+        <BackToMinistryPageBtn />
         <h1 className='txt-center fontFMSong'>儿童事工</h1>
         <p>
           In the midst of a consuming ministry to adults,

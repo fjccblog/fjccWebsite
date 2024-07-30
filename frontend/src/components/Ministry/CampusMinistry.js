@@ -1,8 +1,10 @@
 import React from 'react';
+import BackToMinistryPageBtn from './BackToMinistryPageBtn';
 
 function CampusMinistry() {
   return (
     <div className='container-common'>
+        <BackToMinistryPageBtn />
         <h1 className='txt-center fontFMSong'>校园事工</h1>
         <p>
           Mission : Helping the spiritually lost to come to Jesus;

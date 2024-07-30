@@ -1,0 +1,16 @@
+.ministryBackBtn {
+  font-size: 1.35rem;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+  font-family: 'SimSun',sans-serif;
+  font-weight: 600;
+}
+
+.ministryBackBtnIcon {
+  padding-right: 5px;
+}
+
+.ministryBackBtn:hover .ministryBackBtnIcon{
+  color: var(--hoverBlue);
+}

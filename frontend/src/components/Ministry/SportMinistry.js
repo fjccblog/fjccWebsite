@@ -1,8 +1,10 @@
 import React from 'react';
+import BackToMinistryPageBtn from './BackToMinistryPageBtn';
 
 function SportMinistry() {
   return (
     <div className='container-common'>
+        <BackToMinistryPageBtn />
         <h1 className='txt-center fontFMSong'>體育事工</h1>
 
         <p>

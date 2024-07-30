@@ -53,6 +53,10 @@ a {
 }
 
 /*============ border ================*/
+.bor-0p {
+  border: 0px;
+}
+
 .bor-sol-lggray {
   border: 3px solid lightslategray;
 }
