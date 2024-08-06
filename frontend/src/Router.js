@@ -14,6 +14,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import OfferingPage from './pages/OfferingPage.js';
 import PrayerLetterPage from './pages/PrayerLetterPage.js'
 import PurposePage from './pages/PurposePage.js';
+import SpirtualFoodPage from './pages/SpirtualFoodPage.js';
 import Footer from './components/Footer/Footer.js';
 
 function Router() {
@@ -55,6 +56,9 @@ function Router() {
         </Route>
         <Route path="/purpose">
           <PurposePage />
+        </Route>
+        <Route path="/spirtualFood">
+          <SpirtualFoodPage />
         </Route>
         <Route path="/testimony">
           <TestimonyPage />

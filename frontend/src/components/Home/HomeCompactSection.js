@@ -60,7 +60,7 @@ function HomeCompactSection () {
         </div>
         </Link>
 
-        <Link to="spiritalFood">
+        <Link to="spirtualFood">
         <div className="sectionSpiritFood">
           <div className="circularNavyBg">
             <i className="fas fa-hamburger sectionIcon"></i>
