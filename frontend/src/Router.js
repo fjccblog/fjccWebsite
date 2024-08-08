@@ -11,6 +11,7 @@ import MinistryPage from './pages/Ministry.js';
 import MeetingTimePage from './pages/MeetingTimePage.js';
 import Nav from './components/Navbar/Nav.js';
 import NotFoundPage from './pages/NotFoundPage';
+import NorthgatePage from './pages/NorthgatePage.js';
 import OfferingPage from './pages/OfferingPage.js';
 import PrayerLetterPage from './pages/PrayerLetterPage.js'
 import PurposePage from './pages/PurposePage.js';
@@ -47,6 +48,9 @@ function Router() {
         </Route>
         <Route path="/ministry">
           <MinistryPage />
+        </Route>
+        <Route path="/ng">
+          <NorthgatePage />
         </Route>
         <Route path="/offering">
           <OfferingPage />
