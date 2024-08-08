@@ -1,0 +1,50 @@
+.homeMobileBottomMenuContainer {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  background-color: white;
+  padding: 5px 20px 5px;
+  border-top: 1px solid grey;
+}
+
+.homeMenuContentDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr ;
+}
+.menuModalBtnDiv {
+  position: absolute;
+  bottom: 1.5vw;
+  left: 50vw;
+  width: fit-content;
+  transform: translate(-50%);
+}
+
+.menuMainBtnDiv {
+  background-color: bisque;
+  align-items: center;
+  border-radius: 50%;
+  width: 15vw;
+  aspect-ratio: 1/1;
+  font-weight: 600;
+  font-size: 1.175rem;
+}
+
+.menuBtn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  padding: 5px;
+  font-family: 'SimSun';
+}
+
+.menuBtn:hover {
+  color: var(--hoverBlue);
+}
+
+@media screen and (min-width:650px) {
+  .homeMobileBottomMenuContainer{
+    display: none;
+  }
+}

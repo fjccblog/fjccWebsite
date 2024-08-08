@@ -5,15 +5,17 @@ import AlbumPage from './pages/AlbumPage.js';
 import TestimonyPage from './pages/TestimonyPage.js';
 import ChurchHistoryPage from './pages/ChurchHistoryPage.js';
 import FaithStatementPage from './pages/FaithStatementPage.js';
-import HomePage from './components/Home/HomePage.js';
+import HomePageIndex from './components/Home/HomePageIndex.js';
 import Logo from './components/Logo/Logo.js';
 import MinistryPage from './pages/Ministry.js';
 import MeetingTimePage from './pages/MeetingTimePage.js';
 import Nav from './components/Navbar/Nav.js';
 import NotFoundPage from './pages/NotFoundPage';
+import NorthgatePage from './pages/NorthgatePage.js';
 import OfferingPage from './pages/OfferingPage.js';
 import PrayerLetterPage from './pages/PrayerLetterPage.js'
 import PurposePage from './pages/PurposePage.js';
+import SpirtualFoodPage from './pages/SpirtualFoodPage.js';
 import Footer from './components/Footer/Footer.js';
 
 function Router() {
@@ -23,7 +25,7 @@ function Router() {
       <Nav />
       <Switch>
         <Route exact path="/">
-          <HomePage />
+          <HomePageIndex />
         </Route>
         <Route path="/fjccWebsite">
           <Redirect to="/" />
@@ -47,6 +49,9 @@ function Router() {
         <Route path="/ministry">
           <MinistryPage />
         </Route>
+        <Route path="/ng">
+          <NorthgatePage />
+        </Route>
         <Route path="/offering">
           <OfferingPage />
         </Route>
@@ -55,6 +60,9 @@ function Router() {
         </Route>
         <Route path="/purpose">
           <PurposePage />
+        </Route>
+        <Route path="/spirtualFood">
+          <SpirtualFoodPage />
         </Route>
         <Route path="/testimony">
           <TestimonyPage />
