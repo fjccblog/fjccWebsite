@@ -9,6 +9,9 @@
 * reactjs runs in the browser, so it can't read env variables at the running time
 * ```https://create-react-app.dev/docs/adding-custom-environment-variables/```
 
+### Timezone in Date()
+* should avoid using offset because time zone and daylight saving rules may change.
+* ```https://stackoverflow.com/questions/1091372/getting-the-clients-time-zone-and-offset-in-javascript```
 
 ### Images on the album page
 * Initial thought: Since we already have facebook page with posts of lots of pictures, then I can just copy the source link of each picture, save them all in a json for each album.

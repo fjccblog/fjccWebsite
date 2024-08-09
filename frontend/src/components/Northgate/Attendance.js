@@ -15,21 +15,30 @@ function Attendance() {
   // =========== features in mind
   // sort by room number and sort by time
   // drag and drop for admin override (?)
+  let NGPeopleArr = Object.entries(NGPeople).sort((a,b)=>a[0] - b[0])
+
+  const getTimeNow = () => {
+    // return time in this pattern 10:28:19 AM
+    let timeNowInMS= new Date().getTime();
+    let readableTime = new Date(timeNowInMS); //Fri Aug 09 2024 10:31:17 GMT-0700 (Pacific Daylight Time)
+    let localTime = readableTime.toLocaleString('en-US', {timeZone:"America/Los_Angeles"}) //8/9/2024, 10:28:19 AM
+    let localTimeHourMinSec = localTime.split(",")[1];
+    return localTimeHourMinSec
+  }
+
+  const submitTime = (room) => {
+    let currTime = getTimeNow()
+    // store time/order(2 digit) and room number in cookie
+    // show time / order next to name
+    // check box in excels
+  }
+
 
   const formRef = useRef(null)
 
   const scriptUrl = process.env.REACT_APP_ATTENDANCE_SCRIPT_URL;
 
-  let timeNow= new Date().getTime();
-  let readableTime = new Date(timeNow)
-  let time2 = timeNow.toLocaleString();
-  console.log(readableTime)
-  console.log(time2);
-  console.log(msToTime(timeNow))
-
   const handleSubmit = (e) =>{
-
-
     e.preventDefault()
     fetch(scriptUrl, {method: 'POST', body: new FormData(formRef.current)})
     .then(res => {
@@ -38,23 +47,6 @@ function Attendance() {
     })
     .catch(err => console.log(err))
   }
-
-  function msToTime(duration) {
-    var milliseconds = Math.floor((duration % 1000) / 100),
-      seconds = Math.floor((duration / 1000) % 60),
-      minutes = Math.floor((duration / (1000 * 60)) % 60),
-      hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
-
-    hours = (hours < 10) ? "0" + hours : hours;
-
-    // hour needs to minus 7 because we are in GMT-0700 time zone
-    // needs to add 24 if it is less than 7
-    minutes = (minutes < 10) ? "0" + minutes : minutes;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-    return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
-  }
-
 
   return (
     <div className='northgateContainer'>
@@ -89,6 +81,18 @@ function Attendance() {
               <input type="submit" name="submit" value="签到" />
           </div>
         </form>
+      </div>
+
+      <div className='testing'>
+        {NGPeopleArr.map((person) => {
+          return (
+            <div >
+              {person[1].CHN_Name}
+              <button onClick={()=> submitTime(person[0])}> 签到</button>
+            </div>
+          )
+        })}
+
       </div>
 
     </div>
