@@ -28,12 +28,6 @@ function Attendance() {
   let NGPeopleArr = Object.entries(NGPeople).sort((a,b)=>a[0] - b[0]) //[room,[CHN_name, ENG_name]]
   const scriptUrl = process.env.REACT_APP_ATTENDANCE_SCRIPT_URL;
 
-  let [cookieVal, setCookieVal] = useState("");
-  let [cookieObj, setCookieObj] = useState({}); // {"room": [order, time]}
-  let [currDateTime, setCurrDateTime] = useState([]);
-
-  const formRef = useRef(null)
-
 
   // ================ function definition ==============
   const getTimeNow = () => {
@@ -43,6 +37,32 @@ function Attendance() {
     let localTime = readableTime.toLocaleString('en-US', {timeZone:"America/Los_Angeles"}) //8/9/2024, 10:28:19 AM
     let localTimeArr = localTime.split(",");
     return localTimeArr
+  }
+
+  const InitialCookieObj = () => {
+    // return object in this pattern {"room": [order, "HH:MM:SSAM"]}
+    let emptyObj = {}
+    let attendanceCookie = document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0]));
+    console.log("found", attendanceCookie)
+    if (attendanceCookie !== undefined) {
+
+      // take the value of cookie, and split into each person, which divided by '-'
+      let checkedInArr = attendanceCookie.split("=")[1].split('-');
+      let checkInObj = {};
+      for (let i = 0; i < checkedInArr.length - 1; i++) {
+        let checkIn = checkedInArr[i];
+        console.log("single checkin", checkIn)
+        let [room, time, AMPM] = checkIn.split(" ")
+        // if (checkInObj[room] !== undefined) {
+          checkInObj[room] = [i + 1, time+AMPM]
+        // } else {
+          // checkInObj[room] = [-1, ""]
+        // }
+      }
+      console.log("obj", checkInObj)
+      // setCookieObj(checkInObj)
+    }
+    return emptyObj
   }
 
   const submitTime = (room) => {
@@ -55,6 +75,8 @@ function Attendance() {
       setCookieVal(newCookie)
       document.cookie = `${"NG"+currDateTime[0]}=${newCookie}`;
     }
+    // document.cookie = `${"NG"+getTimeNow()[0]}=${attendanceCookie.split("=")[1] + "02990 8:56:48 PM-02997 8:56:48 PM-"}`
+
   }
 
   const handleSubmit = (e) =>{
@@ -67,32 +89,60 @@ function Attendance() {
     // .catch(err => console.log(err))
   }
 
+  let [cookieVal, setCookieVal] = useState("");
+  let [cookieObj, setCookieObj] = useState(InitialCookieObj()); // {"room": [order, time]}
+  let [currDateTime, setCurrDateTime] = useState(getTimeNow());
+
+  const formRef = useRef(null)
+
   // ============ useEffect ===================
   // on render
   useEffect(()=> {
-    setCurrDateTime(getTimeNow())
+    // setCurrDateTime(getTimeNow())
+
+    let currCookieDate = "NG"+currDateTime[0];
+    if (document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0])) === undefined) {
+      document.cookie = `${currCookieDate}=`
+    } else {
+      // console.log(document.cookie)
+      // let checkInArr = currCookieDate.split("-");
+      // let checkInObj = cookieObj;
+      // for (let i = 0; i < checkInArr.length - 1; i++) {
+      //   let checkIn = checkInArr[i];
+      //   console.log("single checkin", checkIn)
+      //   let room = checkIn.split(" ")[0]
+      //   let time = checkIn.split(" ")[1]
+      //   if (checkInObj[room] !== undefined) {
+      //     checkInObj[room] = [i, time]
+      //   } else {
+      //     checkInObj[room] = [-1, ""]
+      //   }
+      // }
+      // console.log("obj", checkInObj)
+      // setCookieObj(checkInObj)
+    }
   }, [])
 
   useEffect(()=> {
     // check if cookie exists
     // if it doesn't, save empty string for cookie
     // else construct object from cookie
-    let currCookieDate = "NG"+currDateTime[0];
-    if (document.cookie.indexOf(currCookieDate) === -1) {
-      document.cookie = `${currCookieDate}=""`
-    } else {
-      let checkInArr = currCookieDate.split("-");
-      let checkInObj = cookieObj;
-      for (let i = 0; i < checkInArr.length - 1; i++) {
-        let checkIn = checkInArr[i];
-        let room = checkIn.split(" ")[0]
-        let time = checkIn.split(" ")[1]
-        if (checkInObj[room] === undefined) {
-          checkInObj[room] = [i, time]
-        }
-      }
-      setCookieObj(checkInObj)
-    }
+    // let currCookieDate = "NG"+currDateTime[0];
+    // if (document.cookie.indexOf(currCookieDate) === -1) {
+    //   document.cookie = `${currCookieDate}=""`
+    // } else {
+    //   let checkInArr = currCookieDate.split("-");
+    //   let checkInObj = cookieObj;
+    //   for (let i = 0; i < checkInArr.length - 1; i++) {
+    //     let checkIn = checkInArr[i];
+    //     let room = checkIn.split(" ")[0]
+    //     let time = checkIn.split(" ")[1]
+    //     if (checkInObj[room] !== undefined) {
+    //       checkInObj[room] = [i, time]
+    //     }
+    //   }
+    //   setCookieObj(checkInObj)
+    // }
   }, [currDateTime])
 
   // decrypt cookie into object and set new cookie
