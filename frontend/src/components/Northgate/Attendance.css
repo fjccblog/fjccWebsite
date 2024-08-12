@@ -1,0 +1,37 @@
+.AttendanceFormContainer {
+  max-width: 400px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.AttendanceFormTitleContainer {
+  /* display: fixed; */
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+
+.AttendanceFormTitle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  padding: 3px 0px;
+}
+
+.AttendanceSinglePerson {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  padding: 3px 0px;
+}
+
+.checkInButton {
+  border: 0px;
+  border-radius: 12px;
+  background-color: green;
+  color: white;
+  padding: 13px 20px;
+}
+
+.checkInOrder {
+  display: flex;
+  justify-content: center;
+}

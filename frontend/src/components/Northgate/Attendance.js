@@ -1,5 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { NGPeople } from '../../data/Attendance/NGPeople';
+import './Attendance.css'
+
 
 function Attendance() {
 
@@ -48,19 +50,11 @@ function Attendance() {
 
       // take the value of cookie, and split into each person, which divided by '-'
       let checkedInArr = attendanceCookie.split("=")[1].split('-');
-      // let checkInObj = {};
       for (let i = 0; i < checkedInArr.length - 1; i++) {
         let checkIn = checkedInArr[i];
-        // console.log("single checkin", checkIn)
         let [room, time, AMPM] = checkIn.split(" ")
-        // if (checkInObj[room] !== undefined) {
-          checkInObj[room] = [i + 1, time+AMPM]
-        // } else {
-          // checkInObj[room] = [-1, ""]
-        // }
+        checkInObj[room] = [i + 1, time+AMPM]
       }
-      console.log("obj", checkInObj)
-      // setCookieObj(checkInObj)
     }
     return checkInObj
   }
@@ -98,14 +92,15 @@ function Attendance() {
   // ============ useEffect ===================
   // on render
   useEffect(()=> {
+    // from cookie stored in client side
+    // set state variable [cookie value and cookie object]
     let currCookieDate = "NG"+currDateTime[0];
-    let attendanceCookie = document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0]));
-    if (attendanceCookie === undefined) {
+    let currAttendanceCookie = document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0]));
+    if (currAttendanceCookie === undefined) {
       document.cookie = `${currCookieDate}=`
     } else {
-      let currCookieValue = attendanceCookie.split("=")[1];
+      let currCookieValue = currAttendanceCookie.split("=")[1];
       setCookieVal(currCookieValue);
-      // console.log("before set cookie value", cookieValue)
     }
     setCookieObj(InitialCookieObj());
   }, [])
@@ -114,70 +109,43 @@ function Attendance() {
 
   }, [currDateTime])
 
-  // decrypt cookie into object and set new cookie
   useEffect(()=> {
+    // when state varibale (cookie value) change
+    // decrypt cookie into object and set new cookie object
     let currCookieArr = cookieVal.split("-");
     console.log("cookieArr", currCookieArr)
     let currObj = {}
     for (let i = 0; i < currCookieArr.length - 1; i++) {
       let checkIn = currCookieArr[i];
-      // console.log("single checkin", checkIn)
       let [room, time, AMPM] = checkIn.split(" ")
-      // if (checkInObj[room] !== undefined) {
       currObj[room] = [i + 1, time+AMPM]
-      // } else {
-        // checkInObj[room] = [-1, ""]
-      // }
     }
-
     setCookieObj(currObj)
 
   }, [cookieVal])
 
 
   return (
-    <div className='northgateContainer'>
-      <div className="template_example">
-        <form method="post" ref={formRef} name="google-sheet" onSubmit ={handleSubmit}>
-          <div className="form-style">
-              <input type=""  name="name" placeholder='Your Name *' />
-          </div>
-          <div className="form-style">
-              <input type="email" name="email" placeholder='Your Email *' />
-          </div>
-          <div className="form-style">
-              <input type="number" name="phone" placeholder='Your Phone *' />
-          </div>
-          <div className="form-style">
-              <input type="submit" name="submit" value="Login" />
-          </div>
-        </form>
-      </div>
-      <div>
-        <form method="post" ref={formRef} name="google-sheet" onSubmit ={handleSubmit}>
-          <div className="form-style">
-              <input type=""  name="roomNumber" placeholder='房间号码' />
-          </div>
-          <div className="form-style">
-              <input type="email" name="名字" placeholder='你的名字' />
-          </div>
-          <div className="form-style">
-              <input type="number" name="phone" placeholder='Your Phone *' />
-          </div>
-          <div className="form-style">
-              <input type="submit" name="submit" value="签到" />
-          </div>
-        </form>
-      </div>
+    <div className='AttendanceContainer'>
 
-      <div className='testing'>
+      <div className='AttendanceFormContainer'>
+        <div className='AttendanceFormTitleContainer'>
+          <div className='AttendanceFormTitle'>
+            <div>名字</div>
+            <div>签到按钮</div>
+            <div>签到顺序</div>
+            <div>签到时间</div>
+          </div>
+        </div>
         {NGPeopleArr.map((person) => {
           return (
-            <div className='flx'>
+            <div className='AttendanceSinglePerson'>
               <div className='checkInName'>
                 {person[1].CHN_Name}
               </div>
-              <button onClick={()=> submitTime(person[0])}> 签到</button>
+              <button onClick={()=> submitTime(person[0])} className='checkInButton'>
+                签到
+              </button>
               <div className='checkInOrder'>
                 {cookieObj[person[0]] !== undefined ? cookieObj[person[0]][0] : " "}
               </div>
