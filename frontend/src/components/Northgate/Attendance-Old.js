@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { NGPeople } from '../../data/Attendance/NGPeople';
 
-function Attendance() {
+function AttendanceOld() {
 
 
   // ----------- step 1 -----------
@@ -41,14 +41,14 @@ function Attendance() {
 
   const InitialCookieObj = () => {
     // return object in this pattern {"room": [order, "HH:MM:SSAM"]}
-    let checkInObj = {}
+    let emptyObj = {}
     let attendanceCookie = document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0]));
     console.log("found", attendanceCookie)
     if (attendanceCookie !== undefined) {
 
       // take the value of cookie, and split into each person, which divided by '-'
       let checkedInArr = attendanceCookie.split("=")[1].split('-');
-      // let checkInObj = {};
+      let checkInObj = {};
       for (let i = 0; i < checkedInArr.length - 1; i++) {
         let checkIn = checkedInArr[i];
         // console.log("single checkin", checkIn)
@@ -62,7 +62,7 @@ function Attendance() {
       console.log("obj", checkInObj)
       // setCookieObj(checkInObj)
     }
-    return checkInObj
+    return emptyObj
   }
 
   const submitTime = (room) => {
@@ -98,40 +98,59 @@ function Attendance() {
   // ============ useEffect ===================
   // on render
   useEffect(()=> {
+    // setCurrDateTime(getTimeNow())
+
     let currCookieDate = "NG"+currDateTime[0];
-    let attendanceCookie = document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0]));
-    if (attendanceCookie === undefined) {
+    if (document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0])) === undefined) {
       document.cookie = `${currCookieDate}=`
     } else {
-      let currCookieValue = attendanceCookie.split("=")[1];
-      setCookieVal(currCookieValue);
-      // console.log("before set cookie value", cookieValue)
+      // console.log(document.cookie)
+      // let checkInArr = currCookieDate.split("-");
+      // let checkInObj = cookieObj;
+      // for (let i = 0; i < checkInArr.length - 1; i++) {
+      //   let checkIn = checkInArr[i];
+      //   console.log("single checkin", checkIn)
+      //   let room = checkIn.split(" ")[0]
+      //   let time = checkIn.split(" ")[1]
+      //   if (checkInObj[room] !== undefined) {
+      //     checkInObj[room] = [i, time]
+      //   } else {
+      //     checkInObj[room] = [-1, ""]
+      //   }
+      // }
+      // console.log("obj", checkInObj)
+      // setCookieObj(checkInObj)
     }
-    setCookieObj(InitialCookieObj());
   }, [])
 
   useEffect(()=> {
-
+    // check if cookie exists
+    // if it doesn't, save empty string for cookie
+    // else construct object from cookie
+    // let currCookieDate = "NG"+currDateTime[0];
+    // if (document.cookie.indexOf(currCookieDate) === -1) {
+    //   document.cookie = `${currCookieDate}=""`
+    // } else {
+    //   let checkInArr = currCookieDate.split("-");
+    //   let checkInObj = cookieObj;
+    //   for (let i = 0; i < checkInArr.length - 1; i++) {
+    //     let checkIn = checkInArr[i];
+    //     let room = checkIn.split(" ")[0]
+    //     let time = checkIn.split(" ")[1]
+    //     if (checkInObj[room] !== undefined) {
+    //       checkInObj[room] = [i, time]
+    //     }
+    //   }
+    //   setCookieObj(checkInObj)
+    // }
   }, [currDateTime])
 
   // decrypt cookie into object and set new cookie
   useEffect(()=> {
-    let currCookieArr = cookieVal.split("-");
-    console.log("cookieArr", currCookieArr)
-    let currObj = {}
-    for (let i = 0; i < currCookieArr.length - 1; i++) {
-      let checkIn = currCookieArr[i];
-      // console.log("single checkin", checkIn)
-      let [room, time, AMPM] = checkIn.split(" ")
-      // if (checkInObj[room] !== undefined) {
-      currObj[room] = [i + 1, time+AMPM]
-      // } else {
-        // checkInObj[room] = [-1, ""]
-      // }
-    }
-
-    setCookieObj(currObj)
-
+    // let todayDate = "NG" + getTimeNow()[0]
+    // document.cookie = `${todayDate}=${cookieVal}`
+    let cookieArr = cookieVal.split("-");
+    console.log(cookieArr)
   }, [cookieVal])
 
 
@@ -173,17 +192,10 @@ function Attendance() {
       <div className='testing'>
         {NGPeopleArr.map((person) => {
           return (
-            <div className='flx'>
-              <div className='checkInName'>
-                {person[1].CHN_Name}
-              </div>
+            <div >
+              {person[1].CHN_Name}
+              {cookieObj[person[0]] !== undefined ? cookieObj[person[0]][0] : "not working "}
               <button onClick={()=> submitTime(person[0])}> 签到</button>
-              <div className='checkInOrder'>
-                {cookieObj[person[0]] !== undefined ? cookieObj[person[0]][0] : " "}
-              </div>
-              <div className='checkInTime'>
-                {cookieObj[person[0]] !== undefined ? cookieObj[person[0]][1] : " "}
-              </div>
             </div>
           )
         })}
@@ -194,4 +206,4 @@ function Attendance() {
   )
 }
 
-export default Attendance
+export default AttendanceOld
