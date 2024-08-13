@@ -67,6 +67,25 @@ function Attendance() {
     return checkInObj
   }
 
+  const sortArrByOrder = () => {
+    let newArr = [];
+    let currCheckedPeople = Object.keys(cookieObj).sort((a,b)=>cookieObj[a][0]-cookieObj[b][0]);
+
+    // put checked in people at the beginning of array
+    for (let i = 0 ; i < currCheckedPeople.length; i++) {
+      let room = currCheckedPeople[i];
+      let currPerson = NGPeople[room]
+      if(room < 99900) newArr.push([room, currPerson])
+    }
+    // put the rest of people
+    for (let i = 0 ; i < NGPeopleArr.length; i++) {
+      let room = NGPeopleArr[i][0];
+      if (cookieObj[room] === undefined || room >= 99900) newArr.push(NGPeopleArr[i])
+    }
+
+    setSortedArr(newArr)
+  }
+
   const submitTime = (room) => {
     // let currTime = getTimeNow()
     // store time/order(2 digit) and room number in cookie
@@ -106,8 +125,11 @@ function Attendance() {
   let [cookieVal, setCookieVal] = useState("");
   let [cookieObj, setCookieObj] = useState({}); // {"room": [order, time]}
   let [currDateTime, setCurrDateTime] = useState(getTimeNow());
+
   let [adminTap, setAdminTap] = useState(0);
   let [isAdminMenuActive, setIsAdminMenuActive]  = useState(false);
+
+  let [sortedArr, setSortedArr] = useState(NGPeopleArr); //[[room, {CHN_name, ENG_name}]]
 
   const formRef = useRef(null)
 
@@ -166,12 +188,12 @@ function Attendance() {
           <div className='AttendanceFormTitle'>
             <div>名字</div>
             <div>签到按钮</div>
-            <div>签到顺序</div>
+            <div onClick={()=>sortArrByOrder()}>签到顺序</div>
             <div>签到时间</div>
           </div>
         </div>
-        {NGPeopleArr.map(([room, {CHN_Name, ENG_Name}]) => {
 
+        {sortedArr.map(([room, {CHN_Name, ENG_Name}]) => {
           return (
             <div className='AttendanceSinglePerson'>
               <div className='checkInName'>
