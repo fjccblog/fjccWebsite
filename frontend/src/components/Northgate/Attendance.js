@@ -53,7 +53,7 @@ function Attendance() {
     // return object in this pattern {"room": [order, "HH:MM:SSAM"]}
     let checkInObj = {}
     let attendanceCookie = document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0]));
-    console.log("found", attendanceCookie)
+    // console.log("found", attendanceCookie)
     if (attendanceCookie !== undefined) {
 
       // take the value of cookie, and split into each person, which divided by '-'
@@ -69,8 +69,10 @@ function Attendance() {
 
   const sortArrByOrder = () => {
     let newArr = [];
-    let currCheckedPeople = Object.keys(cookieObj).sort((a,b)=>cookieObj[a][0]-cookieObj[b][0]);
+    console.log("obj", cookieObj)
+    let currCheckedPeople = Object.keys(cookieObj).sort((a,b)=>Number(cookieObj[a][0])-Number(cookieObj[b][0]));
 
+    console.log("curr sort",currCheckedPeople)
     // put checked in people at the beginning of array
     for (let i = 0 ; i < currCheckedPeople.length; i++) {
       let room = currCheckedPeople[i];
@@ -82,7 +84,7 @@ function Attendance() {
       let room = NGPeopleArr[i][0];
       if (cookieObj[room] === undefined || room >= 99900) newArr.push(NGPeopleArr[i])
     }
-
+    console.log("new Arr", newArr)
     setSortedArr(newArr)
   }
 
@@ -168,7 +170,7 @@ function Attendance() {
         currObj[room] = [count, time+AMPM]
         count++;
       } else {
-        currObj[room] = ["已到", time+AMPM]
+        currObj[room] = [99999, time+AMPM]
       }
     }
     setCookieObj(currObj)
@@ -177,6 +179,8 @@ function Attendance() {
 
   useEffect(()=> {
     if (adminTap >= 3) setIsAdminMenuActive(true)
+    // in case of misclick, only can turn on admin menu with 3 quick taps
+    setTimeout(()=>{setAdminTap(0)}, 3000)
   }, [adminTap])
 
 
@@ -203,7 +207,9 @@ function Attendance() {
                 签到
               </button>
               <div className='checkInOrder'>
-                {cookieObj[room] !== undefined ? cookieObj[room][0] : " "}
+                {cookieObj[room] !== undefined
+                  ? cookieObj[room][0] >= 99900 ? "已到" : cookieObj[room][0]
+                  : " "}
               </div>
               <div className='checkInTime'>
                 {cookieObj[room] !== undefined ? cookieObj[room][1] : " "}
