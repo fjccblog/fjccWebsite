@@ -41,6 +41,14 @@ function Attendance() {
     return localTimeArr
   }
 
+  const getCookieExpireTime = () => {
+    let now = new Date();
+    let time = now.getTime();
+    let expireTime = time + 1000*36000*7;
+    now.setTime(expireTime);
+    return ';expires='+now.toUTCString()+';path=/fjccWebsite'
+  }
+
   const InitialCookieObj = () => {
     // return object in this pattern {"room": [order, "HH:MM:SSAM"]}
     let checkInObj = {}
@@ -67,7 +75,7 @@ function Attendance() {
     if (cookieVal.indexOf(room) === -1) {
       let newCookie = cookieVal + room + getTimeNow()[1] + "-"
       setCookieVal(newCookie)
-      document.cookie = `${"NG"+currDateTime[0]}=${newCookie}`;
+      document.cookie = `${"NG"+currDateTime[0]}=${newCookie}` + getCookieExpireTime();
     }
     // document.cookie = `${"NG"+getTimeNow()[0]}=${attendanceCookie.split("=")[1] + "02990 8:56:48 PM-02997 8:56:48 PM-"}`
 
@@ -96,8 +104,9 @@ function Attendance() {
     // set state variable [cookie value and cookie object]
     let currCookieDate = "NG"+currDateTime[0];
     let currAttendanceCookie = document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0]));
+
     if (currAttendanceCookie === undefined) {
-      document.cookie = `${currCookieDate}=`
+      document.cookie = `${currCookieDate}=`+ getCookieExpireTime();
     } else {
       let currCookieValue = currAttendanceCookie.split("=")[1];
       setCookieVal(currCookieValue);
@@ -113,12 +122,18 @@ function Attendance() {
     // when state varibale (cookie value) change
     // decrypt cookie into object and set new cookie object
     let currCookieArr = cookieVal.split("-");
-    console.log("cookieArr", currCookieArr)
+    // console.log("cookieArr", currCookieArr)
     let currObj = {}
+    let count = 1
     for (let i = 0; i < currCookieArr.length - 1; i++) {
       let checkIn = currCookieArr[i];
       let [room, time, AMPM] = checkIn.split(" ")
-      currObj[room] = [i + 1, time+AMPM]
+      if (room < 99900) {
+        currObj[room] = [count, time+AMPM]
+        count++;
+      } else {
+        currObj[room] = ["已到", time+AMPM]
+      }
     }
     setCookieObj(currObj)
 
@@ -137,20 +152,21 @@ function Attendance() {
             <div>签到时间</div>
           </div>
         </div>
-        {NGPeopleArr.map((person) => {
+        {NGPeopleArr.map(([room, {CHN_Name, ENG_Name}]) => {
+
           return (
             <div className='AttendanceSinglePerson'>
               <div className='checkInName'>
-                {person[1].CHN_Name}
+                {CHN_Name}
               </div>
-              <button onClick={()=> submitTime(person[0])} className='checkInButton'>
+              <button onClick={()=> submitTime(room)} className='checkInButton'>
                 签到
               </button>
               <div className='checkInOrder'>
-                {cookieObj[person[0]] !== undefined ? cookieObj[person[0]][0] : " "}
+                {cookieObj[room] !== undefined ? cookieObj[room][0] : " "}
               </div>
               <div className='checkInTime'>
-                {cookieObj[person[0]] !== undefined ? cookieObj[person[0]][1] : " "}
+                {cookieObj[room] !== undefined ? cookieObj[room][1] : " "}
               </div>
             </div>
           )
