@@ -12,17 +12,17 @@ function Attendance() {
   // -> perhaps use alphbet to shorter length
   // set expire date in 3 months
   // ----------- step 2 -----------
-  // for display, desture cookie into object
+  // for display, destructure cookie into object
   // get order/time from cookie
-  // perhaps useState for count ?
   // ----------- step 3 -----------
   // store in Google Excels (every check-in record? or submit at the end)
-  // duplicate template into new record for the day
+  // duplicate "template" sheet into new record for the day
   // check the box that correspongding to room number
   // open modal to ask for reason that can't join
 
   // ------------ features in mind -------------
-  // sort by room number and sort by time
+  // sort by room number (default)
+  // sort by time
   // drag and drop for admin override (?)
   // view old cookie
 
@@ -44,7 +44,7 @@ function Attendance() {
   const getCookieExpireTime = () => {
     let now = new Date();
     let time = now.getTime();
-    let expireTime = time + 1000*36000*7;
+    let expireTime = time + 1000*60*60*24*7*4;
     now.setTime(expireTime);
     return ';expires='+now.toUTCString()+';path=/fjccWebsite'
   }
@@ -91,9 +91,23 @@ function Attendance() {
     // .catch(err => console.log(err))
   }
 
+  const clearAttendance = () => {
+    let currCookieDate = "NG"+currDateTime[0];
+    let currAttendanceCookie = document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0]));
+    if (currAttendanceCookie !== undefined) {
+      document.cookie = `${currCookieDate}=`+ getCookieExpireTime();
+    }
+    setCookieVal("")
+    setCookieObj({})
+  }
+
+  // ============ useState variable ===================
+
   let [cookieVal, setCookieVal] = useState("");
   let [cookieObj, setCookieObj] = useState({}); // {"room": [order, time]}
   let [currDateTime, setCurrDateTime] = useState(getTimeNow());
+  let [adminTap, setAdminTap] = useState(0);
+  let [isAdminMenuActive, setIsAdminMenuActive]  = useState(false);
 
   const formRef = useRef(null)
 
@@ -139,6 +153,10 @@ function Attendance() {
 
   }, [cookieVal])
 
+  useEffect(()=> {
+    if (adminTap >= 3) setIsAdminMenuActive(true)
+  }, [adminTap])
+
 
   return (
     <div className='AttendanceContainer'>
@@ -172,6 +190,17 @@ function Attendance() {
           )
         })}
 
+      </div>
+
+      <div className='adminMenu' onClick={()=> increaseAdminTapCount()}>
+        {isAdminMenuActive && <div className=''>
+          <button className='AttendanceClearButton' onClick={()=>{if (!isAdminMenuActive) setAdminTap(adminTap+1)}}>
+            清除签到
+          </button>
+          <button className='HideAdminMenuButton' onClick={()=>{setIsAdminMenuActive(false);setAdminTap(0)}}>
+            隐蔽admin菜单
+          </button>
+        </div>}
       </div>
 
     </div>
