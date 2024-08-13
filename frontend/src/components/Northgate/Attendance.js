@@ -192,9 +192,9 @@ function Attendance() {
 
       </div>
 
-      <div className='adminMenu' onClick={()=> increaseAdminTapCount()}>
+      <div className='adminMenu' onClick={()=> {if (!isAdminMenuActive) setAdminTap(adminTap+1)}}>
         {isAdminMenuActive && <div className=''>
-          <button className='AttendanceClearButton' onClick={()=>{if (!isAdminMenuActive) setAdminTap(adminTap+1)}}>
+          <button className='AttendanceClearButton' onClick={()=>clearAttendance()}>
             清除签到
           </button>
           <button className='HideAdminMenuButton' onClick={()=>{setIsAdminMenuActive(false);setAdminTap(0)}}>
