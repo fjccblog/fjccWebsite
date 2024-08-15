@@ -20,9 +20,13 @@ function Attendance() {
   // check the box that correspongding to room number
   // open modal to ask for reason that can't join
 
+  //------------ need to implement -------------
+  // options for reason can't join
+  // double click to restore to default sort by room
+  // excel part
+
   // ------------ features in mind -------------
-  // sort by room number (default)
-  // sort by time
+  // sort by room number (default) and sort by time
   // drag and drop for admin override (?)
   // view old cookie
 
@@ -65,27 +69,6 @@ function Attendance() {
       }
     }
     return checkInObj
-  }
-
-  const sortArrByOrder = () => {
-    let newArr = [];
-    console.log("obj", cookieObj)
-    let currCheckedPeople = Object.keys(cookieObj).sort((a,b)=>Number(cookieObj[a][0])-Number(cookieObj[b][0]));
-
-    console.log("curr sort",currCheckedPeople)
-    // put checked in people at the beginning of array
-    for (let i = 0 ; i < currCheckedPeople.length; i++) {
-      let room = currCheckedPeople[i];
-      let currPerson = NGPeople[room]
-      if(room < 99900) newArr.push([room, currPerson])
-    }
-    // put the rest of people
-    for (let i = 0 ; i < NGPeopleArr.length; i++) {
-      let room = NGPeopleArr[i][0];
-      if (cookieObj[room] === undefined || room >= 99900) newArr.push(NGPeopleArr[i])
-    }
-    console.log("new Arr", newArr)
-    setSortedArr(newArr)
   }
 
   const submitTime = (room) => {
@@ -132,6 +115,7 @@ function Attendance() {
   let [isAdminMenuActive, setIsAdminMenuActive]  = useState(false);
 
   let [sortedArr, setSortedArr] = useState(NGPeopleArr); //[[room, {CHN_name, ENG_name}]]
+  let [isArrSorted, setIsArrSorted] = useState(false);
 
   const formRef = useRef(null)
 
@@ -183,6 +167,30 @@ function Attendance() {
     setTimeout(()=>{setAdminTap(0)}, 3000)
   }, [adminTap])
 
+  useEffect(()=> {
+    if (isArrSorted) {
+      let newArr = [];
+      console.log("obj", cookieObj)
+      let currCheckedPeople = Object.keys(cookieObj).sort((a,b)=>Number(cookieObj[a][0])-Number(cookieObj[b][0]));
+
+      console.log("curr sort",currCheckedPeople)
+      // put checked in people at the beginning of array
+      for (let i = 0 ; i < currCheckedPeople.length; i++) {
+        let room = currCheckedPeople[i];
+        let currPerson = NGPeople[room]
+        if(room < 99900) newArr.push([room, currPerson])
+      }
+      // put the rest of people
+      for (let i = 0 ; i < NGPeopleArr.length; i++) {
+        let room = NGPeopleArr[i][0];
+        if (cookieObj[room] === undefined || room >= 99900) newArr.push(NGPeopleArr[i])
+      }
+      console.log("new Arr", newArr)
+      setSortedArr(newArr)
+    }
+    else setSortedArr(NGPeopleArr)
+  }, [isArrSorted])
+
 
   return (
     <div className='AttendanceContainer'>
@@ -192,7 +200,7 @@ function Attendance() {
           <div className='AttendanceFormTitle'>
             <div>名字</div>
             <div>签到按钮</div>
-            <div onClick={()=>sortArrByOrder()}>签到顺序</div>
+            <div onClick={()=>setIsArrSorted(!isArrSorted)}>签到顺序</div>
             <div>签到时间</div>
           </div>
         </div>
