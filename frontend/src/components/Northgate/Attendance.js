@@ -198,6 +198,20 @@ function Attendance() {
     <div className='AttendanceContainer'>
 
       <div className='AttendanceFormContainer'>
+        <div onClick={()=> {if (!isAdminMenuActive) setAdminTap(adminTap+1)}} className='txt-center'>
+          <h1>北门长者大厦聚会签到</h1>
+        </div>
+
+
+        {isAdminMenuActive && <div className='adminMenu'>
+          <button className='AttendanceClearButton' onClick={()=>clearAttendance()}>
+            清除签到
+          </button>
+          <button className='HideAdminMenuButton' onClick={()=>{setIsAdminMenuActive(false);setAdminTap(0)}}>
+            隐蔽admin菜单
+          </button>
+        </div>}
+
         <div className='AttendanceFormTitleContainer'>
           <div className='AttendanceFormTitle'>
             <div>名字</div>
@@ -214,7 +228,7 @@ function Attendance() {
 
         {sortedArr.map(([room, {CHN_Name, ENG_Name}]) => {
           return (
-            <div className='AttendanceSinglePerson'>
+            <div className={isAdminMenuActive ? 'AttendanceSinglePersonAdminMode' : 'AttendanceSinglePerson'}>
               <div className='checkInName'>
                 {CHN_Name}
               </div>
@@ -239,17 +253,6 @@ function Attendance() {
           )
         })}
 
-      </div>
-
-      <div className='adminMenu' onClick={()=> {if (!isAdminMenuActive) setAdminTap(adminTap+1)}}>
-        {isAdminMenuActive && <div className=''>
-          <button className='AttendanceClearButton' onClick={()=>clearAttendance()}>
-            清除签到
-          </button>
-          <button className='HideAdminMenuButton' onClick={()=>{setIsAdminMenuActive(false);setAdminTap(0)}}>
-            隐蔽admin菜单
-          </button>
-        </div>}
       </div>
 
     </div>

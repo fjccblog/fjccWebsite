@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { useModal } from '../../context/Modal';
 import './AttendanceReasonModal.css';
 
@@ -11,16 +12,32 @@ function AttendanceReasonModal({data}) {
 
   }
 
+  let [reason, setReason] = useState("");
+  let [otherReason, setOtherReason] = useState("")
+  let [isSubmitBtnDisabled, setIsSubmitBtnDisabled] = useState(true)
+
+  useEffect( ()=> {
+    if ((reason === 'others' && otherReason === '') || (reason === '')) {
+      setIsSubmitBtnDisabled(true)
+    } else {
+      setIsSubmitBtnDisabled(false)
+    }
+  }, [reason])
+
   return (
     <div className='AttendanceReasonModalContainer'>
-      {/* <div className='AttendanceExitBtnDiv'>
-        <button onClick={()=>closeModal()} className='ExitAttendanceReasonModalBtn'>
-          <i className="fas fa-times"></i>
-        </button>
-      </div> */}
       <h3>不能參加聚會的原因？</h3>
-      <input placeholder='其他原因' />
-      <button onClick={()=>submitReason(room)} className='AttendanceModalSubmitBtn'>提交</button>
+      <select name="attendanceReason" className="reasonSelect"
+        onChange={(e) => setReason(e.target.value)}>
+        <option value="">-- 請選擇下面一個選項 --</option>
+        <option value="sick">病了</option>
+        <option value="oot">OOT</option>
+        <option value="others">不能參加 (請註明原因)</option>
+      </select>
+      {reason === "others" && <input onChange={(e)=> setOtherReason(e.target.value)}
+        placeholder='其他原因' className='attendanceReasonInput'/> }
+      <button onClick={()=>submitReason(room)} disabled={isSubmitBtnDisabled}
+        className='AttendanceModalSubmitBtn'>提交</button>
     </div>
   )
 }

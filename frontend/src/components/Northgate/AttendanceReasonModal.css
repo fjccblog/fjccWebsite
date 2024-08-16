@@ -26,3 +26,21 @@
   margin-top: 10px;
   cursor: pointer;
 }
+
+.AttendanceModalSubmitBtn:disabled {
+  background-color: rgb(179, 179, 179);
+}
+
+.reasonSelect {
+  height: 35px;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.attendanceReasonInput {
+  display: block;
+  padding: 2px 5px;
+  border-radius: 5px;
+  height: 35px;
+  margin-top: 10px;
+}
