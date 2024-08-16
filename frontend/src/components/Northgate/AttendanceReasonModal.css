@@ -1,0 +1,28 @@
+
+.AttendanceReasonModalContainer {
+  padding: 10px 50px;
+}
+
+.AttendanceExitBtnDiv {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ExitAttendanceReasonModalBtn {
+  background-color: transparent;
+  border: 5px solid var(--lightBlue);
+  border-radius: 50%;
+  padding: 8px 10px;
+  margin: 5px;
+}
+
+.AttendanceModalSubmitBtn {
+  display: block;
+  background-color: var(--lightBlue);
+  border: 0px;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}

@@ -1,4 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
+import OpenModalButton from '../../context/OpenModalButton';
+import AttendanceReasonModal from './AttendanceReasonModal';
+
 import { NGPeople } from '../../data/Attendance/NGPeople';
 import './Attendance.css'
 
@@ -26,7 +29,7 @@ function Attendance() {
   // excel part
 
   // ------------ features in mind -------------
-  // sort by room number (default) and sort by time
+  // sort by room number (default) and sort by time (done)
   // drag and drop for admin override (?)
   // view old cookie
 
@@ -170,10 +173,9 @@ function Attendance() {
   useEffect(()=> {
     if (isArrSorted) {
       let newArr = [];
-      console.log("obj", cookieObj)
+
       let currCheckedPeople = Object.keys(cookieObj).sort((a,b)=>Number(cookieObj[a][0])-Number(cookieObj[b][0]));
 
-      console.log("curr sort",currCheckedPeople)
       // put checked in people at the beginning of array
       for (let i = 0 ; i < currCheckedPeople.length; i++) {
         let room = currCheckedPeople[i];
@@ -185,7 +187,7 @@ function Attendance() {
         let room = NGPeopleArr[i][0];
         if (cookieObj[room] === undefined || room >= 99900) newArr.push(NGPeopleArr[i])
       }
-      console.log("new Arr", newArr)
+
       setSortedArr(newArr)
     }
     else setSortedArr(NGPeopleArr)
@@ -200,7 +202,12 @@ function Attendance() {
           <div className='AttendanceFormTitle'>
             <div>名字</div>
             <div>签到按钮</div>
-            <div onClick={()=>setIsArrSorted(!isArrSorted)}>签到顺序</div>
+            <div onClick={()=>setIsArrSorted(!isArrSorted)} className='AttendanceSortOrderBtn'>
+              签到顺序
+              <div className='AttendanceSortOrderBtnArrow'>
+                {isArrSorted ? <i className="fas fa-caret-down"></i> : <i className="fas fa-caret-up"></i>}
+              </div>
+            </div>
             <div>签到时间</div>
           </div>
         </div>
@@ -211,9 +218,15 @@ function Attendance() {
               <div className='checkInName'>
                 {CHN_Name}
               </div>
-              <button onClick={()=> submitTime(room)} className='checkInButton'>
-                签到
-              </button>
+              <div>
+                <button onClick={()=> submitTime(room)} className='checkInButton'>
+                  签到
+                </button>
+                {isAdminMenuActive && <OpenModalButton
+                  modalComponent={<AttendanceReasonModal data = {[room, CHN_Name]}/>}
+                  buttonText={<i className ="fas fa-user-slash"></i>}
+                  customizeStyle = "adminCantAttendReasonBtn"/>}
+              </div>
               <div className='checkInOrder'>
                 {cookieObj[room] !== undefined
                   ? cookieObj[room][0] >= 99900 ? "已到" : cookieObj[room][0]
