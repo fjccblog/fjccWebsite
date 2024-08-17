@@ -22,7 +22,7 @@ function AttendanceReasonModal({data}) {
     } else {
       setIsSubmitBtnDisabled(false)
     }
-  }, [reason])
+  }, [reason, otherReason])
 
   return (
     <div className='AttendanceReasonModalContainer'>

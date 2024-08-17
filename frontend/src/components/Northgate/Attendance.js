@@ -25,11 +25,12 @@ function Attendance() {
 
   //------------ need to implement -------------
   // options for reason can't join
-  // double click to restore to default sort by room
   // excel part
+  // add new person
 
   // ------------ features in mind -------------
   // sort by room number (default) and sort by time (done)
+  // copy and paste names
   // drag and drop for admin override (?)
   // view old cookie
 
@@ -108,6 +109,19 @@ function Attendance() {
     setCookieObj({})
   }
 
+  const addNewAttendancePerson = () => {
+    if (newPersonName !== "" && Number(newPersonRoom) < 2000 && Number(newPersonOrder) > 0) {
+      let newRoom = Number(newPersonRoom) < 1000 ? '0'+ newPersonRoom : newPersonRoom;
+      console.log(newRoom, cookieObj[newRoom+"0"])
+      if (cookieObj[newRoom+"0"] === undefined) newRoom = newRoom + '0'
+      else newRoom = newRoom+'1';
+
+      // NGPeople[newRoom] = [newPersonName, "EnglishName"]
+      // submitTime(newRoom);
+      // send to excel as well
+    }
+  }
+
   // ============ useState variable ===================
 
   let [cookieVal, setCookieVal] = useState("");
@@ -119,6 +133,11 @@ function Attendance() {
 
   let [sortedArr, setSortedArr] = useState(NGPeopleArr); //[[room, {CHN_name, ENG_name}]]
   let [isArrSorted, setIsArrSorted] = useState(false);
+
+  let [newPersonName, setNewPersonName] = useState("");
+  let [newPersonRoom, setNewPersonRoom] = useState(null);
+  let [newPersonOrder, setNewPersonOrder] = useState(null);
+
 
   const formRef = useRef(null)
 
@@ -217,7 +236,7 @@ function Attendance() {
             <div>名字</div>
             <div>签到按钮</div>
             <div onClick={()=>setIsArrSorted(!isArrSorted)} className='AttendanceSortOrderBtn'>
-              签到顺序
+              顺序
               <div className='AttendanceSortOrderBtnArrow'>
                 {isArrSorted ? <i className="fas fa-caret-down"></i> : <i className="fas fa-caret-up"></i>}
               </div>
@@ -225,6 +244,16 @@ function Attendance() {
             <div>签到时间</div>
           </div>
         </div>
+
+        {isAdminMenuActive && <div className='addNewAttendancePerson'>
+          <input placeholder='名字' value={newPersonName} onChange={(e)=> setNewPersonName(e.target.value)}
+            className='addNewPersonInput' />
+          <input placeholder='房間號' value={newPersonRoom} onChange={(e)=> setNewPersonRoom(e.target.value)}
+            className='addNewPersonInput'/>
+          <input placeholder='順序' value={newPersonOrder} onChange={(e)=> setNewPersonOrder(e.target.value)}
+            className='addNewPersonInput'/>
+          <button onClick={()=>addNewAttendancePerson()} className='addNewPersonBtn'>添加</button>
+        </div>}
 
         {sortedArr.map(([room, {CHN_Name, ENG_Name}]) => {
           return (
