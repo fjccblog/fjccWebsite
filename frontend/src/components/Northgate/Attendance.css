@@ -1,7 +1,7 @@
 
 
 .AttendanceFormContainer {
-  max-width: 400px;
+  max-width: 800px;
   margin: 0px auto 10vh;
   position: relative;
   padding: 5px 8px;
@@ -17,7 +17,7 @@
 
 .AttendanceFormTitle {
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr;
   padding: 8px 5px;
 }
 
@@ -28,7 +28,13 @@
 
 .AttendanceSinglePerson {
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr;
+  padding: 3px 0px;
+}
+
+.AttendanceSinglePersonAdminMode {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr 1fr 1.5fr;
   padding: 3px 0px;
 }
 
@@ -38,17 +44,55 @@
   align-items: center;
 }
 
+.addNewAttendancePerson {
+  display: flex;
+  gap:15px;
+  margin: 8px 3px;
+}
+
+.addNewPersonInput {
+  width: 120px;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  padding: 1px 5px;
+}
+
+.addNewPersonBtn {
+  border: 0px;
+  border-radius: 5px;
+  background-color: var(--lightBlue);
+  color: white;
+  cursor: pointer;
+}
+
+.AttendanceSortOrderBtn {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.AttendanceSortOrderBtnArrow {
+  border: 2px solid var(--lightBlue);
+  padding: 1px 6px;
+  border-radius: 25%;
+}
+
 .checkInButton {
   border: 0px;
   border-radius: 12px;
   background-color: green;
   color: white;
   padding: 13px 20px;
-  margin: 0px 15px;
+  margin: 0px 5px;
 }
 
-.checkInButton:hover {
-  cursor: pointer;
+.adminCantAttendReasonBtn {
+  border: 0px;
+  border-radius: 12px;
+  background-color: red;
+  color: white;
+  padding: 13px 20px;
 }
 
 .checkInOrder {
@@ -57,12 +101,11 @@
 }
 
 .adminMenu {
-  max-width: 400px;
+  max-width: 350px;
   height: 100px;
   border: 2px solid var(--aliceBlue);
   margin: 0px auto 5vh;
   padding: 5px 8px;
-  position: relative;
 }
 
 .AttendanceClearButton {
@@ -74,11 +117,6 @@
   margin: 0px 15px;
 }
 
-
-.AttendanceClearButton:hover {
-  cursor: pointer;
-}
-
 .HideAdminMenuButton {
   background-color: orange;
   color: white;
@@ -88,6 +126,6 @@
   margin: 0px 15px;
 }
 
-.HideAdminMenuButton:hover {
+.checkInButton:hover, .adminCantAttendReasonBtn:hover, .AttendanceClearButton:hover, .HideAdminMenuButton:hover {
   cursor: pointer;
 }

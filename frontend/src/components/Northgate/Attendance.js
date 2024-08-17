@@ -1,4 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
+import OpenModalButton from '../../context/OpenModalButton';
+import AttendanceReasonModal from './AttendanceReasonModal';
+
 import { NGPeople } from '../../data/Attendance/NGPeople';
 import './Attendance.css'
 
@@ -20,9 +23,14 @@ function Attendance() {
   // check the box that correspongding to room number
   // open modal to ask for reason that can't join
 
+  //------------ need to implement -------------
+  // options for reason can't join
+  // excel part
+  // add new person
+
   // ------------ features in mind -------------
-  // sort by room number (default)
-  // sort by time
+  // sort by room number (default) and sort by time (done)
+  // copy and paste names
   // drag and drop for admin override (?)
   // view old cookie
 
@@ -53,7 +61,7 @@ function Attendance() {
     // return object in this pattern {"room": [order, "HH:MM:SSAM"]}
     let checkInObj = {}
     let attendanceCookie = document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0]));
-    console.log("found", attendanceCookie)
+    // console.log("found", attendanceCookie)
     if (attendanceCookie !== undefined) {
 
       // take the value of cookie, and split into each person, which divided by '-'
@@ -101,13 +109,35 @@ function Attendance() {
     setCookieObj({})
   }
 
+  const addNewAttendancePerson = () => {
+    if (newPersonName !== "" && Number(newPersonRoom) < 2000 && Number(newPersonOrder) > 0) {
+      let newRoom = Number(newPersonRoom) < 1000 ? '0'+ newPersonRoom : newPersonRoom;
+      console.log(newRoom, cookieObj[newRoom+"0"])
+      if (cookieObj[newRoom+"0"] === undefined) newRoom = newRoom + '0'
+      else newRoom = newRoom+'1';
+
+      // NGPeople[newRoom] = [newPersonName, "EnglishName"]
+      // submitTime(newRoom);
+      // send to excel as well
+    }
+  }
+
   // ============ useState variable ===================
 
   let [cookieVal, setCookieVal] = useState("");
   let [cookieObj, setCookieObj] = useState({}); // {"room": [order, time]}
   let [currDateTime, setCurrDateTime] = useState(getTimeNow());
+
   let [adminTap, setAdminTap] = useState(0);
   let [isAdminMenuActive, setIsAdminMenuActive]  = useState(false);
+
+  let [sortedArr, setSortedArr] = useState(NGPeopleArr); //[[room, {CHN_name, ENG_name}]]
+  let [isArrSorted, setIsArrSorted] = useState(false);
+
+  let [newPersonName, setNewPersonName] = useState("");
+  let [newPersonRoom, setNewPersonRoom] = useState(null);
+  let [newPersonOrder, setNewPersonOrder] = useState(null);
+
 
   const formRef = useRef(null)
 
@@ -146,7 +176,7 @@ function Attendance() {
         currObj[room] = [count, time+AMPM]
         count++;
       } else {
-        currObj[room] = ["已到", time+AMPM]
+        currObj[room] = [99999, time+AMPM]
       }
     }
     setCookieObj(currObj)
@@ -155,33 +185,95 @@ function Attendance() {
 
   useEffect(()=> {
     if (adminTap >= 3) setIsAdminMenuActive(true)
+    // in case of misclick, only can turn on admin menu with 3 quick taps
+    setTimeout(()=>{setAdminTap(0)}, 3000)
   }, [adminTap])
+
+  useEffect(()=> {
+    if (isArrSorted) {
+      let newArr = [];
+
+      let currCheckedPeople = Object.keys(cookieObj).sort((a,b)=>Number(cookieObj[a][0])-Number(cookieObj[b][0]));
+
+      // put checked in people at the beginning of array
+      for (let i = 0 ; i < currCheckedPeople.length; i++) {
+        let room = currCheckedPeople[i];
+        let currPerson = NGPeople[room]
+        if(room < 99900) newArr.push([room, currPerson])
+      }
+      // put the rest of people
+      for (let i = 0 ; i < NGPeopleArr.length; i++) {
+        let room = NGPeopleArr[i][0];
+        if (cookieObj[room] === undefined || room >= 99900) newArr.push(NGPeopleArr[i])
+      }
+
+      setSortedArr(newArr)
+    }
+    else setSortedArr(NGPeopleArr)
+  }, [isArrSorted])
 
 
   return (
     <div className='AttendanceContainer'>
 
       <div className='AttendanceFormContainer'>
+        <div onClick={()=> {if (!isAdminMenuActive) setAdminTap(adminTap+1)}} className='txt-center'>
+          <h1>北门长者大厦聚会签到</h1>
+        </div>
+
+
+        {isAdminMenuActive && <div className='adminMenu'>
+          <button className='AttendanceClearButton' onClick={()=>clearAttendance()}>
+            清除签到
+          </button>
+          <button className='HideAdminMenuButton' onClick={()=>{setIsAdminMenuActive(false);setAdminTap(0)}}>
+            隐蔽admin菜单
+          </button>
+        </div>}
+
         <div className='AttendanceFormTitleContainer'>
           <div className='AttendanceFormTitle'>
             <div>名字</div>
             <div>签到按钮</div>
-            <div>签到顺序</div>
+            <div onClick={()=>setIsArrSorted(!isArrSorted)} className='AttendanceSortOrderBtn'>
+              顺序
+              <div className='AttendanceSortOrderBtnArrow'>
+                {isArrSorted ? <i className="fas fa-caret-down"></i> : <i className="fas fa-caret-up"></i>}
+              </div>
+            </div>
             <div>签到时间</div>
           </div>
         </div>
-        {NGPeopleArr.map(([room, {CHN_Name, ENG_Name}]) => {
 
+        {isAdminMenuActive && <div className='addNewAttendancePerson'>
+          <input placeholder='名字' value={newPersonName} onChange={(e)=> setNewPersonName(e.target.value)}
+            className='addNewPersonInput' />
+          <input placeholder='房間號' value={newPersonRoom} onChange={(e)=> setNewPersonRoom(e.target.value)}
+            className='addNewPersonInput'/>
+          <input placeholder='順序' value={newPersonOrder} onChange={(e)=> setNewPersonOrder(e.target.value)}
+            className='addNewPersonInput'/>
+          <button onClick={()=>addNewAttendancePerson()} className='addNewPersonBtn'>添加</button>
+        </div>}
+
+        {sortedArr.map(([room, {CHN_Name, ENG_Name}]) => {
           return (
-            <div className='AttendanceSinglePerson'>
+            <div className={isAdminMenuActive ? 'AttendanceSinglePersonAdminMode' : 'AttendanceSinglePerson'}>
               <div className='checkInName'>
                 {CHN_Name}
               </div>
-              <button onClick={()=> submitTime(room)} className='checkInButton'>
-                签到
-              </button>
+              <div>
+                <button onClick={()=> submitTime(room)} className='checkInButton'>
+                  签到
+                </button>
+                {isAdminMenuActive && <OpenModalButton
+                  modalComponent={<AttendanceReasonModal data = {[room, CHN_Name]}/>}
+                  buttonText={<i className ="fas fa-user-slash"></i>}
+                  customizeStyle = "adminCantAttendReasonBtn"/>}
+              </div>
               <div className='checkInOrder'>
-                {cookieObj[room] !== undefined ? cookieObj[room][0] : " "}
+                {cookieObj[room] !== undefined
+                  ? cookieObj[room][0] >= 99900 ? "已到" : cookieObj[room][0]
+                  : " "}
               </div>
               <div className='checkInTime'>
                 {cookieObj[room] !== undefined ? cookieObj[room][1] : " "}
@@ -190,17 +282,6 @@ function Attendance() {
           )
         })}
 
-      </div>
-
-      <div className='adminMenu' onClick={()=> {if (!isAdminMenuActive) setAdminTap(adminTap+1)}}>
-        {isAdminMenuActive && <div className=''>
-          <button className='AttendanceClearButton' onClick={()=>clearAttendance()}>
-            清除签到
-          </button>
-          <button className='HideAdminMenuButton' onClick={()=>{setIsAdminMenuActive(false);setAdminTap(0)}}>
-            隐蔽admin菜单
-          </button>
-        </div>}
       </div>
 
     </div>
