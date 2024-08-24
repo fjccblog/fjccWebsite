@@ -58,7 +58,7 @@ function Attendance( {peopleData} ) {
     return ';expires='+now.toUTCString()+';path=/fjccWebsite'
   }
 
-  const CookieArr = (data) => {
+  const updateCookieArr = (data) => {
     // should be sorted by room number
     let checkedInArr = [];
     let tempObj = {}
@@ -151,13 +151,12 @@ function Attendance( {peopleData} ) {
   // ============ useState variable ===================
 
   let [cookieVal, setCookieVal] = useState("");
-  let [cookieArr, setCookieArr] = useState([]); //[[room, CHN_name, order, timestamp], ...]
+  let [cookieArr, setCookieArr] = useState(updateCookieArr(peopleData)); //[[room, CHN_name, order, timestamp], ...]
   let [currDateTime, setCurrDateTime] = useState(getTimeNow());
 
   let [adminTap, setAdminTap] = useState(0);
   let [isAdminMenuActive, setIsAdminMenuActive] = useState(false);
 
-  let [sortedArr, setSortedArr] = useState(NGPeopleArr); //[[room, {CHN_name, ENG_name}]]
   let [isArrSorted, setIsArrSorted] = useState(false);
 
   let [newPersonName, setNewPersonName] = useState("");
@@ -183,7 +182,7 @@ function Attendance( {peopleData} ) {
       setCookieVal(currCookieValue);
     }
     // setCookieObj(InitialCookieObj());
-    setCookieArr(CookieArr(peopleData));
+    setCookieArr(updateCookieArr(peopleData));
   }, [])
 
   useEffect(()=> {
@@ -193,7 +192,7 @@ function Attendance( {peopleData} ) {
   useEffect(()=> {
     // when state varibale (cookie value) change
     // decrypt cookie into object and set new cookie object
-    setCookieArr(CookieArr(peopleData))
+    // setCookieArr(updateCookieArr(peopleData))
 
   }, [cookieVal])
 
@@ -205,15 +204,18 @@ function Attendance( {peopleData} ) {
 
   useEffect(()=> {
     if (isArrSorted) {
-      let newArr = [];
-
-      // put checked in people at the beginning of array
-
-      // put the rest of people
-
-      setSortedArr(newArr)
+      let checkedInPeople = [];
+      let notCheckedInPeople = [];
+      // put checked in people at the beginning of array, then the put the rest
+      for ( let i = 0; i < cookieArr.length; i++) {
+        let curr = cookieArr[i];
+        if (curr[2] !== Infinity) checkedInPeople.push(curr);
+        else notCheckedInPeople.push(curr);
+      }
+      checkedInPeople = checkedInPeople.sort((a,b)=> a[2] - b[2]); // sort by order for checked in peopel
+      setCookieArr(checkedInPeople.concat(notCheckedInPeople))
     }
-    else setSortedArr(CookieArr(peopleData))
+    else setCookieArr(cookieArr.sort((a,b)=> a[0] - b[0]))
   }, [isArrSorted])
 
 
