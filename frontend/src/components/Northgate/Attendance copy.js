@@ -2,11 +2,11 @@ import React, {useState, useEffect, useRef} from 'react';
 import OpenModalButton from '../../context/OpenModalButton';
 import AttendanceReasonModal from './AttendanceReasonModal';
 
-
+import { NGPeople } from '../../data/Attendance/NGPeople';
 import './Attendance.css'
 
 
-function Attendance( {peopleData} ) {
+function Attendance() {
 
 
   // ----------- step 1 -----------
@@ -36,7 +36,7 @@ function Attendance( {peopleData} ) {
   // view old cookie
 
   // =============== variable define ===================
-  let NGPeopleArr = Object.entries(peopleData).sort((a,b)=>a[0] - b[0])
+  let NGPeopleArr = Object.entries(NGPeople).sort((a,b)=>a[0] - b[0]) //[room,[CHN_name, ENG_name]]
   const scriptUrl = process.env.REACT_APP_ATTENDANCE_SCRIPT_URL;
 
 
@@ -58,41 +58,22 @@ function Attendance( {peopleData} ) {
     return ';expires='+now.toUTCString()+';path=/fjccWebsite'
   }
 
-  const CookieArr = (data) => {
-    // should be sorted by room number
-    let checkedInArr = [];
-    let tempObj = {}
+  const InitialCookieObj = () => {
+    // return object in this pattern {"room": [order, "HH:MM:SSAM"]}
+    let checkInObj = {}
+    let attendanceCookie = document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0]));
+    // console.log("found", attendanceCookie)
+    if (attendanceCookie !== undefined) {
 
-    let dataKeyArr = Object.keys(data).sort((a,b)=>a - b);
-    // based on exisitng residents first
-    for (let i = 0; i < dataKeyArr.length; i++) {
-      let room = dataKeyArr[i];
-      let name = data[room]['CHN_Name'];
-      // checkedInArr.push([room, name, "order", "timestamp"])
-      tempObj[room] = [room, name, Infinity, "timestamp"];
-    }
-    // add new from cookieVal, and update order and timestamp
-    let cookieArr = cookieVal.split("-")
-    // console.log("arr", cookieArr)
-    for (let i = 0; i < cookieArr.length - 1; i++) {
-      let [room, time, AMPM] = cookieArr[i].split(' ');
-      if (room.startsWith("New")) {
-        let [currName, currRoom] = room.split("R")
-        currName = currName.slice(3);
-        room = currRoom;
-        tempObj[room] = [room, "name", Infinity, "timestamp"];
-        tempObj[room][1] = currName;
+      // take the value of cookie, and split into each person, which divided by '-'
+      let checkedInArr = attendanceCookie.split("=")[1].split('-');
+      for (let i = 0; i < checkedInArr.length - 1; i++) {
+        let checkIn = checkedInArr[i];
+        let [room, time, AMPM] = checkIn.split(" ")
+        checkInObj[room] = [i + 1, time+AMPM]
       }
-      // console.log(tempObj[room])
-      if (room >= 99900) tempObj[room][2] = '已到'
-      else tempObj[room][2] = i + 1; // update order
-      tempObj[room][3] = time + AMPM; // update timestamp
     }
-    checkedInArr = Object.values(tempObj);
-    // console.log("before sort", checkedInArr)
-    checkedInArr = checkedInArr.sort((a,b)=> a[0] - b[0]);
-    console.log("after sort", checkedInArr)
-    return checkedInArr
+    return checkInObj
   }
 
   const submitTime = (room, isNewPerson=false, newName) => {
@@ -127,23 +108,20 @@ function Attendance( {peopleData} ) {
       document.cookie = `${currCookieDate}=`+ getCookieExpireTime();
     }
     setCookieVal("")
+    setCookieObj({})
   }
 
   const addNewAttendancePerson = () => {
     if (newPersonName !== "" && Number(newPersonRoom) < 2000 && Number(newPersonOrder) > 0) {
       // add 0 in front for room number if less than 1000
-      // let newRoom = Number(newPersonRoom) < 1000 ? '0'+ newPersonRoom : newPersonRoom;
-      let newRoom = newPersonRoom.padStart(4, '0');
+      let newRoom = Number(newPersonRoom) < 1000 ? '0'+ newPersonRoom : newPersonRoom;
       // console.log(newRoom, cookieObj[newRoom+"0"])
       // assume max people of each room is two people, set identify number to 0 for first person, else 1
-      if (peopleData[newRoom+"0"] === undefined) newRoom = newRoom + '0'
+      if (cookieObj[newRoom+"0"] === undefined) newRoom = newRoom + '0'
       else newRoom = newRoom+'1';
 
       // NGPeople[newRoom] = [newPersonName, "EnglishNamse"] -> problem object info won't stay after refresh
       submitTime(newRoom, true, newPersonName);
-      setNewPersonName("")
-      setNewPersonOrder("")
-      setNewPersonRoom("")
       // send to excel as well
     }
   }
@@ -151,7 +129,7 @@ function Attendance( {peopleData} ) {
   // ============ useState variable ===================
 
   let [cookieVal, setCookieVal] = useState("");
-  let [cookieArr, setCookieArr] = useState([]); //[[room, CHN_name, order, timestamp], ...]
+  let [cookieObj, setCookieObj] = useState({}); // {"room": [order, time]}
   let [currDateTime, setCurrDateTime] = useState(getTimeNow());
 
   let [adminTap, setAdminTap] = useState(0);
@@ -170,7 +148,6 @@ function Attendance( {peopleData} ) {
   // ============ useEffect ===================
   // on render
   useEffect(()=> {
-    console.log(peopleData)
     // from cookie stored in client side
     // set state variable [cookie value and cookie object]
     let currCookieDate = "NG"+currDateTime[0];
@@ -182,8 +159,7 @@ function Attendance( {peopleData} ) {
       let currCookieValue = currAttendanceCookie.split("=")[1];
       setCookieVal(currCookieValue);
     }
-    // setCookieObj(InitialCookieObj());
-    setCookieArr(CookieArr(peopleData));
+    setCookieObj(InitialCookieObj());
   }, [])
 
   useEffect(()=> {
@@ -193,7 +169,29 @@ function Attendance( {peopleData} ) {
   useEffect(()=> {
     // when state varibale (cookie value) change
     // decrypt cookie into object and set new cookie object
-    setCookieArr(CookieArr(peopleData))
+    let currCookieArr = cookieVal.split("-");
+    // console.log("cookieArr", currCookieArr)
+    let currObj = {}
+    let count = 1
+    for (let i = 0; i < currCookieArr.length - 1; i++) {
+      let checkIn = currCookieArr[i];
+      let [room, time, AMPM] = checkIn.split(" ")
+      if (room.startsWith("New")) {
+        // when it is new resident
+        let [name, tempRoom] = room.split("R")
+        name = name.slice(3);
+        room = tempRoom;
+        NGPeopleArr.push([room, {name, name}]);
+        NGPeopleArr.sort((a,b)=>a[0] - b[0]);
+      }
+      if (room < 99900) {
+        currObj[room] = [count, time+AMPM]
+        count++;
+      } else {
+        currObj[room] = [99999, time+AMPM]
+      }
+    }
+    setCookieObj(currObj)
 
   }, [cookieVal])
 
@@ -207,13 +205,23 @@ function Attendance( {peopleData} ) {
     if (isArrSorted) {
       let newArr = [];
 
-      // put checked in people at the beginning of array
+      let currCheckedPeople = Object.keys(cookieObj).sort((a,b)=>Number(cookieObj[a][0])-Number(cookieObj[b][0]));
 
+      // put checked in people at the beginning of array
+      for (let i = 0 ; i < currCheckedPeople.length; i++) {
+        let room = currCheckedPeople[i];
+        let currPerson = NGPeople[room]
+        if(room < 99900) newArr.push([room, currPerson])
+      }
       // put the rest of people
+      for (let i = 0 ; i < NGPeopleArr.length; i++) {
+        let room = NGPeopleArr[i][0];
+        if (cookieObj[room] === undefined || room >= 99900) newArr.push(NGPeopleArr[i])
+      }
 
       setSortedArr(newArr)
     }
-    else setSortedArr(CookieArr(peopleData))
+    else setSortedArr(NGPeopleArr)
   }, [isArrSorted])
 
 
@@ -259,7 +267,7 @@ function Attendance( {peopleData} ) {
           <button onClick={()=>addNewAttendancePerson()} className='addNewPersonBtn'>添加</button>
         </div>}
 
-        {cookieArr.map(([room, CHN_Name, order, timestamp]) => {
+        {sortedArr.map(([room, {CHN_Name, ENG_Name}]) => {
           return (
             <div className={isAdminMenuActive ? 'AttendanceSinglePersonAdminMode' : 'AttendanceSinglePerson'}>
               <div className='checkInName'>
@@ -275,10 +283,12 @@ function Attendance( {peopleData} ) {
                   customizeStyle = "adminCantAttendReasonBtn"/>}
               </div>
               <div className='checkInOrder'>
-                {order !== Infinity ? order : " "}
+                {cookieObj[room] !== undefined
+                  ? cookieObj[room][0] >= 99900 ? "已到" : cookieObj[room][0]
+                  : " "}
               </div>
               <div className='checkInTime'>
-                {timestamp !== 'timestamp' ? timestamp : " "}
+                {cookieObj[room] !== undefined ? cookieObj[room][1] : " "}
               </div>
             </div>
           )
