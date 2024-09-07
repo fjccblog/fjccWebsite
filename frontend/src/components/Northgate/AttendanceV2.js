@@ -58,7 +58,7 @@ function Attendance( {peopleData} ) {
     return ';expires='+now.toUTCString()+';path=/fjccWebsite'
   }
 
-  const initialCookieArrOrObj = (data) => {
+  const initialCookieArrAndObj = (data) => {
     // should be sorted by room number
     let checkedInArr = [];
     let tempObj = {}
@@ -72,12 +72,10 @@ function Attendance( {peopleData} ) {
       tempObj[room] = [room, name, Infinity, "timestamp"];
     }
     // add new from cookieVal, and update order and timestamp
-    let todayCookie = document.cookie.split("; ").find(element => element.startsWith("NG"+getTimeNow()[0]))
-    let currCookieValue = todayCookie!==undefined ? todayCookie.split("=")[1] : "";
-    let tempCookieArr = currCookieValue!=="" ? currCookieValue.split('-') : [];
-    let count = 1;
-
-    if (tempCookieArr.length > 0)
+    let tempCookieArr = cookieVal.split("-")
+    console.log("arr", tempCookieArr)
+    let count = 0;
+    if (tempCookieArr.length > 1)
       for (let i = 0; i < tempCookieArr.length; i++) {
         let [room, time, AMPM] = tempCookieArr[i].split(' ');
         if (room.startsWith("New")) {
@@ -87,16 +85,17 @@ function Attendance( {peopleData} ) {
           tempObj[room] = [room, "name", Infinity, "timestamp"];
           tempObj[room][1] = currName;
         }
+        console.log(room, tempObj[room])
         if (room >= 99900) tempObj[room][2] = '已到'
-        else if (tempObj[room] !== undefined) tempObj[room][2] = count++; // update order
-        console.log("===========initial obj",room, tempObj[room])
-        if (tempObj[room] !== undefined) tempObj[room][3] = time + AMPM; // update timestamp
+        else tempObj[room][2] = i + 1; // update order
+        tempObj[room][3] = time + AMPM; // update timestamp
       }
-
+    // setCookieObj(tempObj);
     checkedInArr = Object.values(tempObj);
+    // console.log("before sort", checkedInArr)
     checkedInArr = checkedInArr.sort((a,b)=> a[0] - b[0]);
-
-    return checkedInArr
+    console.log("after sort", checkedInArr)
+    setCookieArr([...checkedInArr])
   }
 
   const submitTime = (room, isNewPerson=false, newName) => {
@@ -114,7 +113,15 @@ function Attendance( {peopleData} ) {
       let newCookie = cookieVal + (cookieVal===""?"":"-") +(isNewPerson?newRoom:room) + currTime;
       setCookieVal(newCookie)
       document.cookie = `${"NG"+currDateTime[0]}=${newCookie}` + getCookieExpireTime();
+
+      // if (cookieObj[room] === undefined) {
+        cookieObj[room] = [room, newName, cookieArr.length +1, currTime]
+        setCookieObj(cookieObj)
+        // setCookieArr([...cookieArr, [room, newName, cookieArr.length +1, currTime]])
+      // }
     }
+    // document.cookie = `${"NG"+getTimeNow()[0]}=${attendanceCookie.split("=")[1] + "02990 8:56:48 PM-02997 8:56:48 PM-"}`
+
   }
 
   const handleSubmit = (e) =>{
@@ -146,6 +153,7 @@ function Attendance( {peopleData} ) {
       if (peopleData[newRoom+"0"] === undefined) newRoom = newRoom + '0'
       else newRoom = newRoom+'1';
 
+      // NGPeople[newRoom] = [newPersonName, "EnglishNamse"] -> problem object info won't stay after refresh
       submitTime(newRoom, true, newPersonName);
       setNewPersonName("")
       setNewPersonOrder("")
@@ -157,8 +165,11 @@ function Attendance( {peopleData} ) {
   // ============ useState variable ===================
 
   let [cookieVal, setCookieVal] = useState("");
-  let [cookieArr, setCookieArr] = useState(initialCookieArrOrObj(peopleData)); //[[room, CHN_name, order, timestamp], ...]
+  let [cookieArr, setCookieArr] = useState([]); //[[room, CHN_name, order, timestamp], ...]
+  let [cookieObj, setCookieObj] = useState({});
   let [currDateTime, setCurrDateTime] = useState(getTimeNow());
+
+  let [isObjArrInitialized, setIsObjArrInitialized] = useState(false);
 
   let [adminTap, setAdminTap] = useState(0);
   let [isAdminMenuActive, setIsAdminMenuActive] = useState(false);
@@ -196,9 +207,17 @@ function Attendance( {peopleData} ) {
 
   useEffect(()=> {
     // when state varibale (cookie value) change
-    // assume the last check-in in cookieVal is the only change made
+    // decrypt cookie into object and set new cookie object
+    // setCookieArr(updateCookieArr(peopleData))
+    if(!isObjArrInitialized) {
+      initialCookieArrAndObj(peopleData)
+      setIsObjArrInitialized(true)
+    }
+    // console.log(cookieArr)
+    // if (isArrSorted) setCookieArr(Object.values(cookieObj).sort((a,b)=> a[0] - b[0]))
+    // else setCookieArr(Object.values(cookieObj).sort((a,b)=> a[2] - b[2]))
 
-
+    /*
     let tempArr = cookieVal.split("-")
     let latestCheckIn = tempArr[tempArr.length - 1];
     let [tempRoom, tempTime, tempAMPM] = latestCheckIn.split(" ");
@@ -210,10 +229,9 @@ function Attendance( {peopleData} ) {
       isPersonNew = true
     }
 
-    // console.log(tempRoom,"name", tempName, tempTime)
+    console.log(tempRoom,"name", tempName, tempTime)
 
     let updatedArr = cookieArr;
-    console.log("useEffect cookieArr", cookieArr)
 
     if (!isPersonNew) {
       for (let i = 0; i < updatedArr.length; i++) {
@@ -225,11 +243,16 @@ function Attendance( {peopleData} ) {
         }
       }
     }
-    // console.log("new", updatedArr)
+    console.log("new", updatedArr)
     setCookieArr([...updatedArr])
+    */
 
 
   }, [cookieVal])
+
+  useEffect(()=> {
+    // setCookieArr(Object.values(cookieObj).sort((a,b)=> a[0] - b[0]))
+  }, [cookieObj])
 
   useEffect(()=> {
     if (adminTap >= 3) setIsAdminMenuActive(true)
