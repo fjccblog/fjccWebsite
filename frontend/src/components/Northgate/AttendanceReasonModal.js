@@ -30,7 +30,7 @@ function AttendanceReasonModal({data}) {
       <select name="attendanceReason" className="reasonSelect"
         onChange={(e) => setReason(e.target.value)}>
         <option value="">-- 請選擇下面一個選項 --</option>
-        <option value="sick">病了</option>
+        <option value="sick">看醫生</option>
         <option value="oot">OOT</option>
         <option value="others">不能參加 (請註明原因)</option>
       </select>
