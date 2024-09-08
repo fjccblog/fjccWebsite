@@ -102,7 +102,7 @@
 
 .adminMenu {
   max-width: 350px;
-  height: 100px;
+  height: fit-content;
   border: 2px solid var(--aliceBlue);
   margin: 0px auto 5vh;
   padding: 5px 8px;
@@ -114,7 +114,7 @@
   border: 0px;
   border-radius: 12px;
   padding: 13px 20px;
-  margin: 0px 15px;
+  margin: 5px 15px;
 }
 
 .HideAdminMenuButton {
@@ -123,9 +123,20 @@
   border: 0px;
   border-radius: 12px;
   padding: 13px 20px;
-  margin: 0px 15px;
+  margin: 5px 15px;
 }
 
-.checkInButton:hover, .adminCantAttendReasonBtn:hover, .AttendanceClearButton:hover, .HideAdminMenuButton:hover {
+.CopyAttendanceToClipboardButton {
+  background-color: var(--backgroundGreen);
+  color: white;
+  border: 0px;
+  border-radius: 12px;
+  padding: 13px 20px;
+  margin: 5px 15px;
+}
+
+.checkInButton:hover, .adminCantAttendReasonBtn:hover,
+.AttendanceClearButton:hover, .HideAdminMenuButton:hover,
+.CopyAttendanceToClipboardButton:hover {
   cursor: pointer;
 }
