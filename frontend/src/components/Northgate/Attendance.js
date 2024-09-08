@@ -81,7 +81,7 @@ function Attendance( {peopleData} ) {
       for (let i = 0; i < tempCookieArr.length; i++) {
         let [room, time, AMPM] = tempCookieArr[i].split(' ');
         if (room.startsWith("New")) {
-          let [currName, currRoom] = room.split("R")
+          let [currName, currRoom] = room.split("@")
           currName = currName.slice(3);
           room = currRoom;
           tempObj[room] = [room, "name", Infinity, "timestamp"];
@@ -89,7 +89,7 @@ function Attendance( {peopleData} ) {
         }
         if (room >= 99900) tempObj[room][2] = '已到'
         else if (tempObj[room] !== undefined) tempObj[room][2] = count++; // update order
-        console.log("===========initial obj",room, tempObj[room])
+
         if (tempObj[room] !== undefined) tempObj[room][3] = time + AMPM; // update timestamp
       }
 
@@ -101,8 +101,6 @@ function Attendance( {peopleData} ) {
 
   const submitTime = (room, isNewPerson=false, newName) => {
     let currTime = getTimeNow()[1];
-    console.log("click")
-
     // use for check-in button and add new person
 
     // store time/order(2 digit) and room number in cookie
@@ -110,7 +108,7 @@ function Attendance( {peopleData} ) {
     // check box in excels
     if (cookieVal.indexOf(room) === -1) {
       let newRoom;
-      if (isNewPerson) newRoom = "New" + newName + "R" + room;
+      if (isNewPerson) newRoom = "New" + newName + "@" + room;
       let newCookie = cookieVal + (cookieVal===""?"":"-") +(isNewPerson?newRoom:room) + currTime;
       setCookieVal(newCookie)
       document.cookie = `${"NG"+currDateTime[0]}=${newCookie}` + getCookieExpireTime();
@@ -141,7 +139,6 @@ function Attendance( {peopleData} ) {
       // add 0 in front for room number if less than 1000
       // let newRoom = Number(newPersonRoom) < 1000 ? '0'+ newPersonRoom : newPersonRoom;
       let newRoom = newPersonRoom.padStart(4, '0');
-      // console.log(newRoom, cookieObj[newRoom+"0"])
       // assume max people of each room is two people, set identify number to 0 for first person, else 1
       if (peopleData[newRoom+"0"] === undefined) newRoom = newRoom + '0'
       else newRoom = newRoom+'1';
@@ -175,7 +172,6 @@ function Attendance( {peopleData} ) {
   // ============ useEffect ===================
   // on render
   useEffect(()=> {
-    // console.log(peopleData)
     // from cookie stored in client side
     // set state variable [cookie value and cookie object]
     let currCookieDate = "NG"+currDateTime[0];
@@ -198,23 +194,24 @@ function Attendance( {peopleData} ) {
     // when state varibale (cookie value) change
     // assume the last check-in in cookieVal is the only change made
 
-
+    // get basic info of last check-in
     let tempArr = cookieVal.split("-")
     let latestCheckIn = tempArr[tempArr.length - 1];
     let [tempRoom, tempTime, tempAMPM] = latestCheckIn.split(" ");
     let tempName = "";
     let isPersonNew = false
     if (tempRoom.startsWith("New")) {
-      [tempName, tempRoom] = tempRoom.split("R")
+      [tempName, tempRoom] = tempRoom.split("@")
       tempName = tempName.slice(3);
       isPersonNew = true
     }
 
-    // console.log(tempRoom,"name", tempName, tempTime)
-
     let updatedArr = cookieArr;
-    console.log("useEffect cookieArr", cookieArr)
 
+    // is the last check-in new person?
+    // if no, update the array with new check-in order and time
+    // if yes, check if it is already in array(sometimes it is initaialzed),
+    //              otherwise put the new info one top of array
     if (!isPersonNew) {
       for (let i = 0; i < updatedArr.length; i++) {
         let curr = updatedArr[i]
@@ -224,10 +221,13 @@ function Attendance( {peopleData} ) {
           break;
         }
       }
+    } else {
+      let checkInFound = cookieArr.find(checkin=>checkin[0] === tempRoom)
+      if (checkInFound === undefined)
+        updatedArr.unshift([tempRoom, tempName, tempArr.length, tempTime+tempAMPM])
     }
-    // console.log("new", updatedArr)
-    setCookieArr([...updatedArr])
 
+    setCookieArr([...updatedArr])
 
   }, [cookieVal])
 
@@ -250,7 +250,10 @@ function Attendance( {peopleData} ) {
       checkedInPeople = checkedInPeople.sort((a,b)=> a[2] - b[2]); // sort by order for checked in peopel
       setCookieArr(checkedInPeople.concat(notCheckedInPeople))
     }
-    else setCookieArr(cookieArr.sort((a,b)=> a[0] - b[0]))
+    else {
+      cookieArr.sort((a,b)=> a[0] - b[0])
+      setCookieArr([...cookieArr])
+    }
   }, [isArrSorted])
 
 
