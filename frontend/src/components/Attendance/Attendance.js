@@ -15,7 +15,7 @@ function Attendance( {peopleData} ) {
   // -> perhaps use alphbet to shorter length
   // set expire date in 3 months
   // ----------- step 2 -----------
-  // for display, destructure cookie into object
+  // for display, destructure cookie into array
   // get order/time from cookie
   // ----------- step 3 -----------
   // store in Google Excels (every check-in record? or submit at the end)
@@ -59,6 +59,9 @@ function Attendance( {peopleData} ) {
   }
 
   const initialCookieArrOrObj = (data) => {
+    // initial array from cookie values,
+    // whether it is from exisiting data, or new people from cookie
+    // add order and timestamp from cookie
     // should be sorted by room number
     let checkedInArr = [];
     let tempObj = {}
@@ -149,6 +152,15 @@ function Attendance( {peopleData} ) {
       setNewPersonRoom("")
       // send to excel as well
     }
+  }
+
+  const copyToClipboard = async () => {
+    let str = ""
+    for (let i = 0; i < cookieArr.length; i++) {
+      let curr = cookieArr[i];
+      if (curr[2] !== Infinity) str += (curr[1]+", ");
+    }
+    await navigator.clipboard.writeText(str);
   }
 
   // ============ useState variable ===================
@@ -272,6 +284,9 @@ function Attendance( {peopleData} ) {
           </button>
           <button className='HideAdminMenuButton' onClick={()=>{setIsAdminMenuActive(false);setAdminTap(0)}}>
             隐蔽admin菜单
+          </button>
+          <button className='CopyAttendanceToClipboardButton' onClick={()=>copyToClipboard()}>
+            複製 <i className="far fa-copy"></i>
           </button>
         </div>}
 
