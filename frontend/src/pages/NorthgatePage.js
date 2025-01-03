@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
-import Northgate from '../components/Northgate/Northgate';
+import Northgate from '../components/Attendance/Northgate';
 
 function NorthgatePage() {
 

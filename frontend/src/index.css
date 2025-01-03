@@ -3,6 +3,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+*:focus {
+  box-shadow: none !important;
+}
+
 body {
   margin: 0px;
 }
