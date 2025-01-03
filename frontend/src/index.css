@@ -1,11 +1,12 @@
 *, *::before, *::after {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  color: #000000;
 }
 
-*:focus {
+/* *:focus {
   box-shadow: none !important;
-}
+} */
 
 body {
   margin: 0px;
